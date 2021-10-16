@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+
+<title>Magdalena Czubak</title>
+<link href="styles/trs-style-iWeblike.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="images-static/cu_favicon.png" type="image/png" />
+</head>
+
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><a href="index.html">Home</a></td>
+<td><a href="research.html">Research</a></td>
+<td><a href="teaching.html">Teaching</a></td>
+<td><a href="cv.pdf">CV</a></td>
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+
+<div id="name">
+Magdalena Czubak
+</div>
+
+<div id="main">
+
+
+<img src="images-static/dam.jpg" width="500" >
+
+<div id="right">
+
+<table>
+<tr><td>Department of Mathematics</td>      </tr>
+<tr> <td>University of Colorado at Boulder </td></tr>
+<tr><td>Campus Box 395</td></tr>
+<tr><td>Boulder, CO 80309</td></tr>
+
+
+<tr><td> </td></tr> <tr><td> </td></tr>
+ <tr><td> </td></tr>
+<tr><td><bold>Email:</bold> magda.czubak@colorado.edu</td> </tr>
+
+<tr><td><bold>Spring 2017 Office Hours:</bold>M 3-4, W 2-3</td> </tr>
+
+<tr><td><bold>Office:</bold>Math 319</td> </tr>
+
+<tr><td><bold>Fax:</bold> 303-492-7707</td> </tr>
+</tr>
+</table>
+
+</div>
+
+
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+<table cellpadding="2">
+<tr>
+  <td ><i>Last modified on 2/7/2017.</i></td>
+</tr>
+</table>
+
+</div>
+</div>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11222753; 
+var sc_invisible=1; 
+var sc_security="6c49daf2"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11222753/0/6c49daf2/1/" alt="web
+counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+
+
+
+</body>
+</html>

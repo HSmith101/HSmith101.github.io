@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<style>
+body {
+	background-color: #eff5f5
+}
+</style>
+
+<head>
+<title>Hanson Smith - CU Boulder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="non-bs.css">
+  <link rel="icon" type="image/png" href="favicon.ico" sizes=16x16>
+  <meta name="theme-color" content="#222222">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#222222">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+</head>  
+
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><big><a href="index.html">Home</a></big></td>
+<td>|</td>
+<td><big><a href="research.html">Research and Interests</a></big></td>
+<td>|</td>
+<td><big><a href="teaching.html">Teaching</a></big></td>
+<td>|</td>
+<td><big><a href="3MinuteThesis.html">3 Minute Thesis</a></big></td>
+<td>|</td>
+<td><big><a href="CV.pdf">CV</a></big></td>
+<!--<td><big><a href="monogenicfields.html">Monogenic Fields Data</a></big></td>-->
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+<center>
+<div id="name">
+<b><font size="+2"> Teaching </font></b>
+<hr />
+</div>
+
+<div id="main">
+<br />
+
+<img src="busstop.jpg" width="500" style="border: #000000 4px double">
+<div id="right">
+Waiting for the bus.
+<br />
+<hr />
+<br />
+<big>
+<b>I am currently teaching Linear Algebra and Number Theory. 
+</b>
+<br />
+<br />
+<hr />
+<br />
+Some extra resources for Linear Algebra:  <br />
+<br />
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" >3Blue1Brown's <i>Essence of Linear Algebra</i></a> <br />
+<a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT OpenCourse Lectures</a> <br />
+<a href="https://www.khanacademy.org/math/linear-algebra">Khan Academy</a> <br />
+<a href="https://yutsumura.com/linear-algebra/">Linear Algebra Problems and Solutions</a>
+<br />
+<br />
+Let me know if there are others you like.
+<br /> 
+<br />
+<!-- Some extra resources:  <br />
+<a href="http://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx">Paul's online math notes</a> <br />
+<a href="https://www.khanacademy.org/math/multivariable-calculus">Khan Academy</a> <br />
+<a href="http://people.math.harvard.edu/~knill/teaching/math21a2012/21a_fall_2012.pdf">Oliver Knill's Notes for the course at Harvard</a>
+<br />
+<br /> -->
+<hr />
+<br />
+Some extra resources for Number Theory:  <br />
+<br />
+<li> <a href="http://www.numbertheory.org/ntw/lecture_notes.html">A very extensive list of number theory lecture notes</a> <br />
+<li> <a href="https://ocw.mit.edu/courses/mathematics/18-781-theory-of-numbers-spring-2012/">MIT OpenCourse content</a> <br />
+<li><a href="https://www.youtube.com/watch?v=19SW3P_PRHQ">A random lecture that claims to cover the whole course and more in two and a half hours.</a> <br />
+<br />
+Let me know if there are others you like.
+<br /> 
+<br />
+<hr />
+<br />
+<b>Past Teaching</b>
+<br />
+<br />
+Spring 2021, Linear Algebra
+<br />
+Fall 2020, Linear Algebra
+<br />
+Spring 2020, Calculus 3
+<br />
+Fall 2019, Calculus 3
+<br />
+Summer 2018, REU on Monogenic Fields at CU Boulder. <br />
+Over the summer I helped advise some CU undergrads. They proved some very nice results, which can be found 
+ <a href="https://arxiv.org/abs/1908.09793">here</a>.
+<br />
+Spring 2018, Abstract Algebra I at Colorado College. <br />
+I had the wonderful experience of co-teaching this course with <a href="https://malmskog.wordpress.com/about/">Beth Malmskog</a>.
+<br />
+Fall 2017, Calculus 2
+<br />
+Spring 2017, Calculus 2
+<br />
+Summer 2016, Precalculus
+<br />
+Spring 2016, Calculus 1
+<br />
+Fall 2015, Calculus 1</big>
+<br />
+<br />
+
+
+
+</div>
+
+
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+
+
+</div>
+</div>
+
+
+</body>
+</html>

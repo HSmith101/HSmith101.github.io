@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<style>
+body {
+	background-color: #eff5f5
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+<!-- Copyright 2005, Sandeep Gangadharan -->
+<!-- For more free scripts go to http://www.sivamdesign.com/scripts/ -->
+<!--
+if (document.getElementById) {
+document.writeln('<style type="text/css"><!--')
+document.writeln('.texter {display:none} @media print {.texter {display:block;}}')
+document.writeln('//--></style>') }
+
+function openClose(theID) {
+if (document.getElementById(theID).style.display == "block") { document.getElementById(theID).style.display = "none" }
+else { document.getElementById(theID).style.display = "block" } }
+// -->
+</script>
+
+<head>
+<title>Hanson Smith - CU Boulder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="non-bs.css">
+  <link rel="icon" type="image/png" href="favicon.ico" sizes=16x16>
+  <meta name="theme-color" content="#222222">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#222222">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+</head>  
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><big><a href="index.html">Home</a></big></td>
+<td>|</td>
+<td><big><a href="research.html">Research and Interests</a></big></td>
+<td>|</td>
+<td><big><a href="teaching.html">Teaching</a></big></td>
+<td>|</td>
+<td><big><a href="3MinuteThesis.html">3 Minute Thesis</a></big></td>
+<td>|</td>
+<td><big><a href="CV.pdf">CV</a></big></td>
+<!--<td><big><a href="monogenicfields.html">Monogenic Fields Data</a></big></td>-->
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+<center>
+<div id="name">
+<b><font size="+2">Research and Interests</font></b>
+</div>
+<hr />
+<br />
+<div id="main">
+
+
+<img src="picodeorizabapano.jpg" width="1200" style="border: #000000 4px double" >
+<br />
+Sunrise pano from the summit of the volcano Pico de Orizaba, the highest mountain in Mexico.
+<div id="right">
+<br />
+<hr />
+<div style="width: 70%">
+<big><b>Generally, I am interested in algebraic number theory and arithmetic geometry.</b>
+<br />
+<br />
+<a href="https://www2.karlin.mff.cuni.cz/~kala/nts/smith.mp4">Here</a> is a talk I gave at the Charles University Number Theory Seminar about my thesis work. 
+It includes a good deal of background.
+<br />
+<br />
+A current motivation of my research is understanding the relationship between monogeneity and other arithmetic properties of number fields. <br />
+<span onClick="openClose('monoetymology')" id="abstract"><font style="color:rgb(50,200,250);">[click here for an <i>Infinite Jest</i>-esque footnote 
+on etymology from my thesis.]</font></span>
+<span id="monoetymology" class="texter">
+<div style="width: 90%" align=left>
+<p style="font-size: 16px;" >It appears that 'monogeneity' is more commonly used to indicate "the quality of being monogenic" in mathematics. 
+However, in other fields, 'monogeneity' indicates "the quality of being monogeneous," while 'monogenicity' refers to 
+"the quality of being monogenic." Some sources in mathematics refer to number fields as 'monogeneous,' rather than 'monogenic.' 
+(We note that at least one paper refers to 'monogenesis,' which is often used to indicate 
+"the theory that all humankind originated with a single ancestor or ancestral couple." 
+For the sake of brevity, but at the expense of allegory, we will not delve deeper into this possible terminology here.) 
+The author has chosen to use 'monogeneity' simply because it returns more relevant results on 
+<a href = "https://mathscinet.ams.org/mathscinet/index.html">MATHSCINET</a>. 
+
+Though, in an effort to find some solice, the author decided to investigate the etymology. 
+According to <a href = "https://en.wiktionary.org/wiki/Wiktionary:Main_Page">Wikitionary</a>, which proved a much more satisfactory resource 
+than many more well-established dictionaries, 'monogeneous' and 'monogenic' are derived from the Ancient Greek words 
+μόνος (mόnos), meaning "alone," "only," "sole," or "single," and γενής (genḗs), meaning "offspring" or "kind." 
+(The interested reader should note that multiple diacritics, e.g. 'ḗ,' 
+on one character is a difficult feat to achieve in LaTeX. The package <i>covington</i> yields a solution that the author finds adequate; 
+however, linguists may want to delve deeper down the 
+<a href="https://tex.stackexchange.com/questions/159291/multiple-diacritics-on-one-character/159388">StackExchange</a> rabbit hole.)
+Thus the difference lies in the suffixes '-ic' and '-ous.' The origin of '-ic' is the Latin '-icus,' 
+meaning "belonging to" or "derived from." Conversely, '-ous' is derived from the Latin '-ōsus,' 
+indicating "full," or "full of." The modern usages of '-ic' and '-ous' are more similar, 
+but retain a connotation coming from their Latin roots. As such, 'monogenic' seems the more appropriate term to 
+describe the number fields we will study. Frustratingly, it appears 'monogenicity' should be the more canonical 
+way to turn our preferred adjective into a noun. 
+It may also be worthwhile to note that both 'monogeneous' and 'monogenic' include mathematical definitions in their 
+Wiktionary entries and neither definition is at all related to our current study.</p>
+</div>
+</span> <br />
+<br />
+
+<span onClick="openClose('ResearchList')" id="abstract"><b><font style="color:rgb(700,100,40);">[Click for an enumerated list of my papers.]</font></b></span>
+<span id="ResearchList" class="texter">
+<ol style="width: 70%;">
+<li>Frobenius Finds Non-monogenic Division Fields of Abelian Varieties</li>
+<li>The Scheme of Monogenic Generators and its Twists</li>
+<li>Non-monogenic Division Fields of Elliptic Curves</li>
+<li>A Divisor Formula and a Bound on the ℚ-gonality of the Modular Curve X<sub>1</sub>(N)</li>
+<li>The Monogeneity of Radical Extensions</li>
+<li>Monogenic Fields Arising from Trinomials</li>
+<li>Ramification in Division Fields and Sporadic Points on Modular Curves</li>
+<li>Two Families of Monogenic S<sub>4</sub> Quartic Number Fields</li>
+<li>A Family of Monogenic Quartic Fields Arising from Elliptic Curves</li>
+<li>Optimal Packings of Two to Four Equal Circles on any Flat Torus</li>
+</ol>
+</span>
+
+<br />
+<br />
+
+<hr></hr>
+
+<br />
+
+This paper uses a new representation of the Frobenius endomorphism to investigate the 
+monogeneity of division fields of abelian varieties of dim > 1.
+<br />
+<br />
+<b><a href="https://arxiv.org/abs/2109.04262">
+Frobenius Finds Non-monogenic Division Fields of Abelian Varieties</a></b>
+<br />
+[ <span onClick="openClose('abs-NonMonoAVs')" id="abstract">show abstract</span> | <a href="https://arxiv.org/abs/2109.04262">arXiv:  2109.04262</a> ]
+
+<span id="abs-NonMonoAVs" class="texter">
+Let A be an abelian variety over a finite field k with |k| = q = p<sup>m</sup>. Let π ∈ End<sub>k</sub>(A) denote the Frobenius and let v = q/π denote Verschiebung. 
+Suppose the Weil q-polynomial of A is irreducible. 
+When End<sub>k</sub>(A) = Z[π,v], we construct a matrix which describes the action of π on the prime-to-p-torsion points of A. 
+We employ this matrix in an algorithm that detects when p is an obstruction to the monogeneity of division fields of certain abelian varieties.
+</span>
+<br />
+<br />
+<a href="20MinTalkForYRANT.pdf">Here</a> are slides from a talk I gave at 
+<a href="https://web-eur.cvent.com/event/08d43894-c4fc-4f4d-825a-5cc6f03afeed/summary?RefId=SOM">YRANT</a> about 
+this work.
+<br />
+<br />
+<hr />
+
+<br />
+
+Here is a paper with my friends <a href="http://math.colorado.edu/~saar7867/">Sarah Arpin</a>, <a href="https://math.colorado.edu/~sebo2151/">Sebastian Bozlee</a>, 
+and <a href="http://www.logetale.com/">Leo Herr</a> recasting monogeneity in a more geometric way. 
+<br />
+<br />
+<b><a href="https://arxiv.org/abs/2108.07185">
+The Scheme of Monogenic Generators and its Twists</a></b>
+<br />
+[ <span onClick="openClose('abs-GeoMono')" id="abstract">show abstract</span> | <a href="https://arxiv.org/abs/2108.07185">arXiv:  2108.07185</a> ]
+
+<span id="abs-GeoMono" class="texter">
+Given an extension of algebras B/A, when is B generated by a single element θ∈B over A? 
+We show there is a scheme M<sub>B/A</sub> parameterizing the choice of a generator θ∈B, a "moduli space" of generators. 
+This scheme relates naturally to Hilbert schemes and configuration spaces. We give explicit equations and ample examples.
+A choice of a generator θ is a point of the scheme M<sub>B/A</sub>. This inspires a local-to-global study of monogeneity, 
+piecing together monogenerators over points, completions, open sets, and so on. 
+Local generators may not come from global ones, but they often glue to twisted monogenerators that we define. 
+We show a number ring has class number one if and only if each twisted monogenerator is in fact a global generator θ. 
+The moduli spaces of various twisted monogenerators are either a Proj or stack quotient of M<sub>B/A</sub> by natural symmetries. 
+The various moduli spaces defined can be used to apply cohomological tools and other geometric methods for finding rational points to the 
+classical problem of monogenic algebra extensions.
+</span>
+<br />
+<br />
+<hr />
+
+<br />
+
+Here is a paper investigating the monogeneity and non-monogeneity of division fields of elliptic curves. 
+<br />
+<br />
+<b><a href="Non-mono ECs.pdf">
+Non-monogenic Division Fields of Elliptic Curves</a></b>
+<br />
+[ <span onClick="openClose('abs-nonmonoECs')" id="abstract">show abstract</span> 
+| <a href="https://www.youtube.com/watch?v=TlS5l9PfCSg" >video abstract</a> 
+| <a href="https://doi.org/10.1016/j.jnt.2021.03.024" > Journal of Number Theory</a> | <a href="https://arxiv.org/abs/2007.12781">arXiv:  2007.12781</a> ]
+
+<span id="abs-nonmonoECs" class="texter">
+For various positive integers n, we show the existence of infinite families of elliptic
+curves over ℚ with n-division fields, ℚ(E[n]), that are not monogenic, i.e., the ring of integers does
+not admit a power integral basis. We parametrize some of these families explicitly. Moreover, we
+show that every E/ℚ without CM has infinitely many non-monogenic division fields. Our main
+technique combines a global description of the Frobenius obtained by Duke and Tóth with a simple
+algorithm based on ideas of Dedekind.
+</span>
+<br />
+<br />
+<a href="https://www.youtube.com/watch?time_continue=7&v=2wkRLvfkfrs&feature=emb_logo">Here</a> 
+is a video introducing this work that I recorded for the <a href="https://sites.google.com/view/jmra/home?authuser=0">Junior Mathematician Research Archive</a>.
+
+<br />
+<br />
+<hr />
+
+<br />
+
+Here is a paper I wrote with <a href="https://www.math.fsu.edu/~hoeij/">Mark van Hoeij</a> investigating 
+divisors of modular units and bounding the ℚ-gonality of X<sub>1</sub>(N). 
+<br />
+<br />
+<b><a href="MinFormula.pdf">
+A Divisor Formula and a Bound on the ℚ-gonality of the Modular Curve X<sub>1</sub>(N)</a></b>
+<br />
+[ <span onClick="openClose('abs-minformula')" id="abstract">show abstract</span> 
+|<a href ="https://doi.org/10.1007/s40993-021-00243-3">Research in Number Theory, volume 7, article 22</a>
+|  <a href="https://arxiv.org/abs/2004.13644">arXiv:  2004.13644</a> ]
+
+<span id="abs-minformula" class="texter">
+We give a formula for divisors of modular units on X<sub>1</sub>(N) and use it to prove that the 
+ℚ-gonality of the modular curve X<sub>1</sub>(N) is bounded above by [11N<sup>2</sup>/840], where [•] denotes the nearest
+integer.
+</span>
+<br />
+<br />
+<hr />
+
+<br />
+
+Below is a paper investigating monogeneity in Kummer extensions and radical extensions. 
+<br />
+<br />
+<b><a href="RadicalFinalWebsite.pdf">
+The Monogeneity of Radical Extensions</a></b>
+<br />
+[ <span onClick="openClose('abs-radKummer')" id="abstract">show abstract</span> 
+							| <a href="https://doi.org/10.4064/aa200811-7-10"> Acta Arithmetica, volume 198, pages 313-327</a>
+                    |  <a href="https://arxiv.org/abs/1909.07184">arXiv:  1909.07184</a> ]
+
+<span id="abs-radKummer" class="texter">
+We give necessary and sufficient conditions for the Kummer
+extension K:=ℚ(ζ<sub>n</sub>,α<sup>1/n</sup>) to be monogenic over ℚ(ζ<sub>n</sub>) with α<sup>1/n</sup> as a generator,
+i.e., for <i>O</i><sub>K</sub>=ℤ[ζ<sub>n</sub>][α<sup>1/n</sup>]. We generalize these ideas to radical extensions of an
+arbitrary number field L and provide necessary and sufficient conditions for α<sup>1/n</sup>
+to generate a power <i>O</i><sub>L</sub>-basis for <i>O</i><sub>L(α<sup>1/n</sup>)</sub>.
+We also give sufficient conditions for K to be non-monogenic over ℚ and
+establish a general criterion relating ramification and relative monogeneity. Using
+this criterion, we find a necessary and sufficient condition for a relative cyclotomic
+extension of degree φ(n) to have ζ<sub>n</sub> as a monogenic generator.
+<!-- We give necessary and sufficient conditions for the Kummer extension ℚ(ζ<sub>n</sub>,α<sup>1/n</sup>) 
+to be monogenic over ℚ(ζ<sub>n</sub>) with α<sup>1/n</sup> as a generator, i.e., for 
+<i>O</i><sub>K</sub>=ℤ[ζ<sub>n</sub>][α<sup>1/n</sup>]. 
+We generalize these ideas to radical extensions of an arbitrary number field L 
+and provide necessary and sufficient conditions for α<sup>1/n</sup> to generate a 
+power <i>O</i><sub>L</sub>-basis for <i>O</i><sub>L(α<sup>1/n</sup>)</sub>. We also give sufficient conditions for K to be 
+non-monogenic over ℚ and establish some general criteria relating ramification 
+and relative monogeneity.-->
+</span>
+<br />
+<br />
+<a href="Radical Kummer Pres V2.pdf">Here</a> are my slides from a presentation about this work.
+<br />
+<br />
+<hr />
+
+<br />
+
+
+Below is the paper that came out of the REU <a href="https://math.katestange.net/">Katherine Stange</a> and I ran in the summer of 2018. 
+The REU students (Ryan Ibarra, Henry Lembeck, Mohammad Ozaslan) were excellent and we were able to generalize
+some of my results on the monogeneity of quartic fields to trinomials of arbitrary degree.  
+<br />
+<br />
+<b><a href="MonoREU.pdf">
+Monogenic Fields Arising from Trinomials</a></b>
+<br />
+[ <span onClick="openClose('abs-monotri')" id="abstract">show abstract</span> 
+| accepted for publication in <a href="https://msp.org/involve/about/journal/about.html">Involve</a> |
+                    <a href="https://arxiv.org/abs/1908.09793">arXiv:  1908.09793</a> ]
+
+<span id="abs-monotri" class="texter">
+We call a polynomial monogenic if a root θ has the property that ℤ[θ] is the full ring of integers in ℚ(θ). 
+Using the Montes algorithm, we find sufficient conditions for 
+x<sup>n</sup> +ax+b and x<sup>n</sup>+cx<sup>n-1</sup>+d to be monogenic (this was first studied by Jakhar, Khanduja, and Sangwan using other methods). 
+Weaker conditions are given for n=5 and n=6. We also show that each of the families x<sup>n</sup>+bx+b and x<sup>n</sup>+
+cx<sup>n-1</sup>+cd 
+are monogenic infinitely often and give some positive densities in terms of the coefficients.
+</span>
+<br />
+<br />
+<hr />
+
+<br />
+
+This is a paper that uses ramification in division fields to preclude certain supersingular elliptic curves from corresponding to sporadic points on modular curves. 
+<br />
+<br />
+<b><a href="Ram Div Formal Group 38.pdf">
+Ramification in Division Fields and Sporadic Points on Modular Curves</a></b>
+<br />
+[ <span onClick="openClose('abs-ramdivspor')" id="abstract">show abstract</span> 
+                    |  <a href="https://arxiv.org/abs/1810.04809">arXiv:  1810.04809</a> ]
+
+<span id="abs-ramdivspor" class="texter">
+Consider an elliptic curve E over a number field K. Suppose that E has supersingular
+reduction at some prime <b><i>p</i></b> of K lying above the rational prime p and that E(K) has a point of exact
+order p<sup>n</sup>. To describe the minimum necessary ramification at <b><i>p</i></b>, we completely classify the valuations
+of the p<sup>n</sup>-torsion points of E by the valuation of a coefficient of the p-th division polynomial. In
+particular, if E does not have a canonical subgroup at <b><i>p</i></b>, we show that <b><i>p</i></b> has ramification index at
+least p<sup>2n</sup>-p<sup>2n-2</sup> over p.
+<br />
+We apply this bound to show that sporadic points on the modular curve X<sub>1</sub>(p<sup>n</sup>) cannot correspond to 
+supersingular elliptic curves without a canonical subgroup. Our methods are generalized
+to X<sub>1</sub>(N) with N composite.
+</span>
+<br />
+<br />
+<a href="RamDivPres.pdf">Here</a> are my slides from a presentation at JMM 2021 about this work.
+<br />
+<br />
+<hr />
+<br />
+This is a paper classifying two infinite families of monogenic S<sub>4</sub> Quartic fields. 
+<br />
+<br />
+<b><a href="Monogenic S4 Quartics Revision 10.pdf">Two Families of Monogenic S<sub>4</sub> Quartic Number Fields</a></b>
+<br />
+[ <span onClick="openClose('abs-2families')" id="abstract">show abstract</span> 
+                    | <a href="https://doi.org/10.4064/aa180423-24-8" >Acta Arithmetica, volume 186, pages 257-271</a> 
+                    | <a href="https://arxiv.org/abs/1802.09599">arXiv:  1802.09599</a> ]
+
+<span id="abs-2families" class="texter">
+Consider the integral polynomials f<sub>a,b</sub>(x)=x<sup>4</sup>+ax+b and g<sub>c,d</sub>(x)=x<sup>4</sup>+cx<sup>3</sup>+d. Suppose f<sub>a,b</sub>(x) and g<sub>c,d</sub>(x) are irreducible, 
+b|a, and the integers b, d, 256d-27c<sup>4</sup>, and (256b<sup>3</sup>-27a<sup>4</sup>)/gcd(256b<sup>3</sup>,27a<sup>4</sup>) are all square-free. Using the Montes algorithm, 
+we show that a root of f<sub>a,b</sub>(x) or g<sub>c,d</sub>(x) defines a monogenic extension of <b>Q</b> and serves as a generator for a power integral basis 
+of the ring of integers. In fact, we show monogeneity for slightly more general families. Further, we obtain lower bounds on the density of polynomials 
+generating monogenic S<sub>4</sub> fields within the families f<sub>b,b</sub>(x) and g<sub>1,d</sub>(x). 
+</span>
+<br />
+<br />
+<hr />
+
+<br />
+Below is a paper I wrote with <a href="http://math.hws.edu/gassert/">Alden Gassert</a> and <a href="http://math.colorado.edu/~kstange/">Katherine Stange</a>.
+<br />
+<br />
+<b><a href="MonoDiv.pdf">A Family of Monogenic Quartic Fields Arising from Elliptic Curves</a></b>
+<br />
+[ <span onClick="openClose('abs-monodiv')" id="abstract">show abstract</span> 
+                    | <a href="https://doi.org/10.1016/j.jnt.2018.09.026" >Journal of Number Theory, volume 197, pages 361-382</a> 
+                    | <a href="https://arxiv.org/abs/1708.03953">arXiv:  1708.03953</a> ]
+
+<span id="abs-monodiv" class="texter">
+We consider partial torsion fields (fields generated by a root of a division polynomial) for elliptic curves. By analysing the reduction properties of
+elliptic curves, and applying the Montes Algorithm, we obtain information about
+the ring of integers. In particular, for the partial 3-torsion fields for a certain
+one-parameter family of non-CM elliptic curves, we describe a power basis. As
+a result, we show that the one-parameter family of quartic S<sub>4</sub> fields given by
+T<sup>4</sup> − 6T<sup>2</sup> − &alpha;T − 3 for &alpha; &straightepsilon; Z such that &alpha; &plusmn; 8 are squarefree, are monogenic.</span>
+<br />
+<br />
+<a href="monotorsslides.pdf">Here</a> are my slides from a presentation about this work.
+<br />
+<br />
+<hr />
+
+<br />
+Here is a paper I helped with while at an REU at Grand Valley State University. William Dickinson was our project advisor. 
+<br />
+<br />
+<b><a href="EqualCircles.pdf">Optimal Packings of Two to Four Equal Circles on any Flat Torus</a></b>
+<br />
+[ <span onClick="openClose('abs-packings')" id="abstract">show abstract</span> 
+						  | <a href="https://doi.org/10.1016/j.disc.2019.111597" >Discrete Mathematics, volume 342</a>
+                    |  <a href="https://arxiv.org/abs/1708.05395">arXiv:  1708.05395</a> ]
+
+<span id="abs-packings" class="texter">
+We find explicit formulas for the radii and locations of the circles in all the optimally dense packings of two, 
+three or four equal circles on any flat torus, defined to be the quotient of the Euclidean plane by the lattice 
+generated by two independent vectors. 
+We prove the optimality of the arrangements using techniques from rigidity theory and topological graph theory.
+</span>
+<br />
+<br />
+<hr />
+
+<br />
+Some math related website I like:
+<br />
+<br />
+<a href="https://alozano.clas.uconn.edu/">Álvaro Lozano-Robledo's Website</a>
+<br />
+<a href="http://www.math.uconn.edu/~kconrad/blurbs/">Keith Conrad's Expository Papers</a>
+
+<br />
+
+
+<a href="http://www-personal.umich.edu/~asnowden/teaching/2013/679/index.html">Andrew Snowden's Course on Mazur's Theorem</a>
+<br />
+<a href="http://www.dam.brown.edu/people/mumford/alg_geom/introAG.html">David Mumford's Algebraic Geometry Work</a>
+<br />
+<a href="http://www.jmilne.org/math/CourseNotes/">J.S. Milne's Course Notes</a>
+<br />
+<a href="http://math.colorado.edu/~kstange/">Katherine Stange's Website</a>
+<br />
+<a href="https://terrytao.wordpress.com/">Terry Tao's Blog</a>
+<br />
+<a href="http://www.lmfdb.org/"><b>L</b>-functions and <b>M</b>odular <b>F</b>orms <b>D</b>ata<b>B</b>ase</a>
+<br />
+<a href="http://kskedlaya.org/confs.cgi">Kiran Kedlaya's Conferences Page</a></big>
+<br />
+<br />
+<br />
+</div>
+</div>
+
+
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body>
+</html>

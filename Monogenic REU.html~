@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+
+
+<link href="styles/trs-style-iWeblike.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="images-static/cu_favicon.png" type="image/png" />
+</head>
+
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><a href="index.html">Home</a></td>
+<td><a href="research.html">Research and Interests</a></td>
+<td><a href="teaching.html">Teaching</a></td>
+<td><a href="CV.pdf">CV</a></td>
+<td><a href="monogenicfields.html">Monogenic Fields Data</a></td>
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+<center>
+<div id="name">
+<b><font size="+2">REU on Monogenic Fields</font></b>
+</div>
+<hr />
+<br />
+<div id="main">
+
+
+<div id="right">
+<br />
+
+<b>Background:</b>
+<br />
+<hr></hr>
+<br />
+I plan on writing some notes in the next couple weeks. In the meantime here are some good references for background material.  
+<br />
+<br />
+<hr />
+<a href="QuarticS4.pdf">Two families of Monogenic S4 Quartic Number Fields</a>
+<br />
+<br />
+<hr />
+
+<br />
+<br />
+<a href="MonoDiv.pdf">A family of monogenic quartic fields arising from elliptic curves</a>
+<br />
+<br />
+<hr />
+<br />
+Here is a paper I helped with while at an REU at Grand Valley State University. William Dickinson was our project advisor. 
+<br />
+<br />
+<a href="EqualCircles.pdf">Optimal Packings of Two to Four Equal Circles on any Flat Torus</a>
+
+<br />
+<br />
+<hr />
+<br />
+Some math related website I like:
+<br />
+<br />
+
+<a href="http://www.math.uconn.edu/~kconrad/blurbs/">Keith Conrad's Expository Papers</a>
+
+<br />
+
+
+<a href="http://www-personal.umich.edu/~asnowden/teaching/2013/679/index.html">Andrew Snowden's Course on Mazur's Theorem</a>
+<br />
+<a href="http://www.dam.brown.edu/people/mumford/alg_geom/introAG.html">David Mumford's Algebraic Geometry Work</a>
+<br />
+<a href="http://www.jmilne.org/math/CourseNotes/">J.S. Milne's Course Notes</a>
+<br />
+<a href="http://math.colorado.edu/~kstange/">Katherine Stange's Website</a>
+<br />
+<a href="https://terrytao.wordpress.com/">Terry Tao's Blog</a>
+<br />
+<br />
+<br />
+
+</div>
+
+
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+
+
+</div>
+</div>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11222753; 
+var sc_invisible=1; 
+var sc_security="6c49daf2"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11222753/0/6c49daf2/1/" alt="web
+counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+
+
+
+</body>
+</html>

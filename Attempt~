@@ -1,0 +1,2743 @@
+<html><head>
+<script  >window.onerror =  function(errorMsg, url, lineNumber) {
+var injectedLines = 69;
+
+var lineMap = JSON.parse('[{"insertLine":55,"endLine":680,"filePath":"lib/WI.js"},{"insertLine":680,"endLine":998,"filePath":"lib/WICSS.js"},{"insertLine":998,"endLine":1012,"filePath":"main.js"},{"insertLine":1012,"endLine":1295,"filePath":"lib/ListBox.js"},{"insertLine":1295,"endLine":1381,"filePath":"lib/ListView.js"},{"insertLine":1381,"endLine":1414,"filePath":"lib/ModitUIExtensions.js"},{"insertLine":1414,"endLine":1532,"filePath":"KinveyManager.js"},{"insertLine":1532,"endLine":1536,"filePath":"lib/kinvey-setup.js"},{"insertLine":1536,"endLine":1820,"filePath":"RecordDisplay.js"},{"insertLine":1820,"endLine":2051,"filePath":"Popup.js"},{"insertLine":2051,"endLine":2178,"filePath":"lib/file-dialog.js"},{"insertLine":2178,"endLine":2295,"filePath":"DataBox.js"},{"insertLine":2295,"endLine":2358,"filePath":"Record.js"},{"insertLine":2358,"endLine":2442,"filePath":"DataList.js"},{"insertLine":2442,"endLine":2476,"filePath":"RecordList.js"},{"insertLine":2476,"endLine":2508,"filePath":"SubmissionList.js"},{"insertLine":2508,"endLine":2560,"filePath":"Submission.js"},{"insertLine":2560,"endLine":2596,"filePath":"ModitFooter.js"}]');
+var isFirefox = function () {
+      return navigator.userAgent.indexOf('Firefox') != -1;
+    };
+var chromeShift = 55;
+if(!isFirefox()) {
+  _shiftLineMapForChrome(lineMap, chromeShift);
+}
+function _getFileExtension(path) {
+      var idx = path.lastIndexOf('.');
+      if (idx > -1) {
+        return path.substr(idx + 1);
+      }
+      return '';
+    }function _shiftLineMapForChrome(lineNumberMap, offset) {
+    for(var i = 0; i < lineNumberMap.length; i++) {
+      if (_getFileExtension(lineNumberMap[i].filePath) !== 'css') {
+        lineNumberMap[i].insertLine -= offset;
+        lineNumberMap[i].endLine -= offset;
+      }
+    }
+  }var htmlFileName = 'modit.html';
+onerrorHelper(errorMsg, url, lineNumber, lineMap, isFirefox());
+function onerrorHelper(errorMsg, url, lineNumber, lineMap, isFirefox) {
+      var interval;
+      if (isFirefox) {
+        lineNumber -= injectedLines;
+      }
+      for(var i = 0; i < lineMap.length; i++) {
+        if(lineNumber > lineMap[i].insertLine &&
+            lineNumber <= lineMap[i].endLine) {
+          interval = lineMap[i];
+          return outputError(lineNumber - interval.insertLine 
+              + (interval.tagLocationAdjustment || 0),
+              interval.filePath);
+        }
+      }
+      //See comment below
+      return outputError('unknown', htmlFileName);
+
+      function outputError(lineNumber, file) {
+        var errorFile = file;
+
+        // Get the extenstion
+        var ext = _getFileExtension(file);
+        if (ext !== 'js') {
+          errorFile = htmlFileName;
+        }
+        parent.postMessage(
+            {name: 'scriptError',
+             content: {
+                 error: errorMsg,
+                 file: errorFile,
+                 lineNumber: lineNumber}},
+             parent.location.protocol + '//' + parent.location.hostname);
+      }
+      //  THIS COMMENT REFERENCES THE ABOVE "SEE COMMENT BELOW" I PUT IT DOWN
+      //  HERE SO THAT IT DOESN'T GET INJECTED INTO EVERY MODIT
+      //If we get here its because the error happened somewhere
+      //thats not in our map (eg an onload inline eval) or because we had no 
+      //map probably because they had no scripts at all but some inline eval
+      //Note if something happens in an eval in chrome, because they lie about
+      //line numbers it likely just gets an incorrect line number in the 
+      //loop above, not really anything we can do about that
+
+    }return false;
+};</script>
+<script witag="fileData">MODIT = window.MODIT || {};
+MODIT.fileData = {
+  "main.js": "function main() {\n  var bodyStyle = {\n    backgroundColor: '#333344',\n    width: '100%',\n    height: '100%',\n    margin: 0,\n    padding: 0,\n    border: 0,\n    minHeight: '600',\n  };\n  var km = new Game.KinveyManager();\n  var recordDisplay = new Game.RecordDisplay(km, document.body);\n  MODIT.ui.setStyle(document.body, bodyStyle);\n}",
+  "modit.html": "<html>\n  <head>\n    <script type=\"text/javascript\" src=\".lib/jquery.js\">< /script>\n    <script type=\"text/javascript\" src=\"https://da189i1jfloii.cloudfront.net/js/kinvey-js-0.9.14.min.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/WI.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/WICSS.js\">< /script>\n    <script type=\"text/javascript\" src=\".lib/modit-ui.js\">< /script>\n    <script type=\"text/javascript\" src=\".lib/modit-preloader.js\">< /script>\n    <script type=\"text/javascript\" src=\".lib/underscore.js\">< /script>\n    <script type=\"text/javascript\" src=\".lib/backbone.js\">< /script>\n    <script type=\"text/javascript\" src=\"main.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/ListBox.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/ListView.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/ModitUIExtensions.js\">< /script>\n    <script type=\"text/javascript\" src=\"KinveyManager.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/kinvey-setup.js\">< /script>\n    <script type=\"text/javascript\" src=\"RecordDisplay.js\">< /script>\n    <script type=\"text/javascript\" src=\"Popup.js\">< /script>\n    <script type=\"text/javascript\" src=\"lib/file-dialog.js\">< /script>\n    <script type=\"text/javascript\" src=\"DataBox.js\">< /script>\n    <script type=\"text/javascript\" src=\"Record.js\">< /script>\n    <script type=\"text/javascript\" src=\"DataList.js\">< /script>\n    <script type=\"text/javascript\" src=\"RecordList.js\">< /script>\n    <script type=\"text/javascript\" src=\"SubmissionList.js\">< /script>\n    <script type=\"text/javascript\" src=\"Submission.js\">< /script>\n    <script type=\"text/javascript\" src=\"ModitFooter.js\">< /script>\n  </head>\n  <body onload=\"MODIT.preloadAndRun(main);\">\n  </body>\n</html>",
+  "images": "",
+  "KinveyManager.js": "window.Game = window.Game || {};\n(function(Game){\n\n  var SUBMISSION_COLLECTION = 'LiveSubmissionQueue';\n  var RECORD_COLLECTION = 'LiveRecords';\n  var SETTINGS_COLLECTION = 'LiveSettings';\n  var HIDDEN_MAX_ENTRIES = 100;\n  \n  var KinveyManager = function() {\n    this.initialize();\n  };\n\n  var p = KinveyManager.prototype;\n  p.initialize = function() {\n    this.submissions = new Kinvey.Collection(SUBMISSION_COLLECTION);\n    this.records = new Kinvey.Collection(RECORD_COLLECTION);\n    this.settings = new Kinvey.Collection(SETTINGS_COLLECTION);\n  };\n\n  p.submitRecord = function(data) {\n    var self = this;\n    this.getRecords(data.k, data.k, 1000, function(res) {\n        _validateEntry.apply(self, [data, res]);\n      }, this);\n    \n  };\n  \n  p.getRecords = function(kMin, kMax, maxNum, callback, context, listName, arg) {\n    var query = new Kinvey.Query();\n    if ( kMin ) query.on('k').greaterThanEqual(parseInt(kMin));\n    if ( kMax ) query.on('k').lessThanEqual(parseInt(kMax));\n    query.on('k').sort(Kinvey.Query.ASC);\n    query.setLimit(maxNum || HIDDEN_MAX_ENTRIES);\n    this.records.setQuery(query);\n    this.records.fetch(\n      {success: function(res) {\n        callback.apply(context, [res, listName, arg]);\n      },\n       error: function(e) {\n         console.log(e);\n       }\n      }\n    );\n  };\n  \n  p.getSubmissions = function(nameFilter, kFilter, callback, context, listName, arg) {\n    var query = new Kinvey.Query();\n    query.on('_kmd.ect').sort(Kinvey.Query.DESC);\n    if(nameFilter){\n      query.on('submitter').equal(nameFilter);\n    }\n    if(kFilter){\n      query.on('k').equal(parseInt(kFilter));\n    }\n    query.setLimit(HIDDEN_MAX_ENTRIES);\n    this.submissions.setQuery(query);\n    this.submissions.fetch(\n      {success: function(res) {\n        callback.apply(context, [res, listName, arg]);\n      },\n       error: function(e) {\n         console.log(e);\n       }\n      }\n    );\n  };\n  \n  p.getSetting = function(settingName, callback, context) {\n    var query = new Kinvey.Query();\n    query.on('name').equal(settingName);\n    this.settings.setQuery(query);\n    this.settings.fetch(\n      {success: function(res) {\n        callback.apply(context, [res]);\n      },\n       error: function(e) {\n         console.log(e);\n         callback.apply(context);\n       }\n      }\n    );\n  };\n  \n  function _submitRecord(data){\n    data.status = 'submitted';\n    data.record = 'False';\n    var self = this;\n    console.log('submitting');\n    var ent = new Kinvey.Entity(data, this.submissions.name);\n    ent.save({success: function(){\n      self.onSubmit();\n      alert('Congratulations!  Your record has been submitted.  It will be verified and processed shortly.  You can track its status in the submissions list at the bottom of the page.');\n    },\n              error: function(){ alert('There was an error submitting your ' + \n                                       'record, please try again in a few minutes');}});\n  };\n  \n  function _validateEntry(entry, recordsWithMatchingK){\n    for(var i = 0; i < recordsWithMatchingK.length; i++){\n      var hVal = entry.boundType === 'upper' ?\n          recordsWithMatchingK[i].attr.upperBound :\n          recordsWithMatchingK[i].attr.lowerBound;\n      hVal = parseInt(hVal);\n      if(recordsWithMatchingK[i].attr.k == entry.k &&\n              (hVal <= entry.H && entry.boundType === 'upper') ||\n              (hVal >= entry.H &&\n              entry.boundType === 'lower'))\n              {\n        alert('Sorry, there is already a record with a bound of ' + \n            hVal + ' for k = ' + entry.k);\n        return;\n      }\n    }\n    _submitRecord.apply(this, [entry]);\n  };\n\n  Game.KinveyManager = KinveyManager;\n}(Game));",
+  "RecordDisplay.js": "window.Game = window.Game || {};\n(function(Game){\n\n  var HEADER = 'Narrow admissible tuples';\n  var SUB_TITLE = 'bounds on H(k)';\n  var DESCRIPTION_INNER_HTML = '<p style=\"font-size: 14px\">A <i>k</i>-tuple is a set of <i>k</i> integers.  A <i>k</i>-tuple <i>S</i> is <i>admissible</i> if, for every prime <i>p</i>, there is a residue class (mod <i>p</i>) that does not intersect <i>S</i>. The quantity <i>H(k)</i> is the least possible diameter (difference of the largest and smallest elements) of an admissible <i>k</i>-tuple .</p>';\n  \n  var MASTER_CREATOR_ID = 'kid_VVVl6XruNf';\n  \n  var fontColor = '#f0f0f0';\n\n  var headerStyle = {\n    color: fontColor,\n    fontSize: 28,\n    lineHeight: '40px',\n    fontFamily: 'Arial',\n    fontWeight: 700,\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n    cssFloat: 'left',\n  };\n  \n   var subheaderStyle = {\n    marginLeft: 7,\n    marginTop: 1,\n    color: fontColor,\n    fontSize: 24,\n    lineHeight: '40px',\n    fontFamily: 'Arial',\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n//    fontStyle: 'italic',\n    cssFloat: 'left',\n  };\n  \n  var descriptionStyle = {\n    marginTop: 60,\n    color: fontColor,\n    fontSize: 14,\n    fontFamily: 'Arial',\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n    \n  };\n\n  var containerStyle = {\n    position: 'absolute',\n    top: 10,\n    left: 20,\n    right: 20,\n    bottom: 0,\n  };\n  \n  var refreshButtonStyle = {\n    cssFloat: 'right',\n    lineHeight: '24px',\n    borderRadius: '5px',\n    height: 24,\n    paddingLeft: 10,\n    paddingRight: 10,\n    marginRight: 5,\n  };\n  \n  var submitNewButtonStyle = {\n    cssFloat: 'right',\n    lineHeight: '24px',\n    borderRadius: '5px',\n    height: 24,\n    paddingLeft: 10,\n    paddingRight: 10,\n  };\n  \n  var listStyle = {\n    marginTop: 55,\n    width: '100%',\n    marginBottom: 10,\n  };\n  \n  var inputContStyle = {\n    marginTop: 20,\n    color: fontColor,\n    fontFamily: 'Arial',\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n    lineHeight: '24px',\n  };\n  \n  var inputItemStyle = {\n    cssFloat: 'left',\n    marginRight: 8,\n  };\n\n  var RecordDisplay = function(km, div) {\n    this.initialize(km, div);\n  };\n\n  var p = RecordDisplay.prototype;\n  p.initialize = function(km, div) {\n    this.km = km;\n    var self = this;\n    this.km.onSubmit = function () {\n      MODIT.ui.hide(self.submitPopup.div);\n      setTimeout(function() {\n        self.nameInput.value = '';\n        self.kFilter.value = '';\n        self.updateSubmissions();\n        self.updateRecords(self.kMin.value);\n      }, 2000);\n    };\n    this.div = MODIT.ui.addElement(div, 'div', containerStyle);\n    _addHeader.apply(this);\n    _addDescription.apply(this);\n    _addKInputs.apply(this);\n    _addSubmitNew.apply(this);\n    _addRefresh.apply(this);\n    this.submitPopup = new App.Popup(this.div, this.km.submitRecord, this.km);\n    MODIT.ui.hide(this.submitPopup.div);\n    this.recordList = new App.RecordsList();\n    MODIT.ui.setStyle(this.recordList.div, listStyle);\n    this.div.appendChild(this.recordList.div);\n    _handleBrowse.apply(this);\n    _addNameInput.apply(this);\n    this.km.getSetting('secondParagraphHTML', _setDescription, this);\n    this.submissionList = new App.SubmissionList();\n    MODIT.ui.setStyle(this.submissionList.div, [listStyle,{ marginTop: 10}]);\n    this.div.appendChild(this.submissionList.div);\n    this.updateSubmissions();\n    this.footer = new App.ModitFooter();\n    this.div.appendChild(this.footer.link);\n    MODIT.ui.addElement(this.div, 'div', {width: '100%', height: 40});\n    this.km.getSetting('rangeBounds', function(res){\n      this.minRange=res[0].attr.contents.min;\n      this.maxRange=res[0].attr.contents.max;},this);\n    \n  };\n  \n  p.updateSubmissions = function(nameFilter, kFilter) {\n    this.km.getSubmissions(nameFilter, kFilter, _displayList, this, 'submissionList',[nameFilter, kFilter]);\n  };\n  p.updateRecords = function(kMin) {\n    this.km.getRecords(kMin, null, 100, \n          _displayList, this, 'recordList', kMin);\n  };     \n  function _addSubmitNew() {\n    this.submitNew = new MODIT.ui.Button([WICSS.BLUE_BUTTON_STYLE,\n         submitNewButtonStyle], _handleSubmitNew, this);\n    this.submitNew.setLabel('submit new record');\n    this.submitNew.setMouseOverStyles(WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE,\n         [WICSS.BLUE_BUTTON_STYLE, submitNewButtonStyle]);\n    this.kInputcontainer.appendChild(this.submitNew.div);\n  };\n  \n  function _addRefresh() {\n    this.refresh = new MODIT.ui.Button([WICSS.BLUE_BUTTON_STYLE,\n         refreshButtonStyle], _handleRefresh, this);\n    this.refresh.setLabel('refresh');\n    this.refresh.setMouseOverStyles(WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE,\n         [WICSS.BLUE_BUTTON_STYLE, refreshButtonStyle]);\n    this.kInputcontainer.appendChild(this.refresh.div);\n  };\n  \n  function _addHeader() {\n    this.header = MODIT.ui.addElement(this.div, 'div', headerStyle);\n    this.header.textContent = HEADER;\n//    this.subheader = MODIT.ui.addElement(this.div, 'div', subheaderStyle);\n//    this.subheader.textContent = SUB_TITLE;\n  };\n  \n  function _addDescription(){\n    this.description = MODIT.ui.addElement(this.div, 'div', descriptionStyle);\n  };\n  \n  function _setDescription(res){\n    this.description.innerHTML = DESCRIPTION_INNER_HTML +\n        (res[0].attr.contents || '');\n  };\n  \n  function _addKInputs(){\n    this.kInputcontainer = MODIT.ui.addElement(this.div, 'div',\n          inputContStyle);\n    this.labelMin = MODIT.ui.addElement(this.kInputcontainer, 'div',\n        inputItemStyle);\n    this.labelMin.textContent = 'Showing first 100 records with k \\u2265 ';\n    this.kMin = MODIT.ui.addElement(this.kInputcontainer, 'input', \n        [inputItemStyle, {width: 80}]);\n    this.kMin.type = 'number';\n    this.kMin.value = 2;\n    var self = this;\n    this.kMin.addEventListener('input', function() {\n      _handleBrowse.apply(self);\n    });\n    this.kMin.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowse.apply(self,[true]);});\n  };\n  \n  function _addNameInput(){\n    this.nameInputcontainer = MODIT.ui.addElement(this.div, 'div',\n          [inputContStyle, {marginTop: 60}]);\n    this.labelName = MODIT.ui.addElement(this.nameInputcontainer, 'div',\n        inputItemStyle);\n    this.labelName.textContent = 'Showing recent submissions by ';\n    this.nameInput = MODIT.ui.addElement(this.nameInputcontainer, 'input', \n        [inputItemStyle, {width: 140, marginBottom:10}]); \n    this.nameInput.type = 'text';\n    this.nameInput.value = '';\n    var self = this;\n    this.nameInput.addEventListener('input', function() {\n      _handleBrowseSubmissions.apply(self);\n    });\n    this.nameInput.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowseSubmissions.apply(self,[true]);});\n    this.labelkFilter = MODIT.ui.addElement(this.nameInputcontainer, 'div',\n        inputItemStyle);\n    this.labelkFilter.textContent = 'with k = ';    \n    this.kFilter = MODIT.ui.addElement(this.nameInputcontainer, 'input', \n        [inputItemStyle, {width: 80, marginBottom:10}]);\n    this.kFilter.type = 'number';\n    this.kFilter.value = '';\n    var self = this;\n    this.kFilter.addEventListener('input', function() {\n      _handleBrowseSubmissions.apply(self);\n    });\n    this.kFilter.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowseSubmissions.apply(self,[true]);});\n  };\n  \n  function _handleSubmitNew(){\n    this.km.getSetting('disableSubmissions', function(res) {\n      if(res[0].attr.contents.state !== 1) {\n         MODIT.ui.show(this.submitPopup.div);\n      } else {\n        alert(res[0].attr.contents.message);\n      }\n    }, this);\n  };\n  \n  function _handleRefresh(){\n    console.log('refresh');\n    this.updateSubmissions(this.nameInput.value,this.kFilter.value);\n    this.updateRecords(this.kMin.value);\n  };\n  \n function _handleBrowse(force) {\n    clearTimeout(this.browseTimeout);\n    var self = this;\n    this.browseTimeout = setTimeout(function() {\n      self.updateRecords(self.kMin.value);\n    }, force?0:300);\n  };\n  \n  function _handleBrowseSubmissions(force){\n    clearTimeout(this.browseTimeout);\n    var self = this;\n    this.browseTimeout = setTimeout(function() {\n      self.updateSubmissions(self.nameInput.value,self.kFilter.value);\n    }, force?0:300);\n  };\n  \n  function _displayList(res, listName, arg) {\n    var data = [];\n    if ( listName == 'recordList' && arg && arg >= this.minRange && arg <= this.maxRange && res[0] && res[0].attr.k != arg ) {\n      console.log('ignoring data')\n      console.log(res[0])\n      return;\n    }\n    if ( listName == 'submissionList' && arg[0] && res[0] && res[0].attr.submitter != arg[0] ) {\n      console.log('ignoring data')\n      return;\n    }\n    if ( listName == 'submissionList' && arg[1] && res[0] && res[0].attr.k != arg[1] ) {\n      console.log('ignoring data')\n      return;\n    }\n    _.each(res, function(r) {\n      var temp = {};\n      for(x in r.attr){\n        temp[x] = r.attr[x];\n      }\n      temp.id = r.attr._id;\n      temp.date = r.attr._kmd.ect.split('.')[0];\n      temp.date = temp.date.replace('T', ' ');\n// this line assumes the creator is changed by the submission server, but this is not currently implemented\n//      temp.userSubmitted = r.attr._acl.creator !== MASTER_CREATOR_ID;\n      data.push(temp);\n    });\n    this[listName].update(data)\n    this[listName].listDiv.scrollTop = 0;\n  };\n\n  Game.RecordDisplay = RecordDisplay;\n}(Game));",
+  "Popup.js": "var App = App || {};\n(function(App){\n\n  var popupWidth = 500;\n  var popupHeight = 365;\n  var containerWidth = 400;\n  var containerHeight = 315; \n\n  var Popup = function(parent, onsubmit, context){\n    this.parent = parent;\n    this.onSubmit = onsubmit;\n    this.context = context;\n    \n    this.div = MODIT.ui.createElement('div', shadeStyle);\n    this.div.id = \"thisdiv\";\n    \n    this.popupDiv = MODIT.ui.addElement(this.div, 'div', divStyle);\n    this.barDiv = MODIT.ui.addElement(this.popupDiv, 'div', barDivStyle)\n    this.containerDiv = MODIT.ui.addElement(this.popupDiv, 'div', containerStyle);\n    this.fileName = \"\";\n    this.fileData = \"\";\n    \n    var s = '<table border=\"0\" width = \"100%\" height = \"100%\"> <tr><td align=\"right\"><b>Type:</b></td><td><select  id=\"boundSelect\"><option value = \"upper\">Upper Bound</option></select></td></tr> <tr><td align=\"right\"><b>Name:</b></td> <td><input type=\"text\" id=\"Name\" size=\"30\"></td></tr> <tr><td align=\"right\"><b>File:</b></td><td><div  id=\"FileDiv\"></td></tr><tr><td></td><td><div id=\"FileNameDiv\"></td></tr> <tr><td align=\"right\"><b>Note:</b></td> <td><textarea id = \"Description\" ></textarea></td></tr> <tr><td></td><td> <div id = \"SubmitDiv\" value=\"Submit\"></td></tr> </table>';\n\n    this.containerDiv.innerHTML = s;\n    parent.appendChild(this.div);\n    \n    this.name = document.getElementById('Name');\n    this.k = document.getElementById('k');\n    this.H = 0;//document.getElementById('H');\n\n\n    this.description = document.getElementById('Description');\n    \n    this.name.style.width =\"100%\";\n    this.description.style.width = \"100%\";\n    this.description.style.height = \"100px\";\n        \n    var submitButton = new MODIT.ui.Button(buttonStyle, submitData, this);\n    submitButton.setMouseOverStyles(buttonHighlightStyle, buttonStyle);\n    submitButton.setLabel('Submit');\n    document.getElementById('SubmitDiv').appendChild(submitButton.div);\n    \n    var browseButton = new MODIT.ui.Button(buttonStyle, function(){}, this);\n    browseButton.setMouseOverStyles(buttonHighlightStyle, buttonStyle);\n    browseButton.setLabel('Browse...');\n    document.getElementById('FileDiv').appendChild(browseButton.div);\n\n    var fileDialog = new MODIT.ui.FileDialog(browseButton.div, uploadedData, this);\n    \n    var closeButton = new MODIT.ui.Button(\n      [closerStyle], hide.bind(this), this);\n    closeButton.setMouseOverStyles(\n      buttonHighlightStyle,\n      closerStyle);\n    closeButton.setImage(MODIT.getImage('closeIcon').cloneNode());\n    this.barDiv.appendChild(closeButton.div);\n    \n    \n    var titleDiv = MODIT.ui.addElement(this.barDiv, 'div', titleStyle);\n    titleDiv.textContent = \"Submit New Record\";\n\n    this.boundSelect = document.getElementById('boundSelect');\n    this.boundSelect.type = 'select';\n  }\n  \n  var uploadedData = function(fileName, fileData){\n    \n    var fn = fileName;\n    var d = document.getElementById('FileNameDiv');\n    if(d.firstChild){\n      d.removeChild(d.firstChild);\n    }\n    \n    if (fn.length > 31){\n      fn = fn.substring(0,28)+ \"...\";\n    }\n    \n    d.appendChild(document.createTextNode(fn));\n    this.fileName = fileName;\n    this.fileData = fileData;\n  }\n  \n  var submitData = function(){\n    \n    var namebool = this.name.value != \"\";\n    var filebool = this.fileName != \"\"; \n    \n    if (namebool && filebool){\n      var str = \"Submit following data\"\n      str += \"\\nName: \" + document.getElementById('Name').value;\n      str += \"\\nFile: \" + this.fileName;\n      str += \"\\nDescription: \" + document.getElementById('Description').value;\n      str += '\\nBoundType: ' + this.boundSelect.value;\n      console.log(str);\n          \n      this.onSubmit.apply(this.context, [{\n        submitter:  document.getElementById('Name').value,\n        k: 0, //parseInt(document.getElementById('k').value),\n        H: 0, //parseInt(document.getElementById('H').value),\n        description: document.getElementById('Description').value,\n        textData: this.fileData,\n        boundType: this.boundSelect.value,\n        status: 'Submitted',\n        validation: 'pending',\n        currentRecord: 'pending',\n      }]);\n    }\n    \n    else {\n      var str = \"\";\n      if (namebool == false){\n        str += \"Please enter your name \\n\";\n      }\n//      if (kbool == false){\n//        str += \"Please enter k value (integer) \\n\";\n//      }\n//      if (Hbool == false){\n//        str += \"Please enter Diameter value (integer) \\n\";\n//      }\n      if (filebool == false){\n        str += \"Please upload a file \\n\";\n      }\n      alert(str);\n    }\n    \n  }\n  \n  var hide = function(){\n    MODIT.ui.hide(this.div);\n  }\n  \n  var shadeStyle = {\n    position: 'absolute',\n    top: 0,\n    left: 0,\n    right: 0,\n    bottom: 0,\n    backgroundColor: 'rgba(0, 0, 0, 0.7)',\n    zIndex: 10,\n  };\n  \n  \n  var divStyle = {\n    left: '50%',\n    top: 300,\n    width: popupWidth,\n    height: popupHeight,\n    marginLeft: -popupWidth/2,\n    marginTop: -popupHeight/2,\n    position: 'absolute',\n    backgroundImage: WICSS.generateBrowserSpecificGradient(\n          'rgb(196, 196, 196)', 'rgb(137, 137, 137)'),\n\n    boxShadow: 'rgba(0, 0, 0, 0.7) 0px 5px 20px',\n    fontFamily: 'Arial',\n    borderRadius: '5px',    \n  };\n  \n  var barDivStyle = {\n    width: popupWidth,\n    height: 32,\n    position: 'absolute',\n    backgroundColor: '#61a9cd',\n    backgroundImage: WICSS.generateBrowserSpecificGradient('#61a9cd',\n          '#125474'),\n    fontFamily: 'Arial',\n    borderTopLeftRadius: '5px',\n    borderTopRightRadius: '5px'\n  };\n  \n  \n  \n  var containerStyle = {\n    width: containerWidth,\n    position: 'absolute',\n    left: '50%',\n    top: '40px',\n    marginLeft: -containerWidth/2 - 30,\n    height: containerHeight,\n    //marginTop: 10,\n  };\n  \n  \n  var buttonStyle = {\n    width: 100, \n    marginLeft: 0,\n    marginTop: 2.5,\n    height: 22.5,\n    backgroundImage: WICSS.generateBrowserSpecificGradient(\n        'rgb(226, 226, 226)', 'rgb(107, 107, 117)'),\n    fontSize: '15px',\n    lineHeight: '24px',\n    borderRadius: '5px',\n    boxShadow: 'rgba(0, 0, 0, 0.7) 0px 5px 5px',\n    textAlign: 'center',\n    cursor: 'pointer',\n    textShadow: 'rgba(0, 0, 0, 0.74902) 0px -1px 1px',\n    marginBottom: 15,\n    userSelect: 'none',\n    webkitUserSelect: 'none',\n    MozUserSelect: 'none',\n  }\n  \n  var buttonHighlightStyle = {\n  \tbackgroundImage: WICSS.generateBrowserSpecificGradient(\n        'rgb(226, 226, 236)', 'rgb(187, 187, 207)'),\n\t}\n  \n  var closerStyle = {\n    top: 2,\n    right: 5,\n    position: 'absolute',\n    backgroundImage: 'none',\n    background: 'none',\n  }\n  \n  var titleStyle = {\n    position: 'absolute',\n    left: 10,\n    fontSize: '20px',\n    fontColor: 'silver',\n    fontWeight: 700,\n    marginTop: 5,\n    textShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 10px',\n  };\n\n\n  App.Popup = Popup;\n  \n}(App));",
+  "Record.js": "/* Display element for boxes in the find results list */\nwindow.App = window.App || {};\n(function(App){\n  var FIELDS = {\n    \"k\": {width: 70},\n    \"upperBound\": {width: 70},\n    \"upperTextDataUrl\": {width: 70},\n    \"upperSubmitter\": {width: 160},\n    \"upperDescription\": {width: 300},\n    \"upperDate\": {width: 80},\n    //NO LOWER BOUND STUFF YET\n    //\"lowerBound\",\n    //\"lowerDate\",\n    //\"lowerSubmitter\",\n    //\"lowerTextDataUrl\",\n    //\"lowerDescription\",\n  };\n\n  // Creates a new Record\n  var Record = function(dispatcher, data) {\n    this.initialize(dispatcher, data);\n  };\n\n  var p = Record.prototype = new App.DataBox();\n  p.dataBoxInitialize = p.initialize;\n\n  p.initialize = function(dispatcher, data) {\n    this.dataBoxInitialize(dispatcher, data, FIELDS);\n  };\n  \n  //Updates the Record display based on the given data/index \n  p.dataBoxUpdate = p.update;\n  p.update = function(data, index) {\n    this.dataBoxUpdate(data, index);\n    if (data.id != 0)\n    {\n      MODIT.ui.setStyle(this.upperDescription, {textAlign: \"left\"});\n      MODIT.ui.setStyle(this.upperSubmitter, {textAlign: \"left\"});\n      if(data.upperTextDataUrl) {\n        this.upperTextDataUrl.innerHTML = \n            '<a href='+data.upperTextDataUrl + \n                ' target=\"_blank\"><i>k</i>-tuple</a>';\n      }\n      //No lower bound stuff yet\n      /*if(data.lowerTextDataUrl){\n        this.lowerTextDataUrl.innerHTML = \n            '<a href='+data.lowerTextDataUrl+' target=\"_blank\">tuple</a>';\n      }*/\n    }\n    else\n    {\n      this.upperTextDataUrl.innerHTML = data.upperTextDataUrl;\n      MODIT.ui.setStyle(this['k'], {marginLeft: -1});  //Crazy hack, dunno why\n      //this.lowerTextDataUrl.innerHTML = data.lowerTextDataUrl;\n    }\n    for(var i = 0; i < FIELDS.length; i++) {\n      MODIT.ui.addTitleIfTruncated(this[FIELDS[i]], data[FIELDS[i]])\n    }\n  };\n\n  App.Record = Record;\n}(App));\n",
+  "RecordList.js": "window.App = window.App || {};\n/** Handles all the display for the find results list **/\n(function(App) {\n  \n  var headerData =   {\n    \"id\": 0,\n    \"k\": \"k\",\n    \"upperBound\": '\\u2265' + \" H(k)\",\n    \"upperDate\": 'date',\n    \"upperTextDataUrl\": \"data\",\n    \"upperDescription\": \"comment\",\n    \"upperSubmitter\": \"submitter\",\n    \"lowerBound\": '\\u2264' + \" H(k)\",\n    \"lowerDate\": 'Date',\n    \"lowerTextDataUrl\": \"Data\",\n    \"lowerDescription\": \"Comment\",\n    \"lowerSubmitter\": \"Submitter\",\n  };\n  \n  // Creates a new RecordsList\n  var RecordsList = function() {\n    this.initialize();\n  };\n  \n  // RecordsList Initializer\n  var p = RecordsList.prototype = new App.DataList;\n  p.dataListInitialze = p.initialize;\n  p.initialize = function() {\n    this.dataListInitialze(headerData, 'Record');\n  };\n\n  App.RecordsList = RecordsList\n}(App));\n",
+  "images/closeIcon.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMkI0Rjc0MTdBQTIxMUUyOTMzQkIxMUQ0QTRGOThBQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMkI0Rjc0MjdBQTIxMUUyOTMzQkIxMUQ0QTRGOThBQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQzNjlBOTYyN0FBMjExRTI5MzNCQjExRDRBNEY5OEFDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIyQjRGNzQwN0FBMjExRTI5MzNCQjExRDRBNEY5OEFDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+cti47wAABVtJREFUeNrMlntMU1ccx+9tgYID2tGSEZAISqGg/qE8nChjUR6TuTnQZZnZskcWszigRVQE5kYUYZqBsMUsyxYWRAzEbW6AurlsybKEhw8mWAptobpI6bu3D/oA2rLfD8uydBfpdIn7JSf33nPPOZ9zzu/3+55D8gUpxKOYfEzyr/vMz88TDOIx2WMDByxRnwYFfTAFReJ9+mXgunXeviuwL7jimr8rTq8/USsavD5wpuvityd5PF6R2+1O9BOasWd30d7e335tvnXz+mcwjnB1QuImOg4dOCU/L7cwMDAwND4+bmNHe1tJdHR0PsCTloGm7y4q3FVdeUQUFhYWxWQyg3O2b9vJYDIF8DvYH7DDbLFYbDYbYbfbicjIyMRzrV+VxsbGIjx5CWjazucLXqisOCyEzxDsi0WhuDM243TaoS7IH7CkofF0i8PhsM/MzBBWq5XgcrkJrS1fiuLi4hC+1geamp+Xt/NodZUIPp/A9nNzc8SkUjm2v7ikzWIxKaHe5Q9Y3NXd033q44bTALch3Gw2ExwOJ77li89FCWvW5LldrvXethuezc4u+OD9qjJ4DzOZTITL5SJUKrV837v7z8hkUqmZouTwz+kLYXJ5kf8gj0tHlTqD0aFSq/XpaakbPR4Py+l0EuHh4Zzc3JyUazdu6MFmt27JLDh+rKY8gMlkIxSFQafXK4QHyj+VjY3KjHrdEAxH+a64pqaGHox1E7IxJWW2OO7dm9SmbtywAIcdQDg7Z9v2dQ6nw1Vx6GAxQJ80GAwEuICgKNMfBw9XNI9KRqSG+1AjlDnf8RFMPkgyIQdJSIeMzMzNecKS4gMBAQEciFb0OYFP9CVC0SCY7lUf/bBRfHtYqtdpb0GVng66KJkBy6TIvFcA5mdnZ+dLS4rLYIURuO0REREEbPdCO/ieqq37qFksvi3zQg1LQZdTLl/4dYIkPWfbzq14be+rlbhSjF40yHfifEdn6/Dw8LheqxnyQmcfVjJ94YLV8fHZhbtefANXi5G7aPj+yst79lks1un+gQHN3Qn51H91SCStXBmTX1d7TBgTExONooKBhIZPDDgQGW511ZFDz2Rl5a7mJ6XDL/JRwfyoqKeeq6+tFbFYrFiFQrEAg9ymOi98fdJmt6sg2onx8XHC43ZzysuE5Vlbt+wAeMZy8AdtdUIkj7ejrvZ4aUhI8KrR0dGFKCZJ0tTe0dl4bWBAfOfuXd07b70pCgoKWimRSAg+n88uE5aWQ/TjgkiFXDqAgUk3OG0eg8WDUhWcqj9REhoamoBQ9C2YpfPCNw0I1apVgwTJ0MgnJlRrk1OSGQySrdVqUeFYmZufTjWCUWargzIalHR5TAeOgs4vgU/fY7PZSSMjIwuHBYPBsF78vvt0f3//bY16ahDaac0mShkYyLKOSWXalGSBANpw1Go1Af2CNmVkpJnMZqPRZDaajAaNL5j2WKyurHidw2YLIEUW0ga219bVc6mpv69vWKNSIlQHZQZTTTEuE+t0uqstrWeboO0EisPQ0BAKCqbe2zCZFH9Pp2gelytAn8HpiCt1XPnxanNfX9+Q+j5Ui5qB0MUOAJcYDMYfWs+1N1ut03KYKIE7BTERDu8sf89jyaXLV3pg9k6Yveann39p6u3tHVRPKW/CP40v9C+4XCo1mcxX29rPf0JR1O9uj8d26fLl72zTVgMdh1ar3W7XFgaDmQSp4p62WvQQSGLv9jp8ob7X27g1/FUMklwPN49IhKqUk9hXDcX+d62mBcNgDO/2sLzp4EAZpFvpEvdqTNMQzBqvfGJKeJY9JADg8c7Q/pC3V9RU6//yXv3YwH8KMAC8F9Whgof1SQAAAABJRU5ErkJggg==",
+  "lib": "",
+  "lib/file-dialog.js": "//Class that creates an invisible file dialog button of exact same size and //location as passed on div. Designed to be used behind some other\n//visible button as a hack to support styling a file input or if the\n//nostyle argument is true then to be used as a standard file-input\n(function() {\n\n  var invisStyle = {\n    position: 'relative',\n    opacity: 0,\n    overflow: 'hidden',\n  };\n  \n  /**\n   * Calls initialize with the given args, constructor \n   * @param div {DOMElement} the DOMElement of the visible file dialog button\n   * @param onOkay {function} function to call when the user selects a file, \n   *    gets passed the fileName and fileData\n   * @param context {Obj} context for the onOkay function\n   * @param noStyle {Boolean} if true then the object is not styled and \n   *    will look like a standard file input\n   * @constructor\n   */ \n  \n  var FileDialog = function(div, onOkay, context, noStyle) {\n    this.initialize(div, onOkay, context, noStyle);\n  };\n\n\n  /**\n   * Sets up the button and makes it invisible.\n   * @param div {DOMElement} the DOMElement of the visible file dialog button\n   * @param onOkay {function} function to call when the user selects a file, \n   *    gets passed the fileName and fileData\n   * @param context {Obj} context for the onOkay function\n   * @param noStyle {Boolean} if true then the object is not styled and \n   *    will look like a standard file input\n   * @return {type} desc\n   */\n  FileDialog.prototype.initialize = function(div, onOkay, context, noStyle) {\n  \n    var borderTop = parseInt(div.style.borderTopWidth) || 0;\n    var borderBottom = parseInt(div.style.borderBottomWidth)|| 0;\n    var borderLeft = parseInt(div.style.borderLeftWidth) || 0;\n    var borderRight = parseInt(div.style.borderRightWidth) || 0;\n\n    var left = 0;\n    var top = 0;\n    \n    if (WI.browserIsChrome()){\n      var width = \"-webkit-calc(100% + \" +(borderRight + borderLeft)+ \"px)\";\n      var height = \"-webkit-calc(100% + \" +(borderLeft + borderRight)+ \"px)\";\n    }\n    \n    else if (WI.browserIsFirefox()){\n      var width = \"-moz-calc(100% + \" +(borderRight + borderLeft)+ \"px)\";\n      var height = \"-moz-calc(100% + \" +(borderLeft + borderRight)+ \"px)\";\n    }\n    else if (WI.browserIsIE()){\n      var width = \"calc(100% + \" +(borderRight + borderLeft)+ \"px)\";\n      var height = \"calc(100% + \" +(borderLeft + borderRight)+ \"px)\";\n    }\n    else{\n      var width = \"100%\";\n      var height = \"100%\";\n    }\n  \n    this.div = MODIT.ui.createElement('div');\n    if(!noStyle) {\n    \n      MODIT.ui.setStyle(this.div, \n          [invisStyle, \n          {marginTop: top, marginLeft: left, \n           width: width, height: height}]);\n    }\n    \n    this.wrappedOnOkay = _wrapOnOKay.apply(this, [onOkay, context, noStyle]);\n    addInput.apply(this, [noStyle]);\n    this.height = height;\n    \n    if(div.style.position == \"\" || div.style.position == \"static\"){\n       div.style.position = \"relative\";\n    }    \n    this.div.style.position = \"absolute\";\n    \n    div.appendChild(this.div); \n\n    this.div.style.top = -borderTop;\n    this.div.style.left = -borderLeft;             \n\n    \n  };\n\n  function addInput(noStyle) {\n    this.input = MODIT.ui.addElement(this.div, 'input');\n    this.input.type = 'file';\n    if(!noStyle) {\n      MODIT.ui.setStyle(this.input, {height: this.div.style.height, width: this.div.style.width,\n      //This is the only way to make it bigger in firefox.\n          fontSize: \"999\"});  \n    }\n    this.input.addEventListener('change', this.wrappedOnOkay, false);\n    this.input.addEventListener('click', function() {\n      this.value = '';\n    }, false);\n  };\n\n  function _wrapOnOKay(onOkay, context, noStyle) {\n    var self = this;\n    return function(evt) {\n      var files = evt.target.files;\n      reader = new FileReader();\n      reader.onload = function(e) {\n        if(e.total < 630000) {\n          var split = self.input.value.split('\\\\');\n          var fileName = self.input.value.split('\\\\')[split.length - 1];\n          onOkay.apply(context, [fileName, e.target.result]);\n        } else {\n          alert('Asset is too large.  Please decrease the file size ' +\n                'so that it is less than 600k');\n        }\n      }\n      reader.readAsDataURL(files[0]);\n    }\n  }\n  \n  MODIT.ui.FileDialog = FileDialog;\n}());\n",
+  "lib/ListBox.js": "/*Base class for revision boxes, image boxes and hopefully in the future\n *all our list boxes\n */\nwindow.App = window.App || {};\n(function(App){\n\n  var BOX_HEIGHT = 60;\n  var THUMB_SIZE = 60;\n\n  var boxStyle = {\n    borderBottom: 'solid 1px #b1b1b1',\n    borderTop: 'solid 1px #ffffff',\n    borderLeft: 'solid 1px #343434',\n    borderRight: 'solid 1px #343434',\n    width: '100%',\n    overflow:'hidden',\n  };\n\n  var oddBoxStyle = {\n    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozRDI4NkU3ODk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozRDI4NkU3OTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNEMjg2RTc2OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNEMjg2RTc3OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+DtVeywAAACtJREFUeNrszTEBACAMA7CCP2TW51SwKzGQ0/bls5sFEolEIpFIJJKMAAMABoUCbvlaDdsAAAAASUVORK5CYII=)',\n  };\n\n  var mouseOverStyle = {\n    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGODI2QkVFOTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGODI2QkVFQTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNEMjg2RTdBOTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY4MjZCRUU4OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FbJ/MQAAACxJREFUeNpilCne4MtAY8DEQAcwasmoJaOWjFoyasmoJaOWjFoyagkDQIABAD74Ab7GmNkRAAAAAElFTkSuQmCC)',\n  };\n\n  var headerStyle = {\n    color: '#337B9E',\n    position: 'relative',\n    fontSize: '16px',\n    fontWeight: 700,\n    overflow: 'hidden',\n    textOverflow: 'ellipsis',\n    whiteSpace: 'nowrap',\n    maxWidth: 155,\n    cssFloat: 'left',\n    marginTop: 5,\n    marginLeft: 5,\n  };\n\n  var descriptionStyle = {\n    marginLeft: 5,\n    cssFloat: 'left',\n    width: 250,\n    height: BOX_HEIGHT - 30,\n    overflow: 'hidden',\n    textOverflow: 'ellipsis',\n    fontSize: 12,\n    color: '#888',\n    fontStyle: 'italic',\n  };\n\n  var thumbStyle = {\n    marginLeft: 5,\n    marginTop: 5,\n    width: THUMB_SIZE - 10,\n    height: THUMB_SIZE - 10,\n    cssFloat: 'left',\n  };\n\n  var topRightContainerStyle = {\n    cssFloat: 'right',\n    margin: 5,\n    marginBottom: 0,\n  };\n\n  var iconButtonStyle = {\n    cssFloat: 'left',\n    width: 20,\n    height: 20,\n    cursor: 'pointer',\n  };\n\n  var vertDividerData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NDE2Nzg1Qjk2NTQxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NDE2Nzg1Qzk2NTQxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk0MTY3ODU5OTY1NDExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk0MTY3ODVBOTY1NDExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YZ1NUwAAABpJREFUeNpiysjI8P3///9EJgYoGCQMgAADAPm6BTZponrtAAAAAElFTkSuQmCC';\n\nvar deleteButtonStyle = {\n    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGREE5RERBQzk1QjMxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QTk4MTE0NDk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZEQTlEREFBOTVCMzExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZEQTlEREFCOTVCMzExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yjdzRwAAAZdJREFUeNpijI6OZqAELFmyBIXPxEBlgGygLxA/A+KHQOxJhN4gIH4RExPzGIi9MQxkZmZeCKQkgViOkZFxI5D2wWNYKFDNKiAtDsQyrKysszEM5ObmZoOx////zwrUsA7qamyGLQeqYUbSy4VhYFhY2DGgK/+hGboWzVAMw1hYWP5GREQcxjDQwcGhKjEx8QweQ7EalpqaetLGxqYGw0BgwJ4BGpqHy1BchllbW+cCuRexJhugoSdxGYrHsHN40yEuQ7EZBlR7Dl86RDH03LlzG4GuYkSXA4mdOnVqNTbD8OWU0PPnzzf9+/cPw8C/f/8yAS3rwpGksBqINTaJSFJYDcSZNHDFPtDrvrgM9AcqWIErNvElKaCh7nA9MAYoP/7+/ZsJX2wCi6o8IDVp/vz5JqCwhBkKBDOBTAUUF7Kzs3MTShq4khQXF5cAhpejoqKOCwoKfhMWFv6SlZV1HFc6gxmalpZ2SkhI6CsIA/XC8zIjrMQGescISGWCUgYQTwVqvEygpAapz4ByJwPxZRQDqVUFAAQYAClx7CQoSRW0AAAAAElFTkSuQmCC)',\n  };\n\n  var deleteHighlightStyle = {\n    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5ODE5RDRERTk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5ODE5RDRERjk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRBOTgxMTREOTY1MjExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRBOTgxMTRFOTY1MjExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MeldtQAAAaBJREFUeNpiVCqawUAJuNubjsJnYqAyQDbQF4ifAfFDIPYkQm8QEL9QLp75GIi9MQxkYWZaCKQkgViOkZFhI5D2wWNYKFDNKiAtDsQybCzMszEM5ONkY4Ox//9nYAVqWAd1NTbDlgPVMMMEBLjYuTAMLPEyP8bMxPQPzdC1aIZiGMbKzPS3zNv8MIaB4eYaVS0htmfwGIrVsM4Ih5OBJmo1GAYCA/ZMmLlGHi5DcRnmb6SaC+RexJpsgIaexGUoHsPO4U2HuAzFZhhQ7Tl86RDF0D1XHwCTzn9GdLl//xkYt1+8txqbYfhySui+aw+b/v7DNPDvv39MQMu6cCQprAZijU0ikhRWA3EmDVyxD/S6Ly4D/YEKVuCKTXxJCmioOzwLwxig/Pjrz18mfLEJLKrygNSkmjWHTUBhCTOUnYV5JpCpgOJCLjYWbkJJA1eS4uNkF8DwcpWf5XFxfu5vUoI8X/pjnI/jSmcwQ7sjHU5J8HN/BeFKPwt4XmaEldhA7xgBqUxQygDiqUCNlwmU1CD1GVDuZCC+jGIgtaoAgAADACcx18ycyLA6AAAAAElFTkSuQmCC)',\n  };\n\n  var vertDivderStyle = {\n    marginLeft: 2,\n    marginRight: 2,\n    cssFloat: 'left',\n  };\n\n  var restoreStyle = {\n    cssFloat: 'left',\n    textShadow: 'none',\n    lineHeight: '18px',\n    fontSize: '14px',\n    marginRight: 5,\n    cursor: 'pointer',\n    color: '#888',\n    textDecoration: 'none',\n  };\n\n  var restoreHighlightStyle = {\n    color: '#337B9E',\n    textDecoration: 'underline',\n  };\n \n  /**\n   * Creates a new list box \n   * @param dispatcher {BackBoneEvents} An event dispatcher to trigger \n   *    events on\n   * @param data {Obj} obj to initialize the boxes data property to\n   * @constructor\n   */\n  var ListBox = function(dispatcher, data) {\n    if(dispatcher) {\n      this.initialize(dispatcher, data);\n    }\n  };\n\n  var p = ListBox.prototype;\n  p.initialize = function(dispatcher, data) {\n    this.div = MODIT.ui.createElement('div', boxStyle);\n    this.dispatcher = dispatcher;\n    this.data = data;\n  };\n\n  /**\n   * Updates the boxes display by settings it data attribute and \n   * updating its zebra striping \n   * @param data {Obj} obj to initialize the boxes data property to\n   * @param index {int} The index of the box in the list for striping\n   */\n  p.update = function(data, index) {\n    this.data = data;\n    if(index % 2 == 1) {\n      MODIT.ui.setStyle(this.div, oddBoxStyle);\n    } else {\n      MODIT.ui.setStyle(this.div, {backgroundImage: boxStyle.backgroundImage});\n    }\n  };\n\n  /**\n   * Adds a blue text header at the top of the box \n   * @param text {String} starting text for the header\n   */\n  p.addHeader = function(text) {\n    this.header = MODIT.ui.addElement(this.div, 'div', headerStyle);\n    this.setHeaderText(text); \n  };\n\n  /**\n   * Creates and returns a div with the headerStyle and the passed style \n   * @param style {Obj} object with additional css styles to apply\n   * @return {HTMLDiv} a div\n   */\n  p.createHeader = function(style) {\n    var header = MODIT.ui.createElement('div', [headerStyle, style || {}]);\n    return header;\n  };\n\n  /**\n   * Adds a thumbnail with the given image data and mouse over behavior\n   * @param imgData {dataUri} image data for the thumbnail \n   * @param mouseOn {function} called on mouseover\n   * @param mouseOut {function} called on mouseout\n   * @param context {obj} context for mouseover/mouseout\n   */\n  p.addThumb = function(imgData, mouseOn, mouseOut, context) {\n    this.thumb = new MODIT.ui.ScaledImage(imgData);\n    MODIT.ui.setStyle(this.thumb.div, thumbStyle);\n    this.thumb.div.addEventListener('mouseover', function() { \n        mouseOn.apply(context); });\n    this.thumb.div.addEventListener('mouseout', function() { \n        mouseOut.apply(context); });\n    this.div.appendChild(this.thumb.div);\n  };\n\n  /**\n   * Adds a container to the top right of the box where UI can be placed \n   */\n  p.addTopRightPanel = function() {\n    this.topRightContainer = MODIT.ui.addElement(this.div, 'div', \n        topRightContainerStyle);\n  };\n\n  /**\n   * Updates the header text and adds a tool tip if that text gets\n   * truncated \n   * @param text {String} text to display\n   */\n  p.setHeaderText = function(text) {\n    this.header.textContent = text; \n    MODIT.ui.addTitleIfTruncated(this.header, text);\n  };\n\n  /**\n   * Updates the description text and adds a tool tip if that text gets\n   * truncated \n   * @param text {String} text to display\n   */\n  p.setDescriptionText = function(text) {\n    this.description.textContent = text; \n    MODIT.ui.addTitleIfTruncated(this.description, text);\n  };\n\n  /**\n   * Updates the image the thumbnail is displaying \n   * @param imgData {dataUri} image data for the thumbnail \n   */\n  p.updateThumb = function(imgData) {\n    this.thumb.updateImage(imgData);\n  };\n  \n  /**\n   * Adds a mouse over color change to the entire box \n   */\n  p.addMouseOverHighlight = function() {\n    this.lastBackground = boxStyle.backgroundImage; \n    var self = this;\n    this.div.addEventListener('mouseover', function() {\n      self.lastBackground = self.div.style.backgroundImage;\n      MODIT.ui.setStyle(self.div, mouseOverStyle);\n    });\n    this.div.addEventListener('mouseout', function() {\n      MODIT.ui.setStyle(self.div, {backgroundImage: self.lastBackground});\n    });\n  };\n\n  /**\n   * Adds a description area to the box \n   * @param text {String} starting description text\n   */\n  p.addDescription = function(text) {\n    this.description = MODIT.ui.addElement(this.div, 'div', descriptionStyle);\n    this.setDescriptionText(text);\n  };\n\n  /**\n   * Adds a delete button to the top right container \n   * @param onclick {function} called when delete is clicked\n   * @param context {object} context for the callback \n   */\n  p.addDeleteButton = function(onclick, context) {\n    this.deleteButton = new MODIT.ui.Button([iconButtonStyle, deleteButtonStyle],\n        onclick, context);\n    this.deleteButton.setMouseOverStyles(deleteHighlightStyle, deleteButtonStyle);\n    this.topRightContainer.appendChild(this.deleteButton.div);\n\n  };\n\n  /**\n   * Adds a vertical divider to the top right container \n   */\n  p.addTopRightDivider = function() {\n    var vertDivider = MODIT.ui.addElement(this.topRightContainer, 'img', vertDivderStyle);\n    vertDivider.src = vertDividerData;\n  };\n\n  /**\n   * returns a veritcle divider img element \n   * @param {Obj} style object to apply\n   * @return {Img} a vertical divider img element\n   */\n  p.createDivider = function(style) {\n    var vertDivider = MODIT.ui.createElement('img', \n        [vertDivderStyle, style || {}]);\n    vertDivider.src = vertDividerData;\n    return vertDivider;\n  };\n\n  /**\n   * Adds a restore button to the top right container \n   */\n  p.addRestoreButton = function(onclick, context) {\n    this.restoreButton = new MODIT.ui.Button(restoreStyle, onclick, context); \n    this.restoreButton.setLabel('Restore');\n    this.restoreButton.setMouseOverStyles(restoreHighlightStyle, \n        restoreStyle);\n    this.topRightContainer.appendChild(this.restoreButton.div);\n  };\n\n  App.ListBox = ListBox;\n}(App));\n",
+  "lib/kinvey-setup.js": "Kinvey.init({\n        'appKey': 'kid_VVVl6XruNf',\n        'appSecret': 'ac92b2709bb347b282f0428deced73dc'\n      });",
+  "lib/ListView.js": "window.App = window.App || {};\n/** Base case for list displays like the image list or the\n    revision list **/\n(function(App) {\n\n  /**\n   * Creates a new ListView \n   * @param tool {ModdingTool} Modding tool to update off of\n   * @constructor\n   */\n  var ListView = function(tool) {\n    if(tool) {\n      this.initialize(tool);\n    }\n  };\n\n  var p = ListView.prototype;\n  p.initialize = function(tool) {\n    this.tool = tool;\n    this.div = MODIT.ui.createElement('div');\n    this.listBoxes = [];\n    this.dispatcher = _.extend({}, Backbone.Events);\n  };\n\n  /**\n   * Child classes override \n   */\n  p.update = function() {\n  };\n\n  p.synchBoxesToData = function(boxData, uniqueAttributeName) {\n    _addNewBoxes.apply(this, [boxData, uniqueAttributeName]); \n    _pruneOldBoxes.apply(this, [boxData, uniqueAttributeName]); \n    var self = this;\n    for(var i = 0; i < boxData.length; i++) {\n      var boxInfo = _.find(boxData, function(box) {\n          return box[uniqueAttributeName] ==                  \n                 self.listBoxes[i].data[uniqueAttributeName]\n          });\n      this.listBoxes[i].update(boxInfo, i);\n    }\n  };\n\n  /**\n   * Child classes overide \n   * @param boxData {Obj} data object with information to make a new box\n   */\n  p.addBox = function(boxData) {\n  };\n\n  /**\n   * Removes the given box from the listBoxes array and from the dom \n   * @param box {ListBox} A list box to remove\n   */\n  p.removeBox = function(box) {\n    this.div.removeChild(box.div);\n    this.listBoxes.splice(this.listBoxes.indexOf(box), 1);\n  };\n\n  function _addNewBoxes(data, uniqueAttributeName) {\n    for(var i = 0; i < data.length; i++) {\n      if(!_.find(this.listBoxes, function(box) {\n            return box.data[uniqueAttributeName] == \n                   data[i][uniqueAttributeName];\n           })) {\n        this.addBox(data[i]);\n      }\n    }\n  };\n\n  function _pruneOldBoxes(data, uniqueAttributeName) {\n    for(var i = 0; i < this.listBoxes.length; i++) {\n      var self = this;\n      if(!_.find(data, function(dataItem) {\n              return dataItem[uniqueAttributeName] ==\n                     self.listBoxes[i].data[uniqueAttributeName];\n            })){\n        this.removeBox(this.listBoxes[i]);\n        i--;\n      }\n    }\n  };\n  \n  App.ListView = ListView\n}(App));\n",
+  "lib/ModitUIExtensions.js": "window.MODIT = window.MODIT || {};\nwindow.MODIT.ui = window.MODIT.ui || {};\n(function(MODIT){\n  /**\n   * \n   * Adds a tool tip to the given element if it has been truncated\n   * either by overflow hidden or textOverflow ellipsis\n   * @param el {HTMLElement} element to title\n   * @param title {string} title\n   */\n  MODIT.ui.addTitleIfTruncated = function(el, title) {\n    if(el.titleTimeout) {\n      clearTimeout(el.titleTimeout);\n    }\n    function addTitle() {\n      if(el.offsetWidth < el.scrollWidth || \n         el.offsetHeight < el.scrollHeight){\n        el.title = title;\n      } else {\n        el.title = '';\n      }\n      el.titleTimeout = setTimeout(addTitle, 500);\n    }\n    addTitle();\n  };\n  \n  MODIT.ui.setDelayedStyle = function(el, style)\n  {\n    setTimeout(function(){\n      MODIT.ui.setStyle(el, style);\n    }, .0001);\n  }\n}(MODIT));",
+  "lib/WI.js": "window.MODIT = window.MODIT || {};\nwindow.WI = window.WI || {};\n(function() {\n\n/**\n * A global namespace to hold helper functions for \n * the modit framework.\n **/\nWI.CLIENT_VERSION = '0.2.12.0';\n\n//Set a max of 100K lines each with 100K chars, codemirror\n//Likely can't handle anything near that anyways\nWI.MAX_FILE_SIZE = 100000;\n\n//MS to chunk modit model changes before propagating\nWI.MODIT_MODEL_SYNCH_CHUNK_TIME = 10;\n\n//A singleton object that holds functions for extracting \n//standard mod-elements\nWI.extractionFunctions = {};\n\n//Function for extracting all functions into mod-elements\nWI.extractionFunctions.functionExtractor = function (source) {\n  JSHINT(source);\n  if(_hasUnparsableErrors(JSHINT.errors)) {\n    return [];\n  }\n  var parsedSourceLines = source.split('\\n');\n  var jsHintFunctions = JSHINT.data().functions;\n  return _convertJSHintFunctionsToModdableElemnts(\n      jsHintFunctions, parsedSourceLines);\n};\n\nfunction  _convertJSHintFunctionsToModdableElemnts(\n  jsHintFunctions, parsedSourceLines) {\n  var FUNCTION_REGEXP_STRING =\n    \"(?:function [^(]+[(][^)]*[)]|[^\\\"(\\n;]+function[^)]*[)])\";\n  var returnMEs = [];\n  var re = new RegExp(FUNCTION_REGEXP_STRING);\n  for (var i = 0; i < jsHintFunctions.length; i++) {\n    var firstLineNum = jsHintFunctions[i].line;\n    var lastLineNum = jsHintFunctions[i].last;\n    // Strip the quotes from the name jsHint parses.\n    var parsedName = jsHintFunctions[i].name.submitNew(/\"/g, '');\n    // Get the code of the entire function.\n    var code = parsedSourceLines.slice(\n      firstLineNum - 1, lastLineNum).join('\\n');  \n    // Make sure the parsed name shows up in the code.\n    if (code.indexOf(parsedName) > -1) {\n    // Use the regexp to get the name we display.\n      var matches = re.exec(code);\n      if (matches) {\n        returnMEs.push(new MODIT.ModElement({}, \n            {\n              startLine: firstLineNum -1,\n              startChar: 0,\n              codeFragment: code\n            }));\n      } else if(code.indexOf(parsedName) < \n              code.indexOf('function')) {\n      // anonymous functions of the form\n      // foo(function(){}) are incorrectly given the \n      // name foo by JSHint.  We'd like to not log\n      // to the console in this know case, but log\n      // if any new case that we haven't encountered yet\n      // comes up.  I think the best way to acheive this\n      // is to do nothing in this very particular case.\n      // This tests that if what JS hint thinks is the name\n      // of the function comes before the word function\n      // and it is not a valid declaration of the form\n      // var something = function or something.something = function\n      // somenume : function\n      // that or regexp would match then it should do nothing\n      } else {\n      //We will regularly be trying to parse un parsable could\n      //in our beta client so we no longer really want to longer\n      //in this situation\n      //  console.log('Could not parse function from line ' + \n      //      + firstLineNum + ': \"' + code + '\"');\n      }\n    } else {\n    // This can happen if the function in question is\n    // anonymous as JSHint names such functions anonymous.\n    // However it can also happen due to a bug in JS hint \n    // where some anonymous functions are given the name of the \n    // the last thing after a dot to have been declared.\n    // I don't know of any way to reasonably log in other cases\n    // but not in that one.  Furthermore there was no logging in this\n    // case prior to this story so I think spending a lot of thought on \n    // this would be going outside the story\n    }\n  }\n  return returnMEs;\n}\n\nfunction _hasUnparsableErrors(errorArray) {\n\n  var unparsableErrorList = [\n      \"Expected an identifier and instead saw '{a}'.\",\n      \"Unmatched '{a}'.\",\n  ];\n  for(var i = 0; i < errorArray.length; i++) {\n    if(!errorArray[i] ||\n      unparsableErrorList.indexOf(errorArray[i].raw) != -1) {\n      return true;\n    }\n  }\n  return false;\n}\n\nWI.functionQueuer = {};\n//Array of objects with a function and the time that was last called\nWI.functionQueuer.calledFunctions = [];\n//Array of functions that we have a pending timeout to call\nWI.functionQueuer.pendingFunctions = [];\n//if a function hasn't been called within the passed in mseconds\n//calls it with the given args and context.\n//otherwise adds it to pending if it was not in there\n//already and calls the funcToQueue on a timeout.\n//If matchContext is true it treats calls with different\n//context as unique, otherwise it treats them as duplicates\nWI.functionQueuer.queueFunction = \nfunction(funcToCall, funcToQueue, mseconds, \n         callContext, callArgs, queueContext, \n         queueArgs, matchContext, useStoredReturnVal) {\n  var lastCall = _getLastCall(this.calledFunctions, funcToCall,\n                              matchContext, queueContext);\n\n  var now = (new Date()).getTime();\n  var hasBeenCalledRecently = lastCall ?\n                              now - lastCall.time < mseconds : false;\n\n  //If there is already a call to this function pending\n  //return what we got last time or null depending on \n  //if we want to use the stored return val\n  if(lastCall && lastCall.pending) {\n    return useStoredReturnVal ? lastCall.lastReturn : null;\n  }\n  if(!hasBeenCalledRecently) {\n    if(lastCall) {\n      lastCall.time = now;\n    } else {\n      this.calledFunctions.push(\n        {func: funcToCall, time: now, context: queueContext});\n      lastCall = this.calledFunctions[this.calledFunctions.length - 1];\n    }\n    lastCall.lastReturn = funcToCall.apply(callContext, callArgs);\n    return lastCall.lastReturn;\n  } else {\n    //set up a pending call\n    lastCall.pending = true;\n    var self = this;\n    setTimeout(function() {\n      self._timeoutCall(funcToQueue, queueContext, queueArgs, lastCall);\n    }, mseconds - now + lastCall.time);\n    return useStoredReturnVal ? lastCall.lastReturn : null;\n  }\n}\n\n//This is really private as shown by the _ but made it public\n//for easier testability.\nWI.functionQueuer._timeoutCall = \n      function(funcToQueue, queueContext, queueArgs, lastCall) {\n  lastCall.pending = false;\n  funcToQueue.apply(queueContext, queueArgs);\n};\n\nfunction _getLastCall(calledFuncs, funcToCall, matchContext, queueContext){\n  for(var i = 0; i < calledFuncs.length; i++) {\n    if((calledFuncs[i].func == funcToCall) &&\n        (!matchContext || calledFuncs[i].context == queueContext)) {\n      return calledFuncs[i];\n    }\n  }\n}\n\nWI.getDomainFromWIURL = function(url) {\n  var urlString = String(url);\n  var wiIndex = urlString.indexOf('mod.it');\n  if(wiIndex == -1) {\n    return 'error';\n  }\n  return urlString.substring(0, wiIndex + 6);\n};\n\n/**\n * Removed the given element from the given array if it is there.\n * @param arr {Array} The array from which to remove.\n * @param element {obj} The object to remove.\n */\nWI.removeArrayElement = function(arr, element) {\n  var idx = arr.indexOf(element);\n  if (idx !== -1) {\n    arr.splice(idx, 1);\n  }\n};\n\n/**\n * Extracts the modit key from a WI url \n * @param url {String} (optional) the url to parse, defautls to the current \n                                  url\n * @return {String} modit key\n */\nWI.getModitKeyFromUrl = function(url) {\n  // Get the part after the hostname and before url params or \n  // any other slashes.\n  var path;\n  if(!url) {\n    path = document.location.pathname;\n  } else {\n    path = url.split('mod.it')[1];\n  }\n  path = path.substr(1);\n  var key;\n  key = path.split('/')[0].split('?')[0]; //we want the part of the path\n                                          //before the first / or ?\n  if (key == 'src') { return null; }\n  return key;\n};\n\n/**\n * Extracts the modit revision from a WI url.  Returns 'DEV_HEAD' or\n * 'PROD_HEAD' if no revision number is specified for dev mode or prod\n * mode respectively.  Assumes the url is of the form domain/moditKey/revision\n * @param url {String} (optional) the url to parse, defautls to the current \n                                  url\n * @return {String} modit key\n */\nWI.getModitRevisionFromURL = function(url) {\n  var path;\n  if(!url) {\n    path = document.location.pathname;\n  } else {\n    path = url.split('mod.it')[1];\n  }\n  //get the contents after the second slash.\n  var split = path.split('/');\n  if(split[2]) {\n    var rev = split[2].split('?')[0];\n    if(rev == 'dev') {\n      return 'DEV_HEAD';\n    } else if(rev) {\n      return rev;\n    } \n  } else {\n    return 'PROD_HEAD';\n  }\n};\n\n/**\n * Checks to see if the url param to not run the modit is there \n * @return {Boolean} true if its there\n */\nWI.getNoRunParam = function() {\n  return window.location.search.indexOf('?norun=true') == 0;\n};\n\n/**\n * Gets the current dev prefix based on the current hostname\n * @return {String} The dev prefix\n */\nWI.getDevPrefix = function() {\n  // Get the part after the hostname and before url params.\n  var host = window.location.hostname;\n  if(host == 'mod.it'){\n    return '';\n  }\n  if(host.lastIndexOf('.mod.it') != -1) {\n    var dev_server = host.substr(0, \n        host.lastIndexOf('.mod.it'));\n    if (dev_server == 'beta') {\n      return '';\n    } else if (dev_server == 'dev') {\n      return 'dev_';\n    } else {\n      return 'dev_' + dev_server + '_'; \n    }\n  } else if(host == \"s3.amazonaws.com\"){\n    var path = window.location.pathname;\n    return path.substring(0, path.indexOf('modit-file-json/'));\n  }\n};\n\n/**\n * Gets the url for a library stored on s3\n * @param libFile {string} The flie name for the library.\n * @return {string} The url to the library on S3 \n */\nWI.getLibraryUrl = function(libFile) {\n  var s3Base = 'https://s3.amazonaws.com/';\n  var libBucketBase = 'modit-libraries/';\n  var s3Pref = s3Base + WI.getDevPrefix() + libBucketBase\n  return s3Pref + libFile;\n};\n\n/**\n * Gets the url for the server we are on from the bucket\n * we are on.  Designed to be used by the home modit so that it\n * knows where its links should point. \n * @return {String} url of current server\n */\nWI.getWIDomainFromS3Location = function() {\n  var path = window.location.pathname;\n  var prefix = path.substring(0, path.indexOf('modit-file-json/'));\n  var server;\n  if(prefix.indexOf('/dev_') == 0) {\n    if (prefix == '/dev_') {\n      server = 'dev';\n    } else {\n      server = prefix.substring(5, prefix.length -1);\n    }\n  } else if(prefix == '/') {\n    return 'https://mod.it';\n  }\n  return 'https://' + server + '.mod.it';\n};\n\nWI.getURLVars = function() {\n  // document.location.search starts with ?\n  var paramString = document.location.search.substring(1);\n  var vars = paramString.split(\"&\");\n  var map = {};\n  for (var i = 0; i < vars.length; i++) {\n    var keyVal = vars[i].split(\"=\");\n    map[keyVal[0]] = unescape(keyVal[1]);\n  }\n  return map;\n};\n\nWI.convertObjectToUrlParams = function(obj) {\n  var str = '';\n  for(var x in obj) {\n    str += encodeURIComponent(x) + '=' + \n           encodeURIComponent(obj[x]) + '&';\n  }\n  str = str.substr(0, str.length - 1);\n  return str;\n};\n\n/**\n * Checks if the browser is firefox.\n * @return {bool} True iff the browser is firefox.\n */\nWI.browserIsFirefox = function() {\n  //Changes to this need to be duplicated in the onerrorInjectionCode\n  return navigator.userAgent.indexOf('Firefox') != -1;\n};\n\n/**\n * Checks if the browser is opera.\n * @return {bool} True iff the browser is opera.\n */\nWI.browserIsOpera = function() {\n  //Changes to this need to be duplicated in the onerrorInjectionCode\n  return navigator.userAgent.indexOf('Opera') != -1;\n};\n\n/**\n * Checks if the browser is IE.\n * @return {bool} True iff the browser is IE.\n */\nWI.browserIsIE = function() {\n  //Changes to this need to be duplicated in the onerrorInjectionCode\n  return navigator.userAgent.indexOf('MSIE') != -1;\n};\n\nWI.osIsMac = function () {\n  return navigator.userAgent.indexOf('Mac OS X') != -1;\n};\n\n/**\n * Checks if the os is Android.\n * @return {bool} True iff the os is Android.\n */\nWI.osIsAndroid = function() {\n  return navigator.userAgent.indexOf('Android') != -1;\n};\n\n/**\n * Checks if the os is iOS.\n * @return {bool} True iff the os is iOS.\n */\nWI.osIsIOS = function() {\n  return navigator.userAgent.indexOf('like Mac OS X') != -1;\n};\n\n\n/**\n * Checks if the browser is Safari.\n * @return {bool} True iff the browser is Safari.\n */\nWI.browserIsSafari = function() {\n  return !WI.browserIsChrome() &&\n      navigator.userAgent.indexOf('Safari') != -1;\n};\n\n/**\n * Checks if the browser is Google chrome.\n * @return {bool} True iff the browser is Google chrome.\n */\nWI.browserIsChrome = function() {\n  return navigator.userAgent.indexOf('Chrome') != -1;\n};\n\n/**\n * Wraps the given html in the given tag\n * @param toWrap {String} html\n * @param tagName {String} an html tag eg 'script'\n * @param paramString {String} string for the tag params\n * @return {String} html wrapped in the given tag\n */\nWI.wrapInTag = function(toWrap, tagName, paramString) {\n  // Escape the closing tag's slash becuase that screws things up,\n  // possibly because it gets interpreted as a regex?\n  if(!paramString) {\n    paramString = ' ';\n  }\n  return '<' + tagName + ' ' + paramString + '>' \n    + toWrap + '<\\/' + tagName + '>';\n};\n\nWI.clone = function (obj) {\n  return JSON.parse(JSON.stringify(obj));\n};\n\n/**\n * Searches an array of objects with the given attribute\n * for the first index of an object where the given attributes\n * value is the desired value\n * @param arr {Array} array of objects\n * @param attributeName {string} name of the attribute to search\n * @param value {obj} desired value for that attribute\n * @return {Number} index in the array of the matching object\n */\nWI.searchArray = function(arr, attributeName, value) {\n  for(var i = 0; i < arr.length; i++) {\n    if(arr[i] && arr[i][attributeName] == value) {\n      return i;\n    }\n  }\n  return -1;\n};\n\n/**\n * Pads an inteager to a specific length by prepending zeros. \n * @param num {Number} An integer to pad.\n * @param size {Number} An integer length for the final string.\n * @return {String} The given int padded with zeros to the desired length.\n */\nWI.zeroPadInt = function(num, size) {\n  var str = num + '';\n  while (str.length < size) {\n    str = '0' + str;\n  }\n  return str;\n};\n\n/**\n * Gets the file extension for a path.\n * @param path {string} The path to the file.\n * @return {string} The extension for the file.\n */\nWI.getFileExtension = function(path) {\n  // TODO changes to this should be mirrored in the\n  // injected outputError in modit.js\n  var idx = path.lastIndexOf('.');\n  if (idx > -1) {\n    return path.substr(idx + 1);\n  }\n  return '';\n};\n\n/**\n * Gets the line and character of the point directly before\n * the first occurances of the given text in the given code \n * @param code {String} Some code to search\n * @param text {String} the text to search for\n * @return {Obj} Object with line and char for the given location\n */\nWI.pointBefore = function(code, text) {\n  var beforeText = code.substr(0, code.indexOf(text));\n  var lines = beforeText.split('\\n');\n  return {line: lines.length - 1, char: lines[lines.length -1].length};\n};\n\n/**\n * Given a time that is valid for the Date constructor, returns a string\n * of the format 'today at [localTime]' or '[x] days ago at [localTime]' \n * where localTime is a 12 hour time with am/pm\n * @param time {string} a valid argument for the data constructor, either a\n *    date string or a number of milliseconds since 1/1/1970\n * @return {String} a string with the of the format 'today at [localTime]' \n *    or '[x] days ago at [localTime]' where localTime is a 12 \n *    hour time with am/pm\n */\nWI.getTimeSinceString = function(time) {\n  if (String(time).indexOf('T') != -1) {\n    // Safari can't parse iso8601\n    time = time.submitNew(/T/g, ' ').submitNew(/-/g, '/');\n    // In the non-iso8601 format we need to be explicit that\n    // we're in UTC.\n    time += ' +0000'\n  }\n  var then = new Date(time);\n  var now = new Date();\n  var ms = now.getTime() - then.getTime(); \n  var days = Math.max(Math.floor(ms / 86400000), 0); //max with zero to prevent\n                                                     //rounding to -1 in rare \n                                                     //cases\n  var time = then.toLocaleTimeString();\n  //FF puts toLocaleTimeString in HH:MM:SS AM/PM whereas chrome\n  //does HH/MM/SS in military time\n  var ampm = 'am';\n  var timeSpaceSplit = time.split(' ');\n  var timeSplit = time.split(':');\n  if(timeSpaceSplit.length > 1) {\n    ampm = timeSpaceSplit[1].toLowerCase();  \n  } else if(timeSplit[0] > 11) {\n    ampm = 'pm';\n    if(timeSplit[0] > 12) {\n      timeSplit[0] -= 12;\n    }\n  } else if(timeSplit[0] == 0) {\n    timeSplit[0] = 12;\n  }\n  if (days == 0) {\n    return 'today at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;\n  } else if(days == 1){\n    return  days + ' day ago at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;;\n  } else {\n    return  days + ' days ago at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;;\n  }\n};\n\nWI.convertISOStringToDate = function(iso) {\n  var d = new Date(iso);\n  var offset = 0;\n  //Firefox date constructor does not convert to local\n  if(WI.browserIsFirefox()) {\n    offset = d.getTimezoneOffset() * 60000;\n  } \n  return new Date(d.getTime() - offset);\n};\n\n/**\n * Checks if the given HTML string has any of <, ;, /, & and rejects it\n * if it does \n * @param input {String} the input to validate\n * @return {Boolean} true if its valid, false if not\n */\nWI.validateHTML = function(input) {\n  return input.indexOf('<') == -1 && input.indexOf(';') == -1 &&\n          input.indexOf('/') == -1 && input.indexOf('&') == -1;\n};\n\n\n/**\n * Alerts and logs the given message so that we can spy for tests \n * @param msg {String} msg to show\n */\nWI.alertError = function(msg) {\n  console.log(msg);\n  alert(msg);\n};\n\n\n/**\n * Returns true if the given path has an image file extension \n * @param path {String} the files path\n * @return {Boolean} true if it has an image extension\n */\nWI.isImagePath = function(path) {\n  var imgExtensions = ['png', 'jpg', 'jpeg','gif'];\n  var ext = WI.getFileExtension(path);\n  return imgExtensions.indexOf(ext) !== -1;\n};\n\n/**\n * Returns true iff the origin is from a mod.it domain \n * @param origin {String} the origin uri\n * @return {Boolean} is the origin from a modit domain\n */\nWI.isFromModitDomain = function(origin) {\n  var fromSub = origin.match(/https:\\/\\/[^.]*.mod.it/);\n  var fromProd = origin.match(/https:\\/\\/mod.it/);\n  return fromSub || fromProd;\n};\n\n/**\n * Returns just the file name and extension from the given path \n * @param path {String} a file path\n * @return {String} the file name from the path with the extension included\n */\nWI.getFileFromPath = function(path) {\n  var split = path.split('/');\n  return split[split.length - 1];\n};\n\n/**\n * Updates the url bar with the given key and revision \n * @param key {String} ModitKey\n * @param rev {Int} Revision number\n */\nWI.setModitUrl = function(key, rev) {\n  window.history.pushState(null, document.title,\n        WI.getDomainFromWIURL(window.location) + '/' + key + '/' + rev); \n};\n\n/*\n// Fix a bug in easel where removing a child\n// in the middle of a stage.update can crash\n// because the child will be null and thus\n// reading _tick crashes\nif (window.Container) {\n  window.Container.prototype._tick = function() {\n    for (var i=this.children.length-1; i>=0; i--) {\n      var child = this.children[i];\n      if (child && child._tick) { child._tick(); }\n      if (child && child.tick) { child.tick(); }\n    }\n  }\n}*/\nwindow.WI = WI;\n}());\n",
+  "lib/WICSS.js": "(function(window) {\n  var WICSS = WICSS || {};\n\n  WICSS.generateBrowserSpecificGradient = function(\n        col1, col2, type, pos1, pos2) {\n    if(type == 'linear' || !type) {\n      var gradientArgString = '(top,' + col1 + ',' + col2 + ')';\n      if(WI.browserIsIE()) {\n        return \"-ms-linear-gradient\" + gradientArgString;\n      } else if(!WI.browserIsFirefox()) {\n        return \"-webkit-linear-gradient\" + gradientArgString\n      } else {\n        return \"-moz-linear-gradient\" + gradientArgString\n      }\n    } else if(type == 'radial') {\n      if(WI.browserIsOpera()) {\n        return 'radial-gradient(closest-corner circle at ' +\n            pos1 + ' ' + pos2 + ', ' + col1 + ', ' + col2 + ')';\n      } else if(WI.browserIsIE()){\n        return '-ms-radial-gradient(' + pos1 + ' ' + pos2 + \n            ', circle closest-corner, ' + col1 + ', ' + col2 + ')';\n      } else if(!WI.browserIsFirefox()) {\n        return '-webkit-radial-gradient(' + pos1 + ' ' + \n            pos2 + ', circle closest-corner, ' + col1 + ', ' + col2 + ')';\n      } else {\n        return '-moz-radial-gradient(' + pos1 + ' ' + \n            pos2 + ', circle closest-corner, ' + col1 + ', ' + col2 + ')';\n      }\n    }\n  };\n\n  //Colors\n  WICSS.BACKGROUND_GREY = '#d9d9d9';\n  WICSS.CONTRAST_DARK_GREY = '#434343';\n  WICSS.MENU_GREY = '#666666';\n  WICSS.EDITOR_BACKGROUND_GREY = '#f0f0f0';\n  WICSS.MODIT_BLUE = '#076B9A';\n  WICSS.HIGHLIGHT_BLUE = '#3A9DCD';\n  WICSS.BRIGHTEST_BLUE = '#61A9CD';\n  WICSS.DARK_BLUE = '#024464';\n  WICSS.ACCOUNT_BUTTON_COLOR = '#999999';\n  WICSS.HEADER_GREY = '#383838';\n  WICSS.LIGHT_GREY = '#545454';\n  WICSS.OFF_WHITE = '#e9e9e9';\n  WICSS.WHITE_TEXT_SHADOW = '0px -2px 0px rgba(0, 0, 0, 1)';\n  var greyGradientFrom = '#434343';\n  var greyGradientTo = '#1A1A1A';\n\n  var tabGradientFrom = '#bdbdbd';\n  var tabGradientTo = '#7e7e7e';\n\n  var blueGradientFrom = '#498bab';\n  var blueGradientTo = '#156579';\n\n  var backgroundFrom = 'rgba(206, 206, 206, 1)';\n  var backgroundTo = 'rgba(150, 150, 150, 1)';\n \n  WICSS.LIGHT_GREY_GRADIENT = WICSS.generateBrowserSpecificGradient('#c4c4c4',\n      '#898989');\n\n  WICSS.GREY_GRADIENT = WICSS.generateBrowserSpecificGradient(greyGradientFrom,\n      greyGradientTo);\n\n  WICSS.TAB_BAR_GRAIDENT = WICSS.generateBrowserSpecificGradient(tabGradientFrom,\n      tabGradientTo);\n\n  WICSS.EDITOR_BACKGROUND = WICSS.generateBrowserSpecificGradient(backgroundFrom,\n      backgroundTo, 'radial', '50%', '50%');\n\n  WICSS.BLUE_BUTTON_BACKGROUND = WICSS.generateBrowserSpecificGradient(\n      blueGradientFrom, blueGradientTo);\n\n  WICSS.BLUE_BUTTON_HIGHLIGHT = WICSS.generateBrowserSpecificGradient(\n    blueGradientTo, blueGradientFrom);\n\n  //Fonts\n  WICSS.GENERAL_FONT = 'Arial';\n\n  //Sizes\n  WICSS.OWNER_NOTICE_HEIGHT = 40;\n  WICSS.TOPBAR_HEIGHT = 64;\n  WICSS.TOOLBAR_WIDTH = 60;\n  WICSS.WORKSPACE_BAR_HEIGHT = 30;\n  WICSS.LIST_TOOL_WIDTH = 350;\n  WICSS.TITLEBAR_HEIGHT = 28;\n\n  WICSS.LIST_TOOL_IFRAME_STYLE = {\n    width: WICSS.LIST_TOOL_WIDTH - 1,\n    height: '100%',\n    margin: 0,\n    padding: 0,\n    position: 'absolute',\n    border: 0,\n    userSelect: 'none',\n    MozUserSelect: 'none',\n    webkitUserSelect: 'none',\n    zIndex: 3,\n    background: WICSS.GREY_GRADIENT,\n    webkitBoxShadow: '2px 0px 4px rgba(0, 0, 0, 0.7)',\n    mozBoxShadow:  '2px 0px 4px rgba(0, 0, 0, 0.7)',\n    boxShadow:       '2px 0px 4px rgba(0, 0, 0, 0.7)',\n    left: -WICSS.LIST_TOOL_WIDTH - 4,\n  };\n\n  WICSS.FIND_INPUT_STYLE = {\n    marginLeft: 5,\n    paddingLeft: 10,\n    paddingRight: 10,\n    borderRadius: 3,\n    outline: 0,\n    border: 'solid 1px #4a4a4a',\n    height: 20,\n  };\n\n  //Grabbed this from here: \n  //https://github.com/necolas/css3-social-signin-buttons/blob/master/auth-buttons.css\n  WICSS.LOGIN_BUTTONS_CSS = {\n    position: 'absolute',\n    height: 30,\n    padding: '0 1em',\n    border: '1px solid #999',\n    borderRadius: '2px',\n    width: 140,\n    marginLeft: -70,\n    top: 118,\n    opacity: 0.5,\n    left: '50%',\n    textAlign: 'center',\n    lineHeight: '30px',\n    borderColor: '#3079ed',\n    color: '#fff',\n    background: '#4787ed',\n    backgroundImage: '-webkit-gradient(linear, 0 0, 0 100%, from(#4d90fe), to(#4787ed))',\n    backgroundImage: '-webkit-linear-gradient(#4d90fe, #4787ed)',\n    backgroundImage: '-moz-linear-gradient(#4d90fe, #4787ed)',\n    backgroundImage: 'linear-gradient(#4d90fe, #4787ed)',\n  };\n\n  if(navigator.userAgent.indexOf('Android') != -1 && \n       navigator.userAgent.indexOf('Chrome') == -1) {\n    WICSS.LOGIN_BUTTONS_CSS.width = 180;\n    WICSS.LOGIN_BUTTONS_CSS.marginLeft = -90;\n  }\n\n  WICSS.CONTEXT_MENU_STYLE = {\n    display: 'none',\n    position: 'absolute',\n    width: 172,\n    backgroundColor: WICSS.EDITOR_BACKGROUND_GREY,\n    boxShadow: \"0px 0px 20px 0px rgba(0,0,0,0.75)\",\n    textAlign: 'center',\n    fontFamily: 'Arial',\n    fontWeight: 700,\n    cursor: 'default',\n    outline: '0px solid transparent',\n    fontSize: '18px',\n  };\n\n  WICSS.CONTEXT_OPTION_STYLE = {\n    width: 150,\n    height: 30,\n    marginLeft: 10,\n    marginRight: 10,\n    marginTop: 10,\n    color: 'white',\n    backgroundColor: WICSS.MODIT_BLUE,\n    border: 'solid 1px ' + WICSS.CONTRAST_DARK_GREY,\n    borderRadius: '3px',\n    textAlign: 'center',\n    fontSize: '14px',\n    fontWeight: 700,\n    height: 30,\n    lineHeight: '30px',\n    cursor: 'pointer',\n  };\n\n  WICSS.POPUP_BUTTON_STYLE = {\n    color: 'white',\n    backgroundColor: WICSS.MODIT_BLUE,\n    borderRadius: '3px',\n    textAlign: 'center',\n    marginBottom: 5,\n    fontSize: '14px',\n    fontWeight: 700,\n    height: 30,\n    lineHeight: '30px',\n    cursor: 'pointer',\n\n  };\n\n  WICSS.LIST_TITLE_STYLE = {\n    fontFamily: WICSS.GENERAL_FONT,\n    fontSize: 20,\n    fontWeight: 700,\n    margin: '5px',\n    height: 20,\n    cursor: 'default',\n  };\n\n  WICSS.TOOL_TAB_BAR_STYLE = {\n    width: '100%',\n    background: WICSS.TAB_BAR_GRAIDENT,\n    height: '30px',\n    borderTop: 'solid 1px #888888',\n    borderBottom: 'solid 1px #343434',\n    color: '#434343',\n    textShadow: 'none',  //TODO GET THIS SHADOW FROM SAM\n  };\n\n  WICSS.TOOL_TIP_STYLE = {\n    position: 'absolute',\n    fontSize: 16,\n    lineHeight: '20px',\n    fontFamily: WICSS.GENERAL_FONT,\n    display: 'none',\n    backgroundColor: 'white',\n    color: WICSS.CONTRAST_DARK_GREY,\n    boxShadow: \"10px 10px 5px \" + WICSS.CONTRAST_DARK_GREY,\n    border: \"2px solid \" + WICSS.CONTRAST_DARK_GREY,\n    borderRadius: '5px',\n    cursor: 'default',\n  };\n\n  WICSS.HIGHLIGHT_STYLE = {};\n  var highlightFromColor = '#B6C8DF';\n  var highlightToColor = '#6784B1';\n  WICSS.HIGHLIGHT_STYLE.background = WICSS.generateBrowserSpecificGradient(\n      highlightFromColor, highlightToColor); \n\n\n  WICSS.JS_ICON = \"data:image/png;base64,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\";\n\n  WICSS.BLUE_BUTTON_STYLE = {\n    backgroundImage: WICSS.BLUE_BUTTON_BACKGROUND,\n    fontWeight: 'bold',\n    fontSize: '16px',\n    fontFamily: 'Arial, sans-serif', \n    textShadow: '0 -1px 1px rgba(0, 0, 0, 0.75)',\n    textAlign: 'center',\n    color: '#fafafa',\n    cursor: 'pointer',\n    borderRadius: 12,\n    border: 'solid 1px #102732',\n  };\n\n  WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE = {\n    color: '#ffffff',\n    backgroundImage: WICSS.BLUE_BUTTON_HIGHLIGHT,\n  };\n\n  WICSS.WHITE_BUTTON_STYLE = {\n    fontWeight: 'bold',\n    fontSize: '16px',\n    fontFamily: 'Arial, sans-serif',\n    boxShadow: '1px 1px 1px rgba(255, 255, 255, 0.5) inset',\n    border: '1px solid #bbb',\n    borderRadius: '5px',\n    textShadow: '0 1px 1px rgba(255, 255, 255, 0.9)',\n    textAlign: 'center',\n    color: '#555',\n    margin: '5px auto',\n    marginRight: 10,\n    cursor: 'pointer',\n  };\n\n  var loginBackground = WICSS.generateBrowserSpecificGradient('#fbfbfb', \n        '#d5d5d5');\n  WICSS.WHITE_BUTTON_STYLE.backgroundImage = loginBackground;\n\n  var loginHighlightBackground = WICSS.generateBrowserSpecificGradient( \n      '#d5d5d5', '#fbfbfb');\n  \n  WICSS.WHITE_BUTTON_HIGHLIGHT_STYLE = {\n    color: '#444',\n    backgroundImage: loginHighlightBackground,\n  };\n\n  var loginActiveBackground = WICSS.generateBrowserSpecificGradient(\n      '#ececec', '#f7f7f7');\n\n  WICSS.WHITE_BUTTON_ACTIVE_STYLE = {\n    boxShadow: '0px 1px 2px rgba(50, 50, 50, 0.3) inset',\n    border: '1px solid #999',\n    color: '#555',\n    backgroundImage: loginActiveBackground,\n  };\n\n  WICSS.ACTIVE_HEADER_BG = WICSS.generateBrowserSpecificGradient(\n      '#3389ac', '#085c84');\n\n  WICSS.HEADER_FONT_STYLE = {\n    textShadow: '0px -2px 0px rgba(0, 0, 0, 0.5)',\n    color: 'white',\n    fontFamily: 'Arial',\n    fontWeight: 700,\n  };\n\n  WICSS.WHITE_LABEL_STYLE = {\n    color: 'white',\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n    top: 43, \n    right: 0, \n    width: 76,\n    textAlign: 'center',\n    position: 'absolute',\n    fontSize: '10px',\n    fontWeight: 700,\n    lineHeight: '10px',\n  };\n\n  if(WI.browserIsChrome() && WI.osIsMac()) {\n    WICSS.WHITE_LABEL_STYLE.top = 45;\n  }\n \n  window.WICSS = WICSS;\n    \n}(window));\n",
+  "DataList.js": "window.App = window.App || {};\n/** Handles all the display for the find results list **/\n(function(App) {\n  var listStyle = {\n    overflowY: 'auto',\n    maxHeight: '300px',\n    overflowX: 'hidden',\n    minWidth: '100%',\n  };\n  \n  var divStyle = {\n    overflowX: 'auto',\n    overflowY: 'hidden',\n  };\n  \n  // Creates a new DataList\n  var DataList = function(headerData, boxClassName) {\n    if(headerData){\n      this.initialize(headerData, boxClassName);\n    }\n  };\n  \n  // DataList Initializer\n  var p = DataList.prototype = new App.ListView;\n  p.listViewInitialze = p.initialize;\n  p.initialize = function(headerData, boxClassName) {\n    this.listViewInitialze();\n    this.boxClassName = boxClassName;\n    this.div = MODIT.ui.createElement('div', divStyle);\n    this.headerData = headerData;\n    this.header = new App[this.boxClassName](this.dispatcher, this.headerData);\n    this.div.appendChild(this.header.div);\n    this.listDiv = MODIT.ui.addElement(this.div, 'div', listStyle);\n    \n    //surely there is a pure css way to do this somehow?\n    var self = this;\n    window.addEventListener('resize', function() {\n      clearTimeout(self.resizeTo);\n      self.resizeTo = setTimeout(function() {\n        _handleResize.apply(self);\n      }, 100);\n    });\n  };\n  \n  // Allows dropdown to be updated dynamically\n  p.update = function(data) {\n    while(this.listBoxes.length > 0) {\n      this.removeBox(this.listBoxes[0]);\n    }\n    this.recordData = data;\n    MODIT.ui.hide(this.listDiv);\n    this.synchBoxesToData(this.recordData, 'id');\n    MODIT.ui.setStyle(this.listDiv, { display:'inline-block'});\n    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth,});\n  };\n/*  p.update = function(data) {\n    while(this.listBoxes.length > 0) {\n      this.removeBox(this.listBoxes[0]);\n    }\n    this.recordData = data;\n    MODIT.ui.hide(this.listDiv);\n    this.synchBoxesToData(this.recordData, 'id');\n    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth, display:'block'});\n  };\n*/  \n  // Helper override of AddBox class from ListBox\n  p.addBox = function(data) {\n    var record = new App[this.boxClassName](this.dispatcher, data);\n    this.listDiv.appendChild(record.div);\n    this.listBoxes.push(record);\n  };\n  \n  p.removeBox = function(box) {\n    this.listDiv.removeChild(box.div);\n    this.listBoxes.splice(this.listBoxes.indexOf(box), 1);\n  };\n  \n  function _handleResize(){\n    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth});\n  };\n\n  App.DataList = DataList\n}(App));\n",
+  "SubmissionList.js": "window.App = window.App || {};\n/** Handles all the display for the find results list **/\n(function(App) {\n  \n  var headerData =   {\n    \"id\": 0,\n    \"date\" : \"timestamp\",\n    \"submitter\": \"submitter\",\n    \"k\": \"k\",\n//    \"boundType\": \"type\",\n    \"H\": '\\u2265' + \" H(k)\",\n    \"description\": \"comment\",\n    \"status\": \"status\",\n    \"validation\": \"validation\",\n    \"currentRecord\": \"current\",\n  };\n  \n  // Creates a new SubmissionList\n  var SubmissionList = function() {\n    this.initialize();\n  };\n  \n  // SubmissionList Initializer\n  var p = SubmissionList.prototype = new App.DataList;\n  p.dataListInitialze = p.initialize;\n  p.initialize = function() {\n    this.dataListInitialze(headerData, 'Submission');\n  };\n\n  App.SubmissionList = SubmissionList\n}(App));\n",
+  "Submission.js": "/* Display element for boxes in the find results list */\nwindow.App = window.App || {};\n(function(App){\n  var FIELDS = {\n    \"date\": {width: 160},\n    \"k\": {width: 70},\n    \"H\": {width: 70},\n    \"submitter\": {width: 160},\n//    \"boundType\": {width: 70},\n    \"description\": {width: 300},\n    \"status\": {width: 90},\n    \"validation\": {width: 200},\n    \"currentRecord\": {width: 60},    \n  };\n\n  // Creates a new Submission\n  var Submission = function(dispatcher, data) {\n    this.initialize(dispatcher, data);\n  };\n\n  var p = Submission.prototype = new App.DataBox();\n  p.dataBoxInitialize = p.initialize;\n\n  p.initialize = function(dispatcher, data) {\n    this.dataBoxInitialize(dispatcher, data, FIELDS);\n  };\n  \n  //Updates the Submission display based on the given data/index \n  p.dataBoxUpdate = p.update;\n  p.update = function(data, index) {\n//    if(!data.userSubmitted && data.id !== 0){\n//      data.validation = data.currentRecord = 'pending';\n//    }\n    this.dataBoxUpdate(data, index);\n    if (data.id != 0)\n    {\n      MODIT.ui.setStyle(this.submitter, {textAlign: \"left\"});\n      MODIT.ui.setStyle(this.description, {textAlign: \"left\"});\n      MODIT.ui.setStyle(this.validation, {textAlign: \"left\"});      \n    }\n    else\n    {\n      MODIT.ui.setStyle(this['date'], {marginLeft: -1});  //Crazy hack, dunno why\n    }\n    for(var i = 0; i < FIELDS.length; i++) {\n      MODIT.ui.addTitleIfTruncated(this[FIELDS[i]], data[FIELDS[i]])\n    }\n  };\n\n  App.Submission = Submission;\n}(App));\n",
+  "DataBox.js": "/* Display element for boxes in the find results list */\nwindow.App = window.App || {};\n(function(App){\n\n  var ROW_HEIGHT = 20;\n\n  var boxStyle = {\n    height: ROW_HEIGHT,\n    lineHeight: ROW_HEIGHT + 'px',   \n    webkitTouchCallout: 'none',\n    webkitUserSelect: 'none',\n    khtmlUserSelect: 'none',\n    mozUserSelect: 'none',\n    msUserSelect: 'none',\n    userSelect: 'none',\n    backgroundColor: 'white',\n    border: 0,\n    minWidth: '100%',\n  };\n  \n  var boxHeaderStyle = {\n    lineHeight: ROW_HEIGHT + 'px',\n    backgroundColor: '#61a9cd',\n    backgroundImage: WICSS.generateBrowserSpecificGradient('#61a9cd', \n          '#125474'),\n    border: 0,\n  };\n  \n  var textStyle = {\n    textAlign: 'center',\n    color: '#0c0c0c',\n    cssFloat: 'left',\n    textShadow: '0px 1px 0px rgba(255, 255, 255, 0.7)',\n    fontWeight: 200,\n    fontFamily: 'Arial',\n    fontSize: 12,\n    whiteSpace: 'nowrap',\n    overflow: 'hidden',\n    textOverflow: 'ellipsis',\n    height: ROW_HEIGHT,\n  };\n  \n  var headerStyle = {\n    textAlign: 'center',\n    color: '#000000',\n    textShadow: '0px 1px 0px rgba(100,149,237, 0.5)',\n    fontWeight: 'bold',\n    fontSize: '100%',\n    fontFamily: 'Arial',\n    cssFloat: 'left',\n    overflow: 'hidden',\n    textOverflow: 'ellipsis',\n    height: ROW_HEIGHT,\n    whiteSpace: 'nowrap',\n  };\n  \n  var dividerStyle = {\n    height: '100%',\n  };\n//------------------------------------------------------------------------\n\n  // Creates a new DataBox\n  var DataBox = function(dispatcher, data, fields) {\n    if(dispatcher){\n      this.initialize(dispatcher, data, fields);\n    }\n  };\n\n  var p = DataBox.prototype = new App.ListBox();\n  p.listBoxInitialize = p.initialize;\n\n  p.initialize = function(dispatcher, data, fields) {\n    this.listBoxInitialize(dispatcher, data);\n    MODIT.ui.setStyle(this.div, boxStyle);\n    this.fields = fields;\n    var style;\n    if (data.id != 0)\n    {\n      style = textStyle;\n      this.addMouseOverHighlight();\n    }\n    else\n    {\n      MODIT.ui.setStyle(this.div, boxHeaderStyle);\n      style = headerStyle;\n    }\n    var divider;\n    var totalWidth = 0;\n    for(x in this.fields) {\n      this[x] = MODIT.ui.addElement(this.div, 'div', [style, \n                  {width: this.fields[x].width}]);\n      divider = this.createDivider(dividerStyle);\n      this.div.appendChild(divider);\n      totalWidth += this.fields[x].width + 6;\n    }\n    MODIT.ui.setStyle(this.div, {width: totalWidth + 'px'});\n    this.div.removeChild(divider);\n\n    this.update(data);\n  };\n  \n  //Updates the DataBox display based on the given data/index \n  p.listBoxUpdate = p.update;\n  p.update = function(data, index) {\n    this.listBoxUpdate(data, index);\n    for(x in this.fields) {\n      this[x].textContent = data[x] || '';\n      MODIT.ui.addTitleIfTruncated(this[x], data[x])\n    }\n    for(x in this.fields) {\n      MODIT.ui.addTitleIfTruncated(this[x], data[x])\n    }\n  };\n\n  App.DataBox = DataBox;\n}(App));\n",
+  "ModitFooter.js": "window.App = window.App || {};\n(function(App){\n\n  var logo = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAABACAYAAACp3n/2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDA2MUNDRTM3RTlGMTFFMkExNzc5OTcyMzY3MTZCRTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDA2MUNDRTQ3RTlGMTFFMkExNzc5OTcyMzY3MTZCRTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MDYxQ0NFMTdFOUYxMUUyQTE3Nzk5NzIzNjcxNkJFOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MDYxQ0NFMjdFOUYxMUUyQTE3Nzk5NzIzNjcxNkJFOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm5Z4V0AAAp7SURBVHja7Fp5UBRX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\";\n\n  var style = {\n    position: 'absolute',\n    right: 0,\n    top: 0,\n    height: 42,\n    color: 'white',\n    fontSize: 9,\n    fontFamily: 'Arial',\n    textShadow: WICSS.WHITE_TEXT_SHADOW,\n    backgroundImage: 'url(' + logo + ')',\n    backgroundRepeat: 'no-repeat',\n    backgroundPosition: '40% 40%',\n    opacity: '0.9',\n    cursor: 'pointer',\n  };\n\n  var ModitFooter = function() {\n    this.initialize();\n  };\n\n  var p = ModitFooter.prototype;\n  p.initialize = function() {\n    this.link = MODIT.ui.createElement('a');\n    this.link.href = 'https://mod.it/mwvGNpEU/';\n    this.link.target = '_top';\n    this.div = MODIT.ui.addElement(this.link, 'div', style);\n    this.div.textContent = 'Powered by';\n  };\n\n  App.ModitFooter = ModitFooter;\n}(App));"
+};
+</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://s3.amazonaws.com/modit-libraries/jquery-1.8.2.min.js?a=mod.it_0.2.13.0_real"></script> -->
+    <script type="text/javascript" src="https://da189i1jfloii.cloudfront.net/js/kinvey-js-0.9.14.min.js"></script>
+    
+    
+    <!--<script type="text/javascript" src="https://s3.amazonaws.com/modit-libraries/modit-ui.js?a=mod.it_0.2.13.0_real"></script>-->
+    <!--script type="text/javascript" src="https://s3.amazonaws.com/modit-libraries/modit-preloader.js?a=mod.it_0.2.13.0_real"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!--<script type="text/javascript" src="https://s3.amazonaws.com/modit-libraries/underscore-min.js?a=mod.it_0.2.13.0_real"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.2/backbone-min.js"></script>-->
+    <!--<script type="text/javascript" src="https://s3.amazonaws.com/modit-libraries/backbone-min.js?a=mod.it_0.2.13.0_real"></script>-->
+    
+    <script type="text/javascript">
+      var numericStyles = ['zIndex', 'fontWeight', 'opacity'];
+      window.MODIT = window.MODIT || {};
+      MODIT.preloadAndRun = function(callback){
+        callback();
+      }
+      MODIT.ui = MODIT.ui || {};
+
+      MODIT.ui.setStyle = function(el, style){
+        if(style instanceof Array){
+          for(var i = 0; i < style.length; i++){
+            this.setStyle(el, style[i]);
+          }
+          return;
+        }
+        var toStyle = el;
+        // to make this IE8 compatible:
+        // http://stackoverflow.com/questions/5747523/cross-browser-solution-for-checking-if-a-javascript-object-is-an-html-element
+        if(!(el instanceof HTMLElement) && el.div instanceof HTMLElement){
+          toStyle = el.div;
+        }
+        for(var x in style){
+          if(parseFloat(style[x]) === style[x] && numericStyles.indexOf(x) === -1){
+            el.style[x] = style[x] + 'px';
+          } else {
+            el.style[x] = style[x];
+          }
+        }
+      };
+
+      MODIT.ui.hide = function(el){
+        el.style.display = 'none';
+      };
+
+      MODIT.ui.show = function(el){
+        el.style.display = 'inline-block';
+      };
+
+      MODIT.ui.createElement = function(name, style){
+        var el = document.createElement(name);
+        this.setStyle(el, style);
+        return el;
+      };
+
+      MODIT.ui.addElement = function(parent, type, style){
+        var el = document.createElement(type);
+        parent.appendChild(el);
+        MODIT.ui.setStyle(el, style);
+        return el;
+ };
+
+      MODIT.ui.addTouchClick = function(el, callback, context){
+        var func = function(e){
+          callback.apply(context, [e]);
+        };
+
+        var eventType = WI.osIsIOS() ? 'touchstart' : 'click';
+        el.addEventListener(eventType, func);
+        el.alxuiTouchClickListener = func;
+      };
+
+
+      MODIT.ui.Button = function(style, onclick, context){
+        this.div = MODIT.ui.createElement('div', style);
+        MODIT.ui.setStyle(this.div, style);
+        MODIT.ui.addTouchClick(this.div, onclick, context);
+      };
+
+      MODIT.ui.Button.prototype.setLabel = function(text){
+        this.div.textContent = text;
+      }
+
+      MODIT.ui.Button.prototype.setMouseOverStyles = function(onStyle, offStyle){
+        this.div.addEventListener('mouseover', function(){
+          MODIT.ui.setStyle(this.div, onStyle);
+        }.bind(this));
+        this.div.addEventListener('mouseout', function(e){
+          if(e.toElement && (e.toElement.parentNode === this.div || e.toElemnt === this.div)){
+            return;
+          }
+          MODIT.ui.setStyle(this.div, offStyle);
+        }.bind(this));
+      };
+
+    </script>
+    
+    
+  </head>
+  <body onload="MODIT.preloadAndRun(main);">
+  
+<script witag="combinedScripts">window.getComputedStyle(document.body).width;window.MODIT = window.MODIT || {};
+window.WI = window.WI || {};
+(function() {
+
+/**
+ * A global namespace to hold helper functions for 
+ * the modit framework.
+ **/
+WI.CLIENT_VERSION = '0.2.12.0';
+
+//Set a max of 100K lines each with 100K chars, codemirror
+//Likely can't handle anything near that anyways
+WI.MAX_FILE_SIZE = 100000;
+
+//MS to chunk modit model changes before propagating
+WI.MODIT_MODEL_SYNCH_CHUNK_TIME = 10;
+
+//A singleton object that holds functions for extracting 
+//standard mod-elements
+WI.extractionFunctions = {};
+
+//Function for extracting all functions into mod-elements
+WI.extractionFunctions.functionExtractor = function (source) {
+  JSHINT(source);
+  if(_hasUnparsableErrors(JSHINT.errors)) {
+    return [];
+  }
+  var parsedSourceLines = source.split('\n');
+  var jsHintFunctions = JSHINT.data().functions;
+  return _convertJSHintFunctionsToModdableElemnts(
+      jsHintFunctions, parsedSourceLines);
+};
+
+function  _convertJSHintFunctionsToModdableElemnts(
+  jsHintFunctions, parsedSourceLines) {
+  var FUNCTION_REGEXP_STRING =
+    "(?:function [^(]+[(][^)]*[)]|[^\"(\n;]+function[^)]*[)])";
+  var returnMEs = [];
+  var re = new RegExp(FUNCTION_REGEXP_STRING);
+  for (var i = 0; i < jsHintFunctions.length; i++) {
+    var firstLineNum = jsHintFunctions[i].line;
+    var lastLineNum = jsHintFunctions[i].last;
+    // Strip the quotes from the name jsHint parses.
+    var parsedName = jsHintFunctions[i].name.submitNew(/"/g, '');
+    // Get the code of the entire function.
+    var code = parsedSourceLines.slice(
+      firstLineNum - 1, lastLineNum).join('\n');  
+    // Make sure the parsed name shows up in the code.
+    if (code.indexOf(parsedName) > -1) {
+    // Use the regexp to get the name we display.
+      var matches = re.exec(code);
+      if (matches) {
+        returnMEs.push(new MODIT.ModElement({}, 
+            {
+              startLine: firstLineNum -1,
+              startChar: 0,
+              codeFragment: code
+            }));
+      } else if(code.indexOf(parsedName) < 
+              code.indexOf('function')) {
+      // anonymous functions of the form
+      // foo(function(){}) are incorrectly given the 
+      // name foo by JSHint.  We'd like to not log
+      // to the console in this know case, but log
+      // if any new case that we haven't encountered yet
+      // comes up.  I think the best way to acheive this
+      // is to do nothing in this very particular case.
+      // This tests that if what JS hint thinks is the name
+      // of the function comes before the word function
+      // and it is not a valid declaration of the form
+      // var something = function or something.something = function
+      // somenume : function
+      // that or regexp would match then it should do nothing
+      } else {
+      //We will regularly be trying to parse un parsable could
+      //in our beta client so we no longer really want to longer
+      //in this situation
+      //  console.log('Could not parse function from line ' + 
+      //      + firstLineNum + ': "' + code + '"');
+      }
+    } else {
+    // This can happen if the function in question is
+    // anonymous as JSHint names such functions anonymous.
+    // However it can also happen due to a bug in JS hint 
+    // where some anonymous functions are given the name of the 
+    // the last thing after a dot to have been declared.
+    // I don't know of any way to reasonably log in other cases
+    // but not in that one.  Furthermore there was no logging in this
+    // case prior to this story so I think spending a lot of thought on 
+    // this would be going outside the story
+    }
+  }
+  return returnMEs;
+}
+
+function _hasUnparsableErrors(errorArray) {
+
+  var unparsableErrorList = [
+      "Expected an identifier and instead saw '{a}'.",
+      "Unmatched '{a}'.",
+  ];
+  for(var i = 0; i < errorArray.length; i++) {
+    if(!errorArray[i] ||
+      unparsableErrorList.indexOf(errorArray[i].raw) != -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+WI.functionQueuer = {};
+//Array of objects with a function and the time that was last called
+WI.functionQueuer.calledFunctions = [];
+//Array of functions that we have a pending timeout to call
+WI.functionQueuer.pendingFunctions = [];
+//if a function hasn't been called within the passed in mseconds
+//calls it with the given args and context.
+//otherwise adds it to pending if it was not in there
+//already and calls the funcToQueue on a timeout.
+//If matchContext is true it treats calls with different
+//context as unique, otherwise it treats them as duplicates
+WI.functionQueuer.queueFunction = 
+function(funcToCall, funcToQueue, mseconds, 
+         callContext, callArgs, queueContext, 
+         queueArgs, matchContext, useStoredReturnVal) {
+  var lastCall = _getLastCall(this.calledFunctions, funcToCall,
+                              matchContext, queueContext);
+
+  var now = (new Date()).getTime();
+  var hasBeenCalledRecently = lastCall ?
+                              now - lastCall.time < mseconds : false;
+
+  //If there is already a call to this function pending
+  //return what we got last time or null depending on 
+  //if we want to use the stored return val
+  if(lastCall && lastCall.pending) {
+    return useStoredReturnVal ? lastCall.lastReturn : null;
+  }
+  if(!hasBeenCalledRecently) {
+    if(lastCall) {
+      lastCall.time = now;
+    } else {
+      this.calledFunctions.push(
+        {func: funcToCall, time: now, context: queueContext});
+      lastCall = this.calledFunctions[this.calledFunctions.length - 1];
+    }
+    lastCall.lastReturn = funcToCall.apply(callContext, callArgs);
+    return lastCall.lastReturn;
+  } else {
+    //set up a pending call
+    lastCall.pending = true;
+    var self = this;
+    setTimeout(function() {
+      self._timeoutCall(funcToQueue, queueContext, queueArgs, lastCall);
+    }, mseconds - now + lastCall.time);
+    return useStoredReturnVal ? lastCall.lastReturn : null;
+  }
+}
+
+//This is really private as shown by the _ but made it public
+//for easier testability.
+WI.functionQueuer._timeoutCall = 
+      function(funcToQueue, queueContext, queueArgs, lastCall) {
+  lastCall.pending = false;
+  funcToQueue.apply(queueContext, queueArgs);
+};
+
+function _getLastCall(calledFuncs, funcToCall, matchContext, queueContext){
+  for(var i = 0; i < calledFuncs.length; i++) {
+    if((calledFuncs[i].func == funcToCall) &&
+        (!matchContext || calledFuncs[i].context == queueContext)) {
+      return calledFuncs[i];
+    }
+  }
+}
+
+WI.getDomainFromWIURL = function(url) {
+  var urlString = String(url);
+  var wiIndex = urlString.indexOf('mod.it');
+  if(wiIndex == -1) {
+    return 'error';
+  }
+  return urlString.substring(0, wiIndex + 6);
+};
+
+/**
+ * Removed the given element from the given array if it is there.
+ * @param arr {Array} The array from which to remove.
+ * @param element {obj} The object to remove.
+ */
+WI.removeArrayElement = function(arr, element) {
+  var idx = arr.indexOf(element);
+  if (idx !== -1) {
+    arr.splice(idx, 1);
+  }
+};
+
+/**
+ * Extracts the modit key from a WI url 
+ * @param url {String} (optional) the url to parse, defautls to the current 
+                                  url
+ * @return {String} modit key
+ */
+WI.getModitKeyFromUrl = function(url) {
+  // Get the part after the hostname and before url params or 
+  // any other slashes.
+  var path;
+  if(!url) {
+    path = document.location.pathname;
+  } else {
+    path = url.split('mod.it')[1];
+  }
+  path = path.substr(1);
+  var key;
+  key = path.split('/')[0].split('?')[0]; //we want the part of the path
+                                          //before the first / or ?
+  if (key == 'src') { return null; }
+  return key;
+};
+
+/**
+ * Extracts the modit revision from a WI url.  Returns 'DEV_HEAD' or
+ * 'PROD_HEAD' if no revision number is specified for dev mode or prod
+ * mode respectively.  Assumes the url is of the form domain/moditKey/revision
+ * @param url {String} (optional) the url to parse, defautls to the current 
+                                  url
+ * @return {String} modit key
+ */
+WI.getModitRevisionFromURL = function(url) {
+  var path;
+  if(!url) {
+    path = document.location.pathname;
+  } else {
+    path = url.split('mod.it')[1];
+  }
+  //get the contents after the second slash.
+  var split = path.split('/');
+  if(split[2]) {
+    var rev = split[2].split('?')[0];
+    if(rev == 'dev') {
+      return 'DEV_HEAD';
+    } else if(rev) {
+      return rev;
+    } 
+  } else {
+    return 'PROD_HEAD';
+  }
+};
+
+/**
+ * Checks to see if the url param to not run the modit is there 
+ * @return {Boolean} true if its there
+ */
+WI.getNoRunParam = function() {
+  return window.location.search.indexOf('?norun=true') == 0;
+};
+
+/**
+ * Gets the current dev prefix based on the current hostname
+ * @return {String} The dev prefix
+ */
+WI.getDevPrefix = function() {
+  // Get the part after the hostname and before url params.
+  var host = window.location.hostname;
+  if(host == 'mod.it'){
+    return '';
+  }
+  if(host.lastIndexOf('.mod.it') != -1) {
+    var dev_server = host.substr(0, 
+        host.lastIndexOf('.mod.it'));
+    if (dev_server == 'beta') {
+      return '';
+    } else if (dev_server == 'dev') {
+      return 'dev_';
+    } else {
+      return 'dev_' + dev_server + '_'; 
+    }
+  } else if(host == "s3.amazonaws.com"){
+    var path = window.location.pathname;
+    return path.substring(0, path.indexOf('modit-file-json/'));
+  }
+};
+
+/**
+ * Gets the url for a library stored on s3
+ * @param libFile {string} The flie name for the library.
+ * @return {string} The url to the library on S3 
+ */
+WI.getLibraryUrl = function(libFile) {
+  var s3Base = 'https://s3.amazonaws.com/';
+  var libBucketBase = 'modit-libraries/';
+  var s3Pref = s3Base + WI.getDevPrefix() + libBucketBase
+  return s3Pref + libFile;
+};
+
+/**
+ * Gets the url for the server we are on from the bucket
+ * we are on.  Designed to be used by the home modit so that it
+ * knows where its links should point. 
+ * @return {String} url of current server
+ */
+WI.getWIDomainFromS3Location = function() {
+  var path = window.location.pathname;
+  var prefix = path.substring(0, path.indexOf('modit-file-json/'));
+  var server;
+  if(prefix.indexOf('/dev_') == 0) {
+    if (prefix == '/dev_') {
+      server = 'dev';
+    } else {
+      server = prefix.substring(5, prefix.length -1);
+    }
+  } else if(prefix == '/') {
+    return 'https://mod.it';
+  }
+  return 'https://' + server + '.mod.it';
+};
+
+WI.getURLVars = function() {
+  // document.location.search starts with ?
+  var paramString = document.location.search.substring(1);
+  var vars = paramString.split("&");
+  var map = {};
+  for (var i = 0; i < vars.length; i++) {
+    var keyVal = vars[i].split("=");
+    map[keyVal[0]] = unescape(keyVal[1]);
+  }
+  return map;
+};
+
+WI.convertObjectToUrlParams = function(obj) {
+  var str = '';
+  for(var x in obj) {
+    str += encodeURIComponent(x) + '=' + 
+           encodeURIComponent(obj[x]) + '&';
+  }
+  str = str.substr(0, str.length - 1);
+  return str;
+};
+
+/**
+ * Checks if the browser is firefox.
+ * @return {bool} True iff the browser is firefox.
+ */
+WI.browserIsFirefox = function() {
+  //Changes to this need to be duplicated in the onerrorInjectionCode
+  return navigator.userAgent.indexOf('Firefox') != -1;
+};
+
+/**
+ * Checks if the browser is opera.
+ * @return {bool} True iff the browser is opera.
+ */
+WI.browserIsOpera = function() {
+  //Changes to this need to be duplicated in the onerrorInjectionCode
+  return navigator.userAgent.indexOf('Opera') != -1;
+};
+
+/**
+ * Checks if the browser is IE.
+ * @return {bool} True iff the browser is IE.
+ */
+WI.browserIsIE = function() {
+  //Changes to this need to be duplicated in the onerrorInjectionCode
+  return navigator.userAgent.indexOf('MSIE') != -1;
+};
+
+WI.osIsMac = function () {
+  return navigator.userAgent.indexOf('Mac OS X') != -1;
+};
+
+/**
+ * Checks if the os is Android.
+ * @return {bool} True iff the os is Android.
+ */
+WI.osIsAndroid = function() {
+  return navigator.userAgent.indexOf('Android') != -1;
+};
+
+/**
+ * Checks if the os is iOS.
+ * @return {bool} True iff the os is iOS.
+ */
+WI.osIsIOS = function() {
+  return navigator.userAgent.indexOf('like Mac OS X') != -1;
+};
+
+
+/**
+ * Checks if the browser is Safari.
+ * @return {bool} True iff the browser is Safari.
+ */
+WI.browserIsSafari = function() {
+  return !WI.browserIsChrome() &&
+      navigator.userAgent.indexOf('Safari') != -1;
+};
+
+/**
+ * Checks if the browser is Google chrome.
+ * @return {bool} True iff the browser is Google chrome.
+ */
+WI.browserIsChrome = function() {
+  return navigator.userAgent.indexOf('Chrome') != -1;
+};
+
+/**
+ * Wraps the given html in the given tag
+ * @param toWrap {String} html
+ * @param tagName {String} an html tag eg 'script'
+ * @param paramString {String} string for the tag params
+ * @return {String} html wrapped in the given tag
+ */
+WI.wrapInTag = function(toWrap, tagName, paramString) {
+  // Escape the closing tag's slash becuase that screws things up,
+  // possibly because it gets interpreted as a regex?
+  if(!paramString) {
+    paramString = ' ';
+  }
+  return '<' + tagName + ' ' + paramString + '>' 
+    + toWrap + '<\/' + tagName + '>';
+};
+
+WI.clone = function (obj) {
+  return JSON.parse(JSON.stringify(obj));
+};
+
+/**
+ * Searches an array of objects with the given attribute
+ * for the first index of an object where the given attributes
+ * value is the desired value
+ * @param arr {Array} array of objects
+ * @param attributeName {string} name of the attribute to search
+ * @param value {obj} desired value for that attribute
+ * @return {Number} index in the array of the matching object
+ */
+WI.searchArray = function(arr, attributeName, value) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] && arr[i][attributeName] == value) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+/**
+ * Pads an inteager to a specific length by prepending zeros. 
+ * @param num {Number} An integer to pad.
+ * @param size {Number} An integer length for the final string.
+ * @return {String} The given int padded with zeros to the desired length.
+ */
+WI.zeroPadInt = function(num, size) {
+  var str = num + '';
+  while (str.length < size) {
+    str = '0' + str;
+  }
+  return str;
+};
+
+/**
+ * Gets the file extension for a path.
+ * @param path {string} The path to the file.
+ * @return {string} The extension for the file.
+ */
+WI.getFileExtension = function(path) {
+  // TODO changes to this should be mirrored in the
+  // injected outputError in modit.js
+  var idx = path.lastIndexOf('.');
+  if (idx > -1) {
+    return path.substr(idx + 1);
+  }
+  return '';
+};
+
+/**
+ * Gets the line and character of the point directly before
+ * the first occurances of the given text in the given code 
+ * @param code {String} Some code to search
+ * @param text {String} the text to search for
+ * @return {Obj} Object with line and char for the given location
+ */
+WI.pointBefore = function(code, text) {
+  var beforeText = code.substr(0, code.indexOf(text));
+  var lines = beforeText.split('\n');
+  return {line: lines.length - 1, char: lines[lines.length -1].length};
+};
+
+/**
+ * Given a time that is valid for the Date constructor, returns a string
+ * of the format 'today at [localTime]' or '[x] days ago at [localTime]' 
+ * where localTime is a 12 hour time with am/pm
+ * @param time {string} a valid argument for the data constructor, either a
+ *    date string or a number of milliseconds since 1/1/1970
+ * @return {String} a string with the of the format 'today at [localTime]' 
+ *    or '[x] days ago at [localTime]' where localTime is a 12 
+ *    hour time with am/pm
+ */
+WI.getTimeSinceString = function(time) {
+  if (String(time).indexOf('T') != -1) {
+    // Safari can't parse iso8601
+    time = time.submitNew(/T/g, ' ').submitNew(/-/g, '/');
+    // In the non-iso8601 format we need to be explicit that
+    // we're in UTC.
+    time += ' +0000'
+  }
+  var then = new Date(time);
+  var now = new Date();
+  var ms = now.getTime() - then.getTime(); 
+  var days = Math.max(Math.floor(ms / 86400000), 0); //max with zero to prevent
+                                                     //rounding to -1 in rare 
+                                                     //cases
+  var time = then.toLocaleTimeString();
+  //FF puts toLocaleTimeString in HH:MM:SS AM/PM whereas chrome
+  //does HH/MM/SS in military time
+  var ampm = 'am';
+  var timeSpaceSplit = time.split(' ');
+  var timeSplit = time.split(':');
+  if(timeSpaceSplit.length > 1) {
+    ampm = timeSpaceSplit[1].toLowerCase();  
+  } else if(timeSplit[0] > 11) {
+    ampm = 'pm';
+    if(timeSplit[0] > 12) {
+      timeSplit[0] -= 12;
+    }
+  } else if(timeSplit[0] == 0) {
+    timeSplit[0] = 12;
+  }
+  if (days == 0) {
+    return 'today at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;
+  } else if(days == 1){
+    return  days + ' day ago at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;;
+  } else {
+    return  days + ' days ago at ' + timeSplit[0] + ':' + timeSplit[1] + ampm;;
+  }
+};
+
+WI.convertISOStringToDate = function(iso) {
+  var d = new Date(iso);
+  var offset = 0;
+  //Firefox date constructor does not convert to local
+  if(WI.browserIsFirefox()) {
+    offset = d.getTimezoneOffset() * 60000;
+  } 
+  return new Date(d.getTime() - offset);
+};
+
+/**
+ * Checks if the given HTML string has any of <, ;, /, & and rejects it
+ * if it does 
+ * @param input {String} the input to validate
+ * @return {Boolean} true if its valid, false if not
+ */
+WI.validateHTML = function(input) {
+  return input.indexOf('<') == -1 && input.indexOf(';') == -1 &&
+          input.indexOf('/') == -1 && input.indexOf('&') == -1;
+};
+
+
+/**
+ * Alerts and logs the given message so that we can spy for tests 
+ * @param msg {String} msg to show
+ */
+WI.alertError = function(msg) {
+  console.log(msg);
+  alert(msg);
+};
+
+
+/**
+ * Returns true if the given path has an image file extension 
+ * @param path {String} the files path
+ * @return {Boolean} true if it has an image extension
+ */
+WI.isImagePath = function(path) {
+  var imgExtensions = ['png', 'jpg', 'jpeg','gif'];
+  var ext = WI.getFileExtension(path);
+  return imgExtensions.indexOf(ext) !== -1;
+};
+
+/**
+ * Returns true iff the origin is from a mod.it domain 
+ * @param origin {String} the origin uri
+ * @return {Boolean} is the origin from a modit domain
+ */
+WI.isFromModitDomain = function(origin) {
+  var fromSub = origin.match(/https:\/\/[^.]*.mod.it/);
+  var fromProd = origin.match(/https:\/\/mod.it/);
+  return fromSub || fromProd;
+};
+
+/**
+ * Returns just the file name and extension from the given path 
+ * @param path {String} a file path
+ * @return {String} the file name from the path with the extension included
+ */
+WI.getFileFromPath = function(path) {
+  var split = path.split('/');
+  return split[split.length - 1];
+};
+
+/**
+ * Updates the url bar with the given key and revision 
+ * @param key {String} ModitKey
+ * @param rev {Int} Revision number
+ */
+WI.setModitUrl = function(key, rev) {
+  window.history.pushState(null, document.title,
+        WI.getDomainFromWIURL(window.location) + '/' + key + '/' + rev); 
+};
+
+/*
+// Fix a bug in easel where removing a child
+// in the middle of a stage.update can crash
+// because the child will be null and thus
+// reading _tick crashes
+if (window.Container) {
+  window.Container.prototype._tick = function() {
+    for (var i=this.children.length-1; i>=0; i--) {
+      var child = this.children[i];
+      if (child && child._tick) { child._tick(); }
+      if (child && child.tick) { child.tick(); }
+    }
+  }
+}*/
+window.WI = WI;
+}());
+
+(function(window) {
+  var WICSS = WICSS || {};
+
+  WICSS.generateBrowserSpecificGradient = function(
+        col1, col2, type, pos1, pos2) {
+    if(type == 'linear' || !type) {
+      var gradientArgString = '(top,' + col1 + ',' + col2 + ')';
+      if(WI.browserIsIE()) {
+        return "-ms-linear-gradient" + gradientArgString;
+      } else if(!WI.browserIsFirefox()) {
+        return "-webkit-linear-gradient" + gradientArgString
+      } else {
+        return "-moz-linear-gradient" + gradientArgString
+      }
+    } else if(type == 'radial') {
+      if(WI.browserIsOpera()) {
+        return 'radial-gradient(closest-corner circle at ' +
+            pos1 + ' ' + pos2 + ', ' + col1 + ', ' + col2 + ')';
+      } else if(WI.browserIsIE()){
+        return '-ms-radial-gradient(' + pos1 + ' ' + pos2 + 
+            ', circle closest-corner, ' + col1 + ', ' + col2 + ')';
+      } else if(!WI.browserIsFirefox()) {
+        return '-webkit-radial-gradient(' + pos1 + ' ' + 
+            pos2 + ', circle closest-corner, ' + col1 + ', ' + col2 + ')';
+      } else {
+        return '-moz-radial-gradient(' + pos1 + ' ' + 
+            pos2 + ', circle closest-corner, ' + col1 + ', ' + col2 + ')';
+      }
+    }
+  };
+
+  //Colors
+  WICSS.BACKGROUND_GREY = '#d9d9d9';
+  WICSS.CONTRAST_DARK_GREY = '#434343';
+  WICSS.MENU_GREY = '#666666';
+  WICSS.EDITOR_BACKGROUND_GREY = '#f0f0f0';
+  WICSS.MODIT_BLUE = '#076B9A';
+  WICSS.HIGHLIGHT_BLUE = '#3A9DCD';
+  WICSS.BRIGHTEST_BLUE = '#61A9CD';
+  WICSS.DARK_BLUE = '#024464';
+  WICSS.ACCOUNT_BUTTON_COLOR = '#999999';
+  WICSS.HEADER_GREY = '#383838';
+  WICSS.LIGHT_GREY = '#545454';
+  WICSS.OFF_WHITE = '#e9e9e9';
+  WICSS.WHITE_TEXT_SHADOW = '0px -2px 0px rgba(0, 0, 0, 1)';
+  var greyGradientFrom = '#434343';
+  var greyGradientTo = '#1A1A1A';
+
+  var tabGradientFrom = '#bdbdbd';
+  var tabGradientTo = '#7e7e7e';
+
+  var blueGradientFrom = '#498bab';
+  var blueGradientTo = '#156579';
+
+  var backgroundFrom = 'rgba(206, 206, 206, 1)';
+  var backgroundTo = 'rgba(150, 150, 150, 1)';
+ 
+  WICSS.LIGHT_GREY_GRADIENT = WICSS.generateBrowserSpecificGradient('#c4c4c4',
+      '#898989');
+
+  WICSS.GREY_GRADIENT = WICSS.generateBrowserSpecificGradient(greyGradientFrom,
+      greyGradientTo);
+
+  WICSS.TAB_BAR_GRAIDENT = WICSS.generateBrowserSpecificGradient(tabGradientFrom,
+      tabGradientTo);
+
+  WICSS.EDITOR_BACKGROUND = WICSS.generateBrowserSpecificGradient(backgroundFrom,
+      backgroundTo, 'radial', '50%', '50%');
+
+  WICSS.BLUE_BUTTON_BACKGROUND = WICSS.generateBrowserSpecificGradient(
+      blueGradientFrom, blueGradientTo);
+
+  WICSS.BLUE_BUTTON_HIGHLIGHT = WICSS.generateBrowserSpecificGradient(
+    blueGradientTo, blueGradientFrom);
+
+  //Fonts
+  WICSS.GENERAL_FONT = 'Arial';
+
+  //Sizes
+  WICSS.OWNER_NOTICE_HEIGHT = 40;
+  WICSS.TOPBAR_HEIGHT = 64;
+  WICSS.TOOLBAR_WIDTH = 60;
+  WICSS.WORKSPACE_BAR_HEIGHT = 30;
+  WICSS.LIST_TOOL_WIDTH = 350;
+  WICSS.TITLEBAR_HEIGHT = 28;
+
+  WICSS.LIST_TOOL_IFRAME_STYLE = {
+    width: WICSS.LIST_TOOL_WIDTH - 1,
+    height: '100%',
+    margin: 0,
+    padding: 0,
+    position: 'absolute',
+    border: 0,
+    userSelect: 'none',
+    MozUserSelect: 'none',
+    webkitUserSelect: 'none',
+    zIndex: 3,
+    background: WICSS.GREY_GRADIENT,
+    webkitBoxShadow: '2px 0px 4px rgba(0, 0, 0, 0.7)',
+    mozBoxShadow:  '2px 0px 4px rgba(0, 0, 0, 0.7)',
+    boxShadow:       '2px 0px 4px rgba(0, 0, 0, 0.7)',
+    left: -WICSS.LIST_TOOL_WIDTH - 4,
+  };
+
+  WICSS.FIND_INPUT_STYLE = {
+    marginLeft: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 3,
+    outline: 0,
+    border: 'solid 1px #4a4a4a',
+    height: 20,
+  };
+
+  //Grabbed this from here: 
+  //https://github.com/necolas/css3-social-signin-buttons/blob/master/auth-buttons.css
+  WICSS.LOGIN_BUTTONS_CSS = {
+    position: 'absolute',
+    height: 30,
+    padding: '0 1em',
+    border: '1px solid #999',
+    borderRadius: '2px',
+    width: 140,
+    marginLeft: -70,
+    top: 118,
+    opacity: 0.5,
+    left: '50%',
+    textAlign: 'center',
+    lineHeight: '30px',
+    borderColor: '#3079ed',
+    color: '#fff',
+    background: '#4787ed',
+    backgroundImage: '-webkit-gradient(linear, 0 0, 0 100%, from(#4d90fe), to(#4787ed))',
+    backgroundImage: '-webkit-linear-gradient(#4d90fe, #4787ed)',
+    backgroundImage: '-moz-linear-gradient(#4d90fe, #4787ed)',
+    backgroundImage: 'linear-gradient(#4d90fe, #4787ed)',
+  };
+
+  if(navigator.userAgent.indexOf('Android') != -1 && 
+       navigator.userAgent.indexOf('Chrome') == -1) {
+    WICSS.LOGIN_BUTTONS_CSS.width = 180;
+    WICSS.LOGIN_BUTTONS_CSS.marginLeft = -90;
+  }
+
+  WICSS.CONTEXT_MENU_STYLE = {
+    display: 'none',
+    position: 'absolute',
+    width: 172,
+    backgroundColor: WICSS.EDITOR_BACKGROUND_GREY,
+    boxShadow: "0px 0px 20px 0px rgba(0,0,0,0.75)",
+    textAlign: 'center',
+    fontFamily: 'Arial',
+    fontWeight: 700,
+    cursor: 'default',
+    outline: '0px solid transparent',
+    fontSize: '18px',
+  };
+
+  WICSS.CONTEXT_OPTION_STYLE = {
+    width: 150,
+    height: 30,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 10,
+    color: 'white',
+    backgroundColor: WICSS.MODIT_BLUE,
+    border: 'solid 1px ' + WICSS.CONTRAST_DARK_GREY,
+    borderRadius: '3px',
+    textAlign: 'center',
+    fontSize: '14px',
+    fontWeight: 700,
+    height: 30,
+    lineHeight: '30px',
+    cursor: 'pointer',
+  };
+
+  WICSS.POPUP_BUTTON_STYLE = {
+    color: 'white',
+    backgroundColor: WICSS.MODIT_BLUE,
+    borderRadius: '3px',
+    textAlign: 'center',
+    marginBottom: 5,
+    fontSize: '14px',
+    fontWeight: 700,
+    height: 30,
+    lineHeight: '30px',
+    cursor: 'pointer',
+
+  };
+
+  WICSS.LIST_TITLE_STYLE = {
+    fontFamily: WICSS.GENERAL_FONT,
+    fontSize: 20,
+    fontWeight: 700,
+    margin: '5px',
+    height: 20,
+    cursor: 'default',
+  };
+
+  WICSS.TOOL_TAB_BAR_STYLE = {
+    width: '100%',
+    background: WICSS.TAB_BAR_GRAIDENT,
+    height: '30px',
+    borderTop: 'solid 1px #888888',
+    borderBottom: 'solid 1px #343434',
+    color: '#434343',
+    textShadow: 'none',  //TODO GET THIS SHADOW FROM SAM
+  };
+
+  WICSS.TOOL_TIP_STYLE = {
+    position: 'absolute',
+    fontSize: 16,
+    lineHeight: '20px',
+    fontFamily: WICSS.GENERAL_FONT,
+    display: 'none',
+    backgroundColor: 'white',
+    color: WICSS.CONTRAST_DARK_GREY,
+    boxShadow: "10px 10px 5px " + WICSS.CONTRAST_DARK_GREY,
+    border: "2px solid " + WICSS.CONTRAST_DARK_GREY,
+    borderRadius: '5px',
+    cursor: 'default',
+  };
+
+  WICSS.HIGHLIGHT_STYLE = {};
+  var highlightFromColor = '#B6C8DF';
+  var highlightToColor = '#6784B1';
+  WICSS.HIGHLIGHT_STYLE.background = WICSS.generateBrowserSpecificGradient(
+      highlightFromColor, highlightToColor); 
+
+
+  WICSS.JS_ICON = "data:image/png;base64,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";
+
+  WICSS.BLUE_BUTTON_STYLE = {
+    backgroundImage: WICSS.BLUE_BUTTON_BACKGROUND,
+    fontWeight: 'bold',
+    fontSize: '16px',
+    fontFamily: 'Arial, sans-serif', 
+    textShadow: '0 -1px 1px rgba(0, 0, 0, 0.75)',
+    textAlign: 'center',
+    color: '#fafafa',
+    cursor: 'pointer',
+    borderRadius: 12,
+    border: 'solid 1px #102732',
+  };
+
+  WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE = {
+    color: '#ffffff',
+    backgroundImage: WICSS.BLUE_BUTTON_HIGHLIGHT,
+  };
+
+  WICSS.WHITE_BUTTON_STYLE = {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    fontFamily: 'Arial, sans-serif',
+    boxShadow: '1px 1px 1px rgba(255, 255, 255, 0.5) inset',
+    border: '1px solid #bbb',
+    borderRadius: '5px',
+    textShadow: '0 1px 1px rgba(255, 255, 255, 0.9)',
+    textAlign: 'center',
+    color: '#555',
+    margin: '5px auto',
+    marginRight: 10,
+    cursor: 'pointer',
+  };
+
+  var loginBackground = WICSS.generateBrowserSpecificGradient('#fbfbfb', 
+        '#d5d5d5');
+  WICSS.WHITE_BUTTON_STYLE.backgroundImage = loginBackground;
+
+  var loginHighlightBackground = WICSS.generateBrowserSpecificGradient( 
+      '#d5d5d5', '#fbfbfb');
+  
+  WICSS.WHITE_BUTTON_HIGHLIGHT_STYLE = {
+    color: '#444',
+    backgroundImage: loginHighlightBackground,
+  };
+
+  var loginActiveBackground = WICSS.generateBrowserSpecificGradient(
+      '#ececec', '#f7f7f7');
+
+  WICSS.WHITE_BUTTON_ACTIVE_STYLE = {
+    boxShadow: '0px 1px 2px rgba(50, 50, 50, 0.3) inset',
+    border: '1px solid #999',
+    color: '#555',
+    backgroundImage: loginActiveBackground,
+  };
+
+  WICSS.ACTIVE_HEADER_BG = WICSS.generateBrowserSpecificGradient(
+      '#3389ac', '#085c84');
+
+  WICSS.HEADER_FONT_STYLE = {
+    textShadow: '0px -2px 0px rgba(0, 0, 0, 0.5)',
+    color: 'white',
+    fontFamily: 'Arial',
+    fontWeight: 700,
+  };
+
+  WICSS.WHITE_LABEL_STYLE = {
+    color: 'white',
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+    top: 43, 
+    right: 0, 
+    width: 76,
+    textAlign: 'center',
+    position: 'absolute',
+    fontSize: '10px',
+    fontWeight: 700,
+    lineHeight: '10px',
+  };
+
+  if(WI.browserIsChrome() && WI.osIsMac()) {
+    WICSS.WHITE_LABEL_STYLE.top = 45;
+  }
+ 
+  window.WICSS = WICSS;
+    
+}(window));
+
+function main() {
+  var bodyStyle = {
+    backgroundColor: '#333344',
+    width: '100%',
+    height: '100%',
+    margin: 0,
+    padding: 0,
+    border: 0,
+    minHeight: '600',
+  };
+  var km = new Game.KinveyManager();
+  var recordDisplay = new Game.RecordDisplay(km, document.body);
+  MODIT.ui.setStyle(document.body, bodyStyle);
+}
+/*Base class for revision boxes, image boxes and hopefully in the future
+ *all our list boxes
+ */
+window.App = window.App || {};
+(function(App){
+
+  var BOX_HEIGHT = 60;
+  var THUMB_SIZE = 60;
+
+  var boxStyle = {
+    borderBottom: 'solid 1px #b1b1b1',
+    borderTop: 'solid 1px #ffffff',
+    borderLeft: 'solid 1px #343434',
+    borderRight: 'solid 1px #343434',
+    width: '100%',
+    overflow:'hidden',
+  };
+
+  var oddBoxStyle = {
+    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozRDI4NkU3ODk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozRDI4NkU3OTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNEMjg2RTc2OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNEMjg2RTc3OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+DtVeywAAACtJREFUeNrszTEBACAMA7CCP2TW51SwKzGQ0/bls5sFEolEIpFIJJKMAAMABoUCbvlaDdsAAAAASUVORK5CYII=)',
+  };
+
+  var mouseOverStyle = {
+    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGODI2QkVFOTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGODI2QkVFQTk2NTUxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNEMjg2RTdBOTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY4MjZCRUU4OTY1NTExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FbJ/MQAAACxJREFUeNpilCne4MtAY8DEQAcwasmoJaOWjFoyasmoJaOWjFoyagkDQIABAD74Ab7GmNkRAAAAAElFTkSuQmCC)',
+  };
+
+  var headerStyle = {
+    color: '#337B9E',
+    position: 'relative',
+    fontSize: '16px',
+    fontWeight: 700,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: 155,
+    cssFloat: 'left',
+    marginTop: 5,
+    marginLeft: 5,
+  };
+
+  var descriptionStyle = {
+    marginLeft: 5,
+    cssFloat: 'left',
+    width: 250,
+    height: BOX_HEIGHT - 30,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    fontSize: 12,
+    color: '#888',
+    fontStyle: 'italic',
+  };
+
+  var thumbStyle = {
+    marginLeft: 5,
+    marginTop: 5,
+    width: THUMB_SIZE - 10,
+    height: THUMB_SIZE - 10,
+    cssFloat: 'left',
+  };
+
+  var topRightContainerStyle = {
+    cssFloat: 'right',
+    margin: 5,
+    marginBottom: 0,
+  };
+
+  var iconButtonStyle = {
+    cssFloat: 'left',
+    width: 20,
+    height: 20,
+    cursor: 'pointer',
+  };
+
+  var vertDividerData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NDE2Nzg1Qjk2NTQxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NDE2Nzg1Qzk2NTQxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk0MTY3ODU5OTY1NDExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk0MTY3ODVBOTY1NDExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YZ1NUwAAABpJREFUeNpiysjI8P3///9EJgYoGCQMgAADAPm6BTZponrtAAAAAElFTkSuQmCC';
+
+var deleteButtonStyle = {
+    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGREE5RERBQzk1QjMxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QTk4MTE0NDk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZEQTlEREFBOTVCMzExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZEQTlEREFCOTVCMzExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yjdzRwAAAZdJREFUeNpijI6OZqAELFmyBIXPxEBlgGygLxA/A+KHQOxJhN4gIH4RExPzGIi9MQxkZmZeCKQkgViOkZFxI5D2wWNYKFDNKiAtDsQyrKysszEM5ObmZoOx////zwrUsA7qamyGLQeqYUbSy4VhYFhY2DGgK/+hGboWzVAMw1hYWP5GREQcxjDQwcGhKjEx8QweQ7EalpqaetLGxqYGw0BgwJ4BGpqHy1BchllbW+cCuRexJhugoSdxGYrHsHN40yEuQ7EZBlR7Dl86RDH03LlzG4GuYkSXA4mdOnVqNTbD8OWU0PPnzzf9+/cPw8C/f/8yAS3rwpGksBqINTaJSFJYDcSZNHDFPtDrvrgM9AcqWIErNvElKaCh7nA9MAYoP/7+/ZsJX2wCi6o8IDVp/vz5JqCwhBkKBDOBTAUUF7Kzs3MTShq4khQXF5cAhpejoqKOCwoKfhMWFv6SlZV1HFc6gxmalpZ2SkhI6CsIA/XC8zIjrMQGescISGWCUgYQTwVqvEygpAapz4ByJwPxZRQDqVUFAAQYAClx7CQoSRW0AAAAAElFTkSuQmCC)',
+  };
+
+  var deleteHighlightStyle = {
+    backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5ODE5RDRERTk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5ODE5RDRERjk2NTIxMUUyOUJDNTk2Qjg3RTlCOTdFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRBOTgxMTREOTY1MjExRTI5QkM1OTZCODdFOUI5N0VFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRBOTgxMTRFOTY1MjExRTI5QkM1OTZCODdFOUI5N0VFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MeldtQAAAaBJREFUeNpiVCqawUAJuNubjsJnYqAyQDbQF4ifAfFDIPYkQm8QEL9QLp75GIi9MQxkYWZaCKQkgViOkZFhI5D2wWNYKFDNKiAtDsQybCzMszEM5ONkY4Ox//9nYAVqWAd1NTbDlgPVMMMEBLjYuTAMLPEyP8bMxPQPzdC1aIZiGMbKzPS3zNv8MIaB4eYaVS0htmfwGIrVsM4Ih5OBJmo1GAYCA/ZMmLlGHi5DcRnmb6SaC+RexJpsgIaexGUoHsPO4U2HuAzFZhhQ7Tl86RDF0D1XHwCTzn9GdLl//xkYt1+8txqbYfhySui+aw+b/v7DNPDvv39MQMu6cCQprAZijU0ikhRWA3EmDVyxD/S6Ly4D/YEKVuCKTXxJCmioOzwLwxig/Pjrz18mfLEJLKrygNSkmjWHTUBhCTOUnYV5JpCpgOJCLjYWbkJJA1eS4uNkF8DwcpWf5XFxfu5vUoI8X/pjnI/jSmcwQ7sjHU5J8HN/BeFKPwt4XmaEldhA7xgBqUxQygDiqUCNlwmU1CD1GVDuZCC+jGIgtaoAgAADACcx18ycyLA6AAAAAElFTkSuQmCC)',
+  };
+
+  var vertDivderStyle = {
+    marginLeft: 2,
+    marginRight: 2,
+    cssFloat: 'left',
+  };
+
+  var restoreStyle = {
+    cssFloat: 'left',
+    textShadow: 'none',
+    lineHeight: '18px',
+    fontSize: '14px',
+    marginRight: 5,
+    cursor: 'pointer',
+    color: '#888',
+    textDecoration: 'none',
+  };
+
+  var restoreHighlightStyle = {
+    color: '#337B9E',
+    textDecoration: 'underline',
+  };
+ 
+  /**
+   * Creates a new list box 
+   * @param dispatcher {BackBoneEvents} An event dispatcher to trigger 
+   *    events on
+   * @param data {Obj} obj to initialize the boxes data property to
+   * @constructor
+   */
+  var ListBox = function(dispatcher, data) {
+    if(dispatcher) {
+      this.initialize(dispatcher, data);
+    }
+  };
+
+  var p = ListBox.prototype;
+  p.initialize = function(dispatcher, data) {
+    this.div = MODIT.ui.createElement('div', boxStyle);
+    this.dispatcher = dispatcher;
+    this.data = data;
+  };
+
+  /**
+   * Updates the boxes display by settings it data attribute and 
+   * updating its zebra striping 
+   * @param data {Obj} obj to initialize the boxes data property to
+   * @param index {int} The index of the box in the list for striping
+   */
+  p.update = function(data, index) {
+    this.data = data;
+    if(index % 2 == 1) {
+      MODIT.ui.setStyle(this.div, oddBoxStyle);
+    } else {
+      MODIT.ui.setStyle(this.div, {backgroundImage: boxStyle.backgroundImage});
+    }
+  };
+
+  /**
+   * Adds a blue text header at the top of the box 
+   * @param text {String} starting text for the header
+   */
+  p.addHeader = function(text) {
+    this.header = MODIT.ui.addElement(this.div, 'div', headerStyle);
+    this.setHeaderText(text); 
+  };
+
+  /**
+   * Creates and returns a div with the headerStyle and the passed style 
+   * @param style {Obj} object with additional css styles to apply
+   * @return {HTMLDiv} a div
+   */
+  p.createHeader = function(style) {
+    var header = MODIT.ui.createElement('div', [headerStyle, style || {}]);
+    return header;
+  };
+
+  /**
+   * Adds a thumbnail with the given image data and mouse over behavior
+   * @param imgData {dataUri} image data for the thumbnail 
+   * @param mouseOn {function} called on mouseover
+   * @param mouseOut {function} called on mouseout
+   * @param context {obj} context for mouseover/mouseout
+   */
+  p.addThumb = function(imgData, mouseOn, mouseOut, context) {
+    this.thumb = new MODIT.ui.ScaledImage(imgData);
+    MODIT.ui.setStyle(this.thumb.div, thumbStyle);
+    this.thumb.div.addEventListener('mouseover', function() { 
+        mouseOn.apply(context); });
+    this.thumb.div.addEventListener('mouseout', function() { 
+        mouseOut.apply(context); });
+    this.div.appendChild(this.thumb.div);
+  };
+
+  /**
+   * Adds a container to the top right of the box where UI can be placed 
+   */
+  p.addTopRightPanel = function() {
+    this.topRightContainer = MODIT.ui.addElement(this.div, 'div', 
+        topRightContainerStyle);
+  };
+
+  /**
+   * Updates the header text and adds a tool tip if that text gets
+   * truncated 
+   * @param text {String} text to display
+   */
+  p.setHeaderText = function(text) {
+    this.header.textContent = text; 
+    MODIT.ui.addTitleIfTruncated(this.header, text);
+  };
+
+  /**
+   * Updates the description text and adds a tool tip if that text gets
+   * truncated 
+   * @param text {String} text to display
+   */
+  p.setDescriptionText = function(text) {
+    this.description.textContent = text; 
+    MODIT.ui.addTitleIfTruncated(this.description, text);
+  };
+
+  /**
+   * Updates the image the thumbnail is displaying 
+   * @param imgData {dataUri} image data for the thumbnail 
+   */
+  p.updateThumb = function(imgData) {
+    this.thumb.updateImage(imgData);
+  };
+  
+  /**
+   * Adds a mouse over color change to the entire box 
+   */
+  p.addMouseOverHighlight = function() {
+    this.lastBackground = boxStyle.backgroundImage; 
+    var self = this;
+    this.div.addEventListener('mouseover', function() {
+      self.lastBackground = self.div.style.backgroundImage;
+      MODIT.ui.setStyle(self.div, mouseOverStyle);
+    });
+    this.div.addEventListener('mouseout', function() {
+      MODIT.ui.setStyle(self.div, {backgroundImage: self.lastBackground});
+    });
+  };
+
+  /**
+   * Adds a description area to the box 
+   * @param text {String} starting description text
+   */
+  p.addDescription = function(text) {
+    this.description = MODIT.ui.addElement(this.div, 'div', descriptionStyle);
+    this.setDescriptionText(text);
+  };
+
+  /**
+   * Adds a delete button to the top right container 
+   * @param onclick {function} called when delete is clicked
+   * @param context {object} context for the callback 
+   */
+  p.addDeleteButton = function(onclick, context) {
+    this.deleteButton = new MODIT.ui.Button([iconButtonStyle, deleteButtonStyle],
+        onclick, context);
+    this.deleteButton.setMouseOverStyles(deleteHighlightStyle, deleteButtonStyle);
+    this.topRightContainer.appendChild(this.deleteButton.div);
+
+  };
+
+  /**
+   * Adds a vertical divider to the top right container 
+   */
+  p.addTopRightDivider = function() {
+    var vertDivider = MODIT.ui.addElement(this.topRightContainer, 'img', vertDivderStyle);
+    vertDivider.src = vertDividerData;
+  };
+
+  /**
+   * returns a veritcle divider img element 
+   * @param {Obj} style object to apply
+   * @return {Img} a vertical divider img element
+   */
+  p.createDivider = function(style) {
+    var vertDivider = MODIT.ui.createElement('img', 
+        [vertDivderStyle, style || {}]);
+    vertDivider.src = vertDividerData;
+    return vertDivider;
+  };
+
+  /**
+   * Adds a restore button to the top right container 
+   */
+  p.addRestoreButton = function(onclick, context) {
+    this.restoreButton = new MODIT.ui.Button(restoreStyle, onclick, context); 
+    this.restoreButton.setLabel('Restore');
+    this.restoreButton.setMouseOverStyles(restoreHighlightStyle, 
+        restoreStyle);
+    this.topRightContainer.appendChild(this.restoreButton.div);
+  };
+
+  App.ListBox = ListBox;
+}(App));
+
+window.App = window.App || {};
+/** Base case for list displays like the image list or the
+    revision list **/
+(function(App) {
+
+  /**
+   * Creates a new ListView 
+   * @param tool {ModdingTool} Modding tool to update off of
+   * @constructor
+   */
+  var ListView = function(tool) {
+    if(tool) {
+      this.initialize(tool);
+    }
+  };
+
+  var p = ListView.prototype;
+  p.initialize = function(tool) {
+    this.tool = tool;
+    this.div = MODIT.ui.createElement('div');
+    this.listBoxes = [];
+    this.dispatcher = _.extend({}, Backbone.Events);
+  };
+
+  /**
+   * Child classes override 
+   */
+  p.update = function() {
+  };
+
+  p.synchBoxesToData = function(boxData, uniqueAttributeName) {
+    _addNewBoxes.apply(this, [boxData, uniqueAttributeName]); 
+    _pruneOldBoxes.apply(this, [boxData, uniqueAttributeName]); 
+    var self = this;
+    for(var i = 0; i < boxData.length; i++) {
+      var boxInfo = _.find(boxData, function(box) {
+          return box[uniqueAttributeName] ==                  
+                 self.listBoxes[i].data[uniqueAttributeName]
+          });
+      this.listBoxes[i].update(boxInfo, i);
+    }
+  };
+
+  /**
+   * Child classes overide 
+   * @param boxData {Obj} data object with information to make a new box
+   */
+  p.addBox = function(boxData) {
+  };
+
+  /**
+   * Removes the given box from the listBoxes array and from the dom 
+   * @param box {ListBox} A list box to remove
+   */
+  p.removeBox = function(box) {
+    this.div.removeChild(box.div);
+    this.listBoxes.splice(this.listBoxes.indexOf(box), 1);
+  };
+
+  function _addNewBoxes(data, uniqueAttributeName) {
+    for(var i = 0; i < data.length; i++) {
+      if(!_.find(this.listBoxes, function(box) {
+            return box.data[uniqueAttributeName] == 
+                   data[i][uniqueAttributeName];
+           })) {
+        this.addBox(data[i]);
+      }
+    }
+  };
+
+  function _pruneOldBoxes(data, uniqueAttributeName) {
+    for(var i = 0; i < this.listBoxes.length; i++) {
+      var self = this;
+      if(!_.find(data, function(dataItem) {
+              return dataItem[uniqueAttributeName] ==
+                     self.listBoxes[i].data[uniqueAttributeName];
+            })){
+        this.removeBox(this.listBoxes[i]);
+        i--;
+      }
+    }
+  };
+  
+  App.ListView = ListView
+}(App));
+
+window.MODIT = window.MODIT || {};
+window.MODIT.ui = window.MODIT.ui || {};
+(function(MODIT){
+  /**
+   * 
+   * Adds a tool tip to the given element if it has been truncated
+   * either by overflow hidden or textOverflow ellipsis
+   * @param el {HTMLElement} element to title
+   * @param title {string} title
+   */
+  MODIT.ui.addTitleIfTruncated = function(el, title) {
+    if(el.titleTimeout) {
+      clearTimeout(el.titleTimeout);
+    }
+    function addTitle() {
+      if(el.offsetWidth < el.scrollWidth || 
+         el.offsetHeight < el.scrollHeight){
+        el.title = title;
+      } else {
+        el.title = '';
+      }
+      el.titleTimeout = setTimeout(addTitle, 500);
+    }
+    addTitle();
+  };
+  
+  MODIT.ui.setDelayedStyle = function(el, style)
+  {
+    setTimeout(function(){
+      MODIT.ui.setStyle(el, style);
+    }, .0001);
+  }
+}(MODIT));
+window.Game = window.Game || {};
+(function(Game){
+
+  var SUBMISSION_COLLECTION = 'LiveSubmissionQueue';
+  var RECORD_COLLECTION = 'LiveRecords';
+  var SETTINGS_COLLECTION = 'LiveSettings';
+  var HIDDEN_MAX_ENTRIES = 100;
+  
+  var KinveyManager = function() {
+    this.initialize();
+  };
+
+  var p = KinveyManager.prototype;
+  p.initialize = function() {
+    this.submissions = new Kinvey.Collection(SUBMISSION_COLLECTION);
+    this.records = new Kinvey.Collection(RECORD_COLLECTION);
+    this.settings = new Kinvey.Collection(SETTINGS_COLLECTION);
+  };
+
+  p.submitRecord = function(data) {
+    var self = this;
+    this.getRecords(data.k, data.k, 1000, function(res) {
+        _validateEntry.apply(self, [data, res]);
+      }, this);
+    
+  };
+  
+  p.getRecords = function(kMin, kMax, maxNum, callback, context, listName, arg) {
+    var query = new Kinvey.Query();
+    if ( kMin ) query.on('k').greaterThanEqual(parseInt(kMin));
+    if ( kMax ) query.on('k').lessThanEqual(parseInt(kMax));
+    query.on('k').sort(Kinvey.Query.ASC);
+    query.setLimit(maxNum || HIDDEN_MAX_ENTRIES);
+    this.records.setQuery(query);
+    this.records.fetch(
+      {success: function(res) {
+        callback.apply(context, [res, listName, arg]);
+      },
+       error: function(e) {
+         console.log(e);
+       }
+      }
+    );
+  };
+  
+  p.getSubmissions = function(nameFilter, kFilter, callback, context, listName, arg) {
+    var query = new Kinvey.Query();
+    query.on('_kmd.ect').sort(Kinvey.Query.DESC);
+    if(nameFilter){
+      query.on('submitter').equal(nameFilter);
+    }
+    if(kFilter){
+      query.on('k').equal(parseInt(kFilter));
+    }
+    query.setLimit(HIDDEN_MAX_ENTRIES);
+    this.submissions.setQuery(query);
+    this.submissions.fetch(
+      {success: function(res) {
+        callback.apply(context, [res, listName, arg]);
+      },
+       error: function(e) {
+         console.log(e);
+       }
+      }
+    );
+  };
+  
+  p.getSetting = function(settingName, callback, context) {
+    var query = new Kinvey.Query();
+    query.on('name').equal(settingName);
+    this.settings.setQuery(query);
+    this.settings.fetch(
+      {success: function(res) {
+        callback.apply(context, [res]);
+      },
+       error: function(e) {
+         console.log(e);
+         callback.apply(context);
+       }
+      }
+    );
+  };
+  
+  function _submitRecord(data){
+    data.status = 'submitted';
+    data.record = 'False';
+    var self = this;
+    console.log('submitting');
+    var ent = new Kinvey.Entity(data, this.submissions.name);
+    ent.save({success: function(){
+      self.onSubmit();
+      alert('Congratulations!  Your record has been submitted.  It will be verified and processed shortly.  You can track its status in the submissions list at the bottom of the page.');
+    },
+              error: function(){ alert('There was an error submitting your ' + 
+                                       'record, please try again in a few minutes');}});
+  };
+  
+  function _validateEntry(entry, recordsWithMatchingK){
+    for(var i = 0; i < recordsWithMatchingK.length; i++){
+      var hVal = entry.boundType === 'upper' ?
+          recordsWithMatchingK[i].attr.upperBound :
+          recordsWithMatchingK[i].attr.lowerBound;
+      hVal = parseInt(hVal);
+      if(recordsWithMatchingK[i].attr.k == entry.k &&
+              (hVal <= entry.H && entry.boundType === 'upper') ||
+              (hVal >= entry.H &&
+              entry.boundType === 'lower'))
+              {
+        alert('Sorry, there is already a record with a bound of ' + 
+            hVal + ' for k = ' + entry.k);
+        return;
+      }
+    }
+    _submitRecord.apply(this, [entry]);
+  };
+
+  Game.KinveyManager = KinveyManager;
+}(Game));
+Kinvey.init({
+        'appKey': 'kid_VVVl6XruNf',
+        'appSecret': 'ac92b2709bb347b282f0428deced73dc'
+      });
+window.Game = window.Game || {};
+(function(Game){
+
+  var HEADER = 'Narrow admissible tuples';
+  var SUB_TITLE = 'bounds on H(k)';
+  var DESCRIPTION_INNER_HTML = '<p style="font-size: 14px">A <i>k</i>-tuple is a set of <i>k</i> integers.  A <i>k</i>-tuple <i>S</i> is <i>admissible</i> if, for every prime <i>p</i>, there is a residue class (mod <i>p</i>) that does not intersect <i>S</i>. The quantity <i>H(k)</i> is the least possible diameter (difference of the largest and smallest elements) of an admissible <i>k</i>-tuple .</p>';
+  
+  var MASTER_CREATOR_ID = 'kid_VVVl6XruNf';
+  
+  var fontColor = '#f0f0f0';
+
+  var headerStyle = {
+    color: fontColor,
+    fontSize: 28,
+    lineHeight: '40px',
+    fontFamily: 'Arial',
+    fontWeight: 700,
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+    cssFloat: 'left',
+  };
+  
+   var subheaderStyle = {
+    marginLeft: 7,
+    marginTop: 1,
+    color: fontColor,
+    fontSize: 24,
+    lineHeight: '40px',
+    fontFamily: 'Arial',
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+//    fontStyle: 'italic',
+    cssFloat: 'left',
+  };
+  
+  var descriptionStyle = {
+    marginTop: 60,
+    color: fontColor,
+    fontSize: 14,
+    fontFamily: 'Arial',
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+    
+  };
+
+  var containerStyle = {
+    position: 'absolute',
+    top: 10,
+    left: 20,
+    right: 20,
+    bottom: 0,
+  };
+  
+  var refreshButtonStyle = {
+    cssFloat: 'right',
+    lineHeight: '24px',
+    borderRadius: '5px',
+    height: 24,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginRight: 5,
+  };
+  
+  var submitNewButtonStyle = {
+    cssFloat: 'right',
+    lineHeight: '24px',
+    borderRadius: '5px',
+    height: 24,
+    paddingLeft: 10,
+    paddingRight: 10,
+  };
+  
+  var listStyle = {
+    marginTop: 55,
+    width: '100%',
+    marginBottom: 10,
+  };
+  
+  var inputContStyle = {
+    marginTop: 20,
+    color: fontColor,
+    fontFamily: 'Arial',
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+    lineHeight: '24px',
+  };
+  
+  var inputItemStyle = {
+    cssFloat: 'left',
+    marginRight: 8,
+  };
+
+  var RecordDisplay = function(km, div) {
+    this.initialize(km, div);
+  };
+
+  var p = RecordDisplay.prototype;
+  p.initialize = function(km, div) {
+    this.km = km;
+    var self = this;
+    this.km.onSubmit = function () {
+      MODIT.ui.hide(self.submitPopup.div);
+      setTimeout(function() {
+        self.nameInput.value = '';
+        self.kFilter.value = '';
+        self.updateSubmissions();
+        self.updateRecords(self.kMin.value);
+      }, 2000);
+    };
+    this.div = MODIT.ui.addElement(div, 'div', containerStyle);
+    _addHeader.apply(this);
+    _addDescription.apply(this);
+    _addKInputs.apply(this);
+    _addSubmitNew.apply(this);
+    _addRefresh.apply(this);
+    this.submitPopup = new App.Popup(this.div, this.km.submitRecord, this.km);
+    MODIT.ui.hide(this.submitPopup.div);
+    this.recordList = new App.RecordsList();
+    MODIT.ui.setStyle(this.recordList.div, listStyle);
+    this.div.appendChild(this.recordList.div);
+    _handleBrowse.apply(this);
+    _addNameInput.apply(this);
+    this.km.getSetting('secondParagraphHTML', _setDescription, this);
+    this.submissionList = new App.SubmissionList();
+    MODIT.ui.setStyle(this.submissionList.div, [listStyle,{ marginTop: 10}]);
+    this.div.appendChild(this.submissionList.div);
+    this.updateSubmissions();
+    //this.footer = new App.ModitFooter();
+    //this.div.appendChild(this.footer.link);
+    MODIT.ui.addElement(this.div, 'div', {width: '100%', height: 40});
+    this.km.getSetting('rangeBounds', function(res){
+      this.minRange=res[0].attr.contents.min;
+      this.maxRange=res[0].attr.contents.max;},this);
+    
+  };
+  
+  p.updateSubmissions = function(nameFilter, kFilter) {
+    this.km.getSubmissions(nameFilter, kFilter, _displayList, this, 'submissionList',[nameFilter, kFilter]);
+  };
+  p.updateRecords = function(kMin) {
+    this.km.getRecords(kMin, null, 100, 
+          _displayList, this, 'recordList', kMin);
+  };     
+  function _addSubmitNew() {
+    this.submitNew = new MODIT.ui.Button([WICSS.BLUE_BUTTON_STYLE,
+         submitNewButtonStyle], _handleSubmitNew, this);
+    this.submitNew.setLabel('submit new record');
+    this.submitNew.setMouseOverStyles(WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE,
+         [WICSS.BLUE_BUTTON_STYLE, submitNewButtonStyle]);
+    this.kInputcontainer.appendChild(this.submitNew.div);
+  };
+  
+  function _addRefresh() {
+    this.refresh = new MODIT.ui.Button([WICSS.BLUE_BUTTON_STYLE,
+         refreshButtonStyle], _handleRefresh, this);
+    this.refresh.setLabel('refresh');
+    this.refresh.setMouseOverStyles(WICSS.BLUE_BUTTON_HIGHLIGHT_STYLE,
+         [WICSS.BLUE_BUTTON_STYLE, refreshButtonStyle]);
+    this.kInputcontainer.appendChild(this.refresh.div);
+  };
+  
+  function _addHeader() {
+    this.header = MODIT.ui.addElement(this.div, 'div', headerStyle);
+    this.header.textContent = HEADER;
+//    this.subheader = MODIT.ui.addElement(this.div, 'div', subheaderStyle);
+//    this.subheader.textContent = SUB_TITLE;
+  };
+  
+  function _addDescription(){
+    this.description = MODIT.ui.addElement(this.div, 'div', descriptionStyle);
+  };
+  
+  function _setDescription(res){
+    this.description.innerHTML = DESCRIPTION_INNER_HTML +
+        (res[0].attr.contents || '');
+  };
+  
+  function _addKInputs(){
+    this.kInputcontainer = MODIT.ui.addElement(this.div, 'div',
+          inputContStyle);
+    this.labelMin = MODIT.ui.addElement(this.kInputcontainer, 'div',
+        inputItemStyle);
+    this.labelMin.textContent = 'Showing first 100 records with k \u2265 ';
+    this.kMin = MODIT.ui.addElement(this.kInputcontainer, 'input', 
+        [inputItemStyle, {width: 80}]);
+    this.kMin.type = 'number';
+    this.kMin.value = 2;
+    var self = this;
+    this.kMin.addEventListener('input', function() {
+      _handleBrowse.apply(self);
+    });
+    this.kMin.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowse.apply(self,[true]);});
+  };
+  
+  function _addNameInput(){
+    this.nameInputcontainer = MODIT.ui.addElement(this.div, 'div',
+          [inputContStyle, {marginTop: 60}]);
+    this.labelName = MODIT.ui.addElement(this.nameInputcontainer, 'div',
+        inputItemStyle);
+    this.labelName.textContent = 'Showing recent submissions by ';
+    this.nameInput = MODIT.ui.addElement(this.nameInputcontainer, 'input', 
+        [inputItemStyle, {width: 140, marginBottom:10}]); 
+    this.nameInput.type = 'text';
+    this.nameInput.value = '';
+    var self = this;
+    this.nameInput.addEventListener('input', function() {
+      _handleBrowseSubmissions.apply(self);
+    });
+    this.nameInput.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowseSubmissions.apply(self,[true]);});
+    this.labelkFilter = MODIT.ui.addElement(this.nameInputcontainer, 'div',
+        inputItemStyle);
+    this.labelkFilter.textContent = 'with k = ';    
+    this.kFilter = MODIT.ui.addElement(this.nameInputcontainer, 'input', 
+        [inputItemStyle, {width: 80, marginBottom:10}]);
+    this.kFilter.type = 'number';
+    this.kFilter.value = '';
+    var self = this;
+    this.kFilter.addEventListener('input', function() {
+      _handleBrowseSubmissions.apply(self);
+    });
+    this.kFilter.addEventListener('keydown', function(key) {if (key.keyCode===13)_handleBrowseSubmissions.apply(self,[true]);});
+  };
+  
+  function _handleSubmitNew(){
+    this.km.getSetting('disableSubmissions', function(res) {
+      if(res[0].attr.contents.state !== 1) {
+         MODIT.ui.show(this.submitPopup.div);
+      } else {
+        alert(res[0].attr.contents.message);
+      }
+    }, this);
+  };
+  
+  function _handleRefresh(){
+    console.log('refresh');
+    this.updateSubmissions(this.nameInput.value,this.kFilter.value);
+    this.updateRecords(this.kMin.value);
+  };
+  
+ function _handleBrowse(force) {
+    clearTimeout(this.browseTimeout);
+    var self = this;
+    this.browseTimeout = setTimeout(function() {
+      self.updateRecords(self.kMin.value);
+    }, force?0:300);
+  };
+  
+  function _handleBrowseSubmissions(force){
+    clearTimeout(this.browseTimeout);
+    var self = this;
+    this.browseTimeout = setTimeout(function() {
+      self.updateSubmissions(self.nameInput.value,self.kFilter.value);
+    }, force?0:300);
+  };
+  
+  function _displayList(res, listName, arg) {
+    var data = [];
+    if ( listName == 'recordList' && arg && arg >= this.minRange && arg <= this.maxRange && res[0] && res[0].attr.k != arg ) {
+      console.log('ignoring data')
+      console.log(res[0])
+      return;
+    }
+    if ( listName == 'submissionList' && arg[0] && res[0] && res[0].attr.submitter != arg[0] ) {
+      console.log('ignoring data')
+      return;
+    }
+    if ( listName == 'submissionList' && arg[1] && res[0] && res[0].attr.k != arg[1] ) {
+      console.log('ignoring data')
+      return;
+    }
+    _.each(res, function(r) {
+      var temp = {};
+      for(x in r.attr){
+        temp[x] = r.attr[x];
+      }
+      temp.id = r.attr._id;
+      temp.date = r.attr._kmd.ect.split('.')[0];
+      temp.date = temp.date.replace('T', ' ');
+// this line assumes the creator is changed by the submission server, but this is not currently implemented
+//      temp.userSubmitted = r.attr._acl.creator !== MASTER_CREATOR_ID;
+      data.push(temp);
+    });
+    this[listName].update(data)
+    this[listName].listDiv.scrollTop = 0;
+  };
+
+  Game.RecordDisplay = RecordDisplay;
+}(Game));
+var App = App || {};
+(function(App){
+
+  var popupWidth = 500;
+  var popupHeight = 365;
+  var containerWidth = 400;
+  var containerHeight = 315; 
+
+  var Popup = function(parent, onsubmit, context){
+    this.parent = parent;
+    this.onSubmit = onsubmit;
+    this.context = context;
+    
+    this.div = MODIT.ui.createElement('div', shadeStyle);
+    this.div.id = "thisdiv";
+    
+    this.popupDiv = MODIT.ui.addElement(this.div, 'div', divStyle);
+    this.barDiv = MODIT.ui.addElement(this.popupDiv, 'div', barDivStyle)
+    this.containerDiv = MODIT.ui.addElement(this.popupDiv, 'div', containerStyle);
+    this.fileName = "";
+    this.fileData = "";
+    
+    var s = '<table border="0" width = "100%" height = "100%"> <tr><td align="right"><b>Type:</b></td><td><select  id="boundSelect"><option value = "upper">Upper Bound</option></select></td></tr> <tr><td align="right"><b>Name:</b></td> <td><input type="text" id="Name" size="30"></td></tr> <tr><td align="right"><b>File:</b></td><td><div  id="FileDiv"></td></tr><tr><td></td><td><div id="FileNameDiv"></td></tr> <tr><td align="right"><b>Note:</b></td> <td><textarea id = "Description" ></textarea></td></tr> <tr><td></td><td> <div id = "SubmitDiv" value="Submit"></td></tr> </table>';
+
+    this.containerDiv.innerHTML = s;
+    parent.appendChild(this.div);
+    
+    this.name = document.getElementById('Name');
+    this.k = document.getElementById('k');
+    this.H = 0;//document.getElementById('H');
+
+
+    this.description = document.getElementById('Description');
+    
+    this.name.style.width ="100%";
+    this.description.style.width = "100%";
+    this.description.style.height = "100px";
+        
+    var submitButton = new MODIT.ui.Button(buttonStyle, submitData, this);
+    submitButton.setMouseOverStyles(buttonHighlightStyle, buttonStyle);
+    submitButton.setLabel('Submit');
+    document.getElementById('SubmitDiv').appendChild(submitButton.div);
+    
+    var browseButton = new MODIT.ui.Button(buttonStyle, function(){}, this);
+    browseButton.setMouseOverStyles(buttonHighlightStyle, buttonStyle);
+    browseButton.setLabel('Browse...');
+    document.getElementById('FileDiv').appendChild(browseButton.div);
+
+    var fileDialog = new MODIT.ui.FileDialog(browseButton.div, uploadedData, this);
+    
+    var closeButton = new MODIT.ui.Button(
+      [closerStyle], hide.bind(this), this);
+    closeButton.setMouseOverStyles(
+      buttonHighlightStyle,
+      closerStyle);
+    //closeButton.setImage(MODIT.getImage('closeIcon').cloneNode());
+    closeButton.setLabel('X');
+    closeButton.div.style.cursor = 'pointer';
+    this.barDiv.appendChild(closeButton.div);
+    
+    
+    var titleDiv = MODIT.ui.addElement(this.barDiv, 'div', titleStyle);
+    titleDiv.textContent = "Submit New Record";
+
+    this.boundSelect = document.getElementById('boundSelect');
+    this.boundSelect.type = 'select';
+  }
+  
+  var uploadedData = function(fileName, fileData){
+    
+    var fn = fileName;
+    var d = document.getElementById('FileNameDiv');
+    if(d.firstChild){
+      d.removeChild(d.firstChild);
+    }
+    
+    if (fn.length > 31){
+      fn = fn.substring(0,28)+ "...";
+    }
+    
+    d.appendChild(document.createTextNode(fn));
+    this.fileName = fileName;
+    this.fileData = fileData;
+  }
+  
+  var submitData = function(){
+    
+    var namebool = this.name.value != "";
+    var filebool = this.fileName != ""; 
+    
+    if (namebool && filebool){
+      var str = "Submit following data"
+      str += "\nName: " + document.getElementById('Name').value;
+      str += "\nFile: " + this.fileName;
+      str += "\nDescription: " + document.getElementById('Description').value;
+      str += '\nBoundType: ' + this.boundSelect.value;
+      console.log(str);
+          
+      this.onSubmit.apply(this.context, [{
+        submitter:  document.getElementById('Name').value,
+        k: 0, //parseInt(document.getElementById('k').value),
+        H: 0, //parseInt(document.getElementById('H').value),
+        description: document.getElementById('Description').value,
+        textData: this.fileData,
+        boundType: this.boundSelect.value,
+        status: 'Submitted',
+        validation: 'pending',
+        currentRecord: 'pending',
+      }]);
+    }
+    
+    else {
+      var str = "";
+      if (namebool == false){
+        str += "Please enter your name \n";
+      }
+//      if (kbool == false){
+//        str += "Please enter k value (integer) \n";
+//      }
+//      if (Hbool == false){
+//        str += "Please enter Diameter value (integer) \n";
+//      }
+      if (filebool == false){
+        str += "Please upload a file \n";
+      }
+      alert(str);
+    }
+    
+  }
+  
+  var hide = function(){
+    MODIT.ui.hide(this.div);
+  }
+  
+  var shadeStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    zIndex: 10,
+  };
+  
+  
+  var divStyle = {
+    left: '50%',
+    top: 300,
+    width: popupWidth,
+    height: popupHeight,
+    marginLeft: -popupWidth/2,
+    marginTop: -popupHeight/2,
+    position: 'absolute',
+    backgroundImage: WICSS.generateBrowserSpecificGradient(
+          'rgb(196, 196, 196)', 'rgb(137, 137, 137)'),
+
+    boxShadow: 'rgba(0, 0, 0, 0.7) 0px 5px 20px',
+    fontFamily: 'Arial',
+    borderRadius: '5px',    
+  };
+  
+  var barDivStyle = {
+    width: popupWidth,
+    height: 32,
+    position: 'absolute',
+    backgroundColor: '#61a9cd',
+    backgroundImage: WICSS.generateBrowserSpecificGradient('#61a9cd',
+          '#125474'),
+    fontFamily: 'Arial',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px'
+  };
+  
+  
+  
+  var containerStyle = {
+    width: containerWidth,
+    position: 'absolute',
+    left: '50%',
+    top: '40px',
+    marginLeft: -containerWidth/2 - 30,
+    height: containerHeight,
+    //marginTop: 10,
+  };
+  
+  
+  var buttonStyle = {
+    width: 100, 
+    marginLeft: 0,
+    marginTop: 2.5,
+    height: 22.5,
+    backgroundImage: WICSS.generateBrowserSpecificGradient(
+        'rgb(226, 226, 226)', 'rgb(107, 107, 117)'),
+    fontSize: '15px',
+    lineHeight: '24px',
+    borderRadius: '5px',
+    boxShadow: 'rgba(0, 0, 0, 0.7) 0px 5px 5px',
+    textAlign: 'center',
+    cursor: 'pointer',
+    textShadow: 'rgba(0, 0, 0, 0.74902) 0px -1px 1px',
+    marginBottom: 15,
+    userSelect: 'none',
+    webkitUserSelect: 'none',
+    MozUserSelect: 'none',
+  }
+  
+  var buttonHighlightStyle = {
+  	backgroundImage: WICSS.generateBrowserSpecificGradient(
+        'rgb(226, 226, 236)', 'rgb(187, 187, 207)'),
+	}
+  
+  var closerStyle = {
+    top: 2,
+    right: 5,
+    position: 'absolute',
+    backgroundImage: 'none',
+    background: 'none',
+  }
+  
+  var titleStyle = {
+    position: 'absolute',
+    left: 10,
+    fontSize: '20px',
+    fontColor: 'silver',
+    fontWeight: 700,
+    marginTop: 5,
+    textShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 10px',
+  };
+
+
+  App.Popup = Popup;
+  
+}(App));
+//Class that creates an invisible file dialog button of exact same size and //location as passed on div. Designed to be used behind some other
+//visible button as a hack to support styling a file input or if the
+//nostyle argument is true then to be used as a standard file-input
+(function() {
+
+  var invisStyle = {
+    position: 'relative',
+    opacity: 0,
+    overflow: 'hidden',
+  };
+  
+  /**
+   * Calls initialize with the given args, constructor 
+   * @param div {DOMElement} the DOMElement of the visible file dialog button
+   * @param onOkay {function} function to call when the user selects a file, 
+   *    gets passed the fileName and fileData
+   * @param context {Obj} context for the onOkay function
+   * @param noStyle {Boolean} if true then the object is not styled and 
+   *    will look like a standard file input
+   * @constructor
+   */ 
+  
+  var FileDialog = function(div, onOkay, context, noStyle) {
+    this.initialize(div, onOkay, context, noStyle);
+  };
+
+
+  /**
+   * Sets up the button and makes it invisible.
+   * @param div {DOMElement} the DOMElement of the visible file dialog button
+   * @param onOkay {function} function to call when the user selects a file, 
+   *    gets passed the fileName and fileData
+   * @param context {Obj} context for the onOkay function
+   * @param noStyle {Boolean} if true then the object is not styled and 
+   *    will look like a standard file input
+   * @return {type} desc
+   */
+  FileDialog.prototype.initialize = function(div, onOkay, context, noStyle) {
+  
+    var borderTop = parseInt(div.style.borderTopWidth) || 0;
+    var borderBottom = parseInt(div.style.borderBottomWidth)|| 0;
+    var borderLeft = parseInt(div.style.borderLeftWidth) || 0;
+    var borderRight = parseInt(div.style.borderRightWidth) || 0;
+
+    var left = 0;
+    var top = 0;
+    
+    if (WI.browserIsChrome()){
+      var width = "-webkit-calc(100% + " +(borderRight + borderLeft)+ "px)";
+      var height = "-webkit-calc(100% + " +(borderLeft + borderRight)+ "px)";
+    }
+    
+    else if (WI.browserIsFirefox()){
+      var width = "-moz-calc(100% + " +(borderRight + borderLeft)+ "px)";
+      var height = "-moz-calc(100% + " +(borderLeft + borderRight)+ "px)";
+    }
+    else if (WI.browserIsIE()){
+      var width = "calc(100% + " +(borderRight + borderLeft)+ "px)";
+      var height = "calc(100% + " +(borderLeft + borderRight)+ "px)";
+    }
+    else{
+      var width = "100%";
+      var height = "100%";
+    }
+  
+    this.div = MODIT.ui.createElement('div');
+    if(!noStyle) {
+    
+      MODIT.ui.setStyle(this.div, 
+          [invisStyle, 
+          {marginTop: top, marginLeft: left, 
+           width: width, height: height}]);
+    }
+    
+    this.wrappedOnOkay = _wrapOnOKay.apply(this, [onOkay, context, noStyle]);
+    addInput.apply(this, [noStyle]);
+    this.height = height;
+    
+    if(div.style.position == "" || div.style.position == "static"){
+       div.style.position = "relative";
+    }    
+    this.div.style.position = "absolute";
+    
+    div.appendChild(this.div); 
+
+    this.div.style.top = -borderTop;
+    this.div.style.left = -borderLeft;             
+
+    
+  };
+
+  function addInput(noStyle) {
+    this.input = MODIT.ui.addElement(this.div, 'input');
+    this.input.type = 'file';
+    if(!noStyle) {
+      MODIT.ui.setStyle(this.input, {height: this.div.style.height, width: this.div.style.width,
+      //This is the only way to make it bigger in firefox.
+          fontSize: "999"});  
+    }
+    this.input.addEventListener('change', this.wrappedOnOkay, false);
+    this.input.addEventListener('click', function() {
+      this.value = '';
+    }, false);
+  };
+
+  function _wrapOnOKay(onOkay, context, noStyle) {
+    var self = this;
+    return function(evt) {
+      var files = evt.target.files;
+      reader = new FileReader();
+      reader.onload = function(e) {
+        if(e.total < 630000) {
+          var split = self.input.value.split('\\');
+          var fileName = self.input.value.split('\\')[split.length - 1];
+          onOkay.apply(context, [fileName, e.target.result]);
+        } else {
+          alert('Asset is too large.  Please decrease the file size ' +
+                'so that it is less than 600k');
+        }
+      }
+      reader.readAsDataURL(files[0]);
+    }
+  }
+  
+  MODIT.ui.FileDialog = FileDialog;
+}());
+
+/* Display element for boxes in the find results list */
+window.App = window.App || {};
+(function(App){
+
+  var ROW_HEIGHT = 20;
+
+  var boxStyle = {
+    height: ROW_HEIGHT,
+    lineHeight: ROW_HEIGHT + 'px',   
+    webkitTouchCallout: 'none',
+    webkitUserSelect: 'none',
+    khtmlUserSelect: 'none',
+    mozUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none',
+    backgroundColor: 'white',
+    border: 0,
+    minWidth: '100%',
+  };
+  
+  var boxHeaderStyle = {
+    lineHeight: ROW_HEIGHT + 'px',
+    backgroundColor: '#61a9cd',
+    backgroundImage: WICSS.generateBrowserSpecificGradient('#61a9cd', 
+          '#125474'),
+    border: 0,
+  };
+  
+  var textStyle = {
+    textAlign: 'center',
+    color: '#0c0c0c',
+    cssFloat: 'left',
+    textShadow: '0px 1px 0px rgba(255, 255, 255, 0.7)',
+    fontWeight: 200,
+    fontFamily: 'Arial',
+    fontSize: 12,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    height: ROW_HEIGHT,
+  };
+  
+  var headerStyle = {
+    textAlign: 'center',
+    color: '#000000',
+    textShadow: '0px 1px 0px rgba(100,149,237, 0.5)',
+    fontWeight: 'bold',
+    fontSize: '100%',
+    fontFamily: 'Arial',
+    cssFloat: 'left',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    height: ROW_HEIGHT,
+    whiteSpace: 'nowrap',
+  };
+  
+  var dividerStyle = {
+    height: '100%',
+  };
+//------------------------------------------------------------------------
+
+  // Creates a new DataBox
+  var DataBox = function(dispatcher, data, fields) {
+    if(dispatcher){
+      this.initialize(dispatcher, data, fields);
+    }
+  };
+
+  var p = DataBox.prototype = new App.ListBox();
+  p.listBoxInitialize = p.initialize;
+
+  p.initialize = function(dispatcher, data, fields) {
+    this.listBoxInitialize(dispatcher, data);
+    MODIT.ui.setStyle(this.div, boxStyle);
+    this.fields = fields;
+    var style;
+    if (data.id != 0)
+    {
+      style = textStyle;
+      this.addMouseOverHighlight();
+    }
+    else
+    {
+      MODIT.ui.setStyle(this.div, boxHeaderStyle);
+      style = headerStyle;
+    }
+    var divider;
+    var totalWidth = 0;
+    for(x in this.fields) {
+      this[x] = MODIT.ui.addElement(this.div, 'div', [style, 
+                  {width: this.fields[x].width}]);
+      divider = this.createDivider(dividerStyle);
+      this.div.appendChild(divider);
+      totalWidth += this.fields[x].width + 6;
+    }
+    MODIT.ui.setStyle(this.div, {width: totalWidth + 'px'});
+    this.div.removeChild(divider);
+
+    this.update(data);
+  };
+  
+  //Updates the DataBox display based on the given data/index 
+  p.listBoxUpdate = p.update;
+  p.update = function(data, index) {
+    this.listBoxUpdate(data, index);
+    for(x in this.fields) {
+      this[x].textContent = data[x] || '';
+      MODIT.ui.addTitleIfTruncated(this[x], data[x])
+    }
+    for(x in this.fields) {
+      MODIT.ui.addTitleIfTruncated(this[x], data[x])
+    }
+  };
+
+  App.DataBox = DataBox;
+}(App));
+
+/* Display element for boxes in the find results list */
+window.App = window.App || {};
+(function(App){
+  var FIELDS = {
+    "k": {width: 70},
+    "upperBound": {width: 70},
+    "upperTextDataUrl": {width: 70},
+    "upperSubmitter": {width: 160},
+    "upperDescription": {width: 300},
+    "upperDate": {width: 80},
+    //NO LOWER BOUND STUFF YET
+    //"lowerBound",
+    //"lowerDate",
+    //"lowerSubmitter",
+    //"lowerTextDataUrl",
+    //"lowerDescription",
+  };
+
+  // Creates a new Record
+  var Record = function(dispatcher, data) {
+    this.initialize(dispatcher, data);
+  };
+
+  var p = Record.prototype = new App.DataBox();
+  p.dataBoxInitialize = p.initialize;
+
+  p.initialize = function(dispatcher, data) {
+    this.dataBoxInitialize(dispatcher, data, FIELDS);
+  };
+  
+  //Updates the Record display based on the given data/index 
+  p.dataBoxUpdate = p.update;
+  p.update = function(data, index) {
+    this.dataBoxUpdate(data, index);
+    if (data.id != 0)
+    {
+      MODIT.ui.setStyle(this.upperDescription, {textAlign: "left"});
+      MODIT.ui.setStyle(this.upperSubmitter, {textAlign: "left"});
+      if(data.upperTextDataUrl) {
+        this.upperTextDataUrl.innerHTML = 
+            '<a href='+data.upperTextDataUrl + 
+                ' target="_blank"><i>k</i>-tuple</a>';
+      }
+      //No lower bound stuff yet
+      /*if(data.lowerTextDataUrl){
+        this.lowerTextDataUrl.innerHTML = 
+            '<a href='+data.lowerTextDataUrl+' target="_blank">tuple</a>';
+      }*/
+    }
+    else
+    {
+      this.upperTextDataUrl.innerHTML = data.upperTextDataUrl;
+      MODIT.ui.setStyle(this['k'], {marginLeft: -1});  //Crazy hack, dunno why
+      //this.lowerTextDataUrl.innerHTML = data.lowerTextDataUrl;
+    }
+    for(var i = 0; i < FIELDS.length; i++) {
+      MODIT.ui.addTitleIfTruncated(this[FIELDS[i]], data[FIELDS[i]])
+    }
+  };
+
+  App.Record = Record;
+}(App));
+
+window.App = window.App || {};
+/** Handles all the display for the find results list **/
+(function(App) {
+  var listStyle = {
+    overflowY: 'auto',
+    maxHeight: '300px',
+    overflowX: 'hidden',
+    minWidth: '100%',
+  };
+  
+  var divStyle = {
+    overflowX: 'auto',
+    overflowY: 'hidden',
+  };
+  
+  // Creates a new DataList
+  var DataList = function(headerData, boxClassName) {
+    if(headerData){
+      this.initialize(headerData, boxClassName);
+    }
+  };
+  
+  // DataList Initializer
+  var p = DataList.prototype = new App.ListView;
+  p.listViewInitialze = p.initialize;
+  p.initialize = function(headerData, boxClassName) {
+    this.listViewInitialze();
+    this.boxClassName = boxClassName;
+    this.div = MODIT.ui.createElement('div', divStyle);
+    this.headerData = headerData;
+    this.header = new App[this.boxClassName](this.dispatcher, this.headerData);
+    this.div.appendChild(this.header.div);
+    this.listDiv = MODIT.ui.addElement(this.div, 'div', listStyle);
+    
+    //surely there is a pure css way to do this somehow?
+    var self = this;
+    window.addEventListener('resize', function() {
+      clearTimeout(self.resizeTo);
+      self.resizeTo = setTimeout(function() {
+        _handleResize.apply(self);
+      }, 100);
+    });
+  };
+  
+  // Allows dropdown to be updated dynamically
+  p.update = function(data) {
+    while(this.listBoxes.length > 0) {
+      this.removeBox(this.listBoxes[0]);
+    }
+    this.recordData = data;
+    MODIT.ui.hide(this.listDiv);
+    this.synchBoxesToData(this.recordData, 'id');
+    MODIT.ui.setStyle(this.listDiv, { display:'inline-block'});
+    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth,});
+  };
+/*  p.update = function(data) {
+    while(this.listBoxes.length > 0) {
+      this.removeBox(this.listBoxes[0]);
+    }
+    this.recordData = data;
+    MODIT.ui.hide(this.listDiv);
+    this.synchBoxesToData(this.recordData, 'id');
+    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth, display:'block'});
+  };
+*/  
+  // Helper override of AddBox class from ListBox
+  p.addBox = function(data) {
+    var record = new App[this.boxClassName](this.dispatcher, data);
+    this.listDiv.appendChild(record.div);
+    this.listBoxes.push(record);
+  };
+  
+  p.removeBox = function(box) {
+    this.listDiv.removeChild(box.div);
+    this.listBoxes.splice(this.listBoxes.indexOf(box), 1);
+  };
+  
+  function _handleResize(){
+    MODIT.ui.setStyle(this.listDiv, {width: this.header.div.offsetWidth});
+  };
+
+  App.DataList = DataList
+}(App));
+
+window.App = window.App || {};
+/** Handles all the display for the find results list **/
+(function(App) {
+  
+  var headerData =   {
+    "id": 0,
+    "k": "k",
+    "upperBound": '\u2265' + " H(k)",
+    "upperDate": 'date',
+    "upperTextDataUrl": "data",
+    "upperDescription": "comment",
+    "upperSubmitter": "submitter",
+    "lowerBound": '\u2264' + " H(k)",
+    "lowerDate": 'Date',
+    "lowerTextDataUrl": "Data",
+    "lowerDescription": "Comment",
+    "lowerSubmitter": "Submitter",
+  };
+  
+  // Creates a new RecordsList
+  var RecordsList = function() {
+    this.initialize();
+  };
+  
+  // RecordsList Initializer
+  var p = RecordsList.prototype = new App.DataList;
+  p.dataListInitialze = p.initialize;
+  p.initialize = function() {
+    this.dataListInitialze(headerData, 'Record');
+  };
+
+  App.RecordsList = RecordsList
+}(App));
+
+window.App = window.App || {};
+/** Handles all the display for the find results list **/
+(function(App) {
+  
+  var headerData =   {
+    "id": 0,
+    "date" : "timestamp",
+    "submitter": "submitter",
+    "k": "k",
+//    "boundType": "type",
+    "H": '\u2265' + " H(k)",
+    "description": "comment",
+    "status": "status",
+    "validation": "validation",
+    "currentRecord": "current",
+  };
+  
+  // Creates a new SubmissionList
+  var SubmissionList = function() {
+    this.initialize();
+  };
+  
+  // SubmissionList Initializer
+  var p = SubmissionList.prototype = new App.DataList;
+  p.dataListInitialze = p.initialize;
+  p.initialize = function() {
+    this.dataListInitialze(headerData, 'Submission');
+  };
+
+  App.SubmissionList = SubmissionList
+}(App));
+
+/* Display element for boxes in the find results list */
+window.App = window.App || {};
+(function(App){
+  var FIELDS = {
+    "date": {width: 160},
+    "k": {width: 70},
+    "H": {width: 70},
+    "submitter": {width: 160},
+//    "boundType": {width: 70},
+    "description": {width: 300},
+    "status": {width: 90},
+    "validation": {width: 200},
+    "currentRecord": {width: 60},    
+  };
+
+  // Creates a new Submission
+  var Submission = function(dispatcher, data) {
+    this.initialize(dispatcher, data);
+  };
+
+  var p = Submission.prototype = new App.DataBox();
+  p.dataBoxInitialize = p.initialize;
+
+  p.initialize = function(dispatcher, data) {
+    this.dataBoxInitialize(dispatcher, data, FIELDS);
+  };
+  
+  //Updates the Submission display based on the given data/index 
+  p.dataBoxUpdate = p.update;
+  p.update = function(data, index) {
+//    if(!data.userSubmitted && data.id !== 0){
+//      data.validation = data.currentRecord = 'pending';
+//    }
+    this.dataBoxUpdate(data, index);
+    if (data.id != 0)
+    {
+      MODIT.ui.setStyle(this.submitter, {textAlign: "left"});
+      MODIT.ui.setStyle(this.description, {textAlign: "left"});
+      MODIT.ui.setStyle(this.validation, {textAlign: "left"});      
+    }
+    else
+    {
+      MODIT.ui.setStyle(this['date'], {marginLeft: -1});  //Crazy hack, dunno why
+    }
+    for(var i = 0; i < FIELDS.length; i++) {
+      MODIT.ui.addTitleIfTruncated(this[FIELDS[i]], data[FIELDS[i]])
+    }
+  };
+
+  App.Submission = Submission;
+}(App));
+
+window.App = window.App || {};
+(function(App){
+
+  var logo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAABACAYAAACp3n/2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDA2MUNDRTM3RTlGMTFFMkExNzc5OTcyMzY3MTZCRTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDA2MUNDRTQ3RTlGMTFFMkExNzc5OTcyMzY3MTZCRTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MDYxQ0NFMTdFOUYxMUUyQTE3Nzk5NzIzNjcxNkJFOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MDYxQ0NFMjdFOUYxMUUyQTE3Nzk5NzIzNjcxNkJFOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm5Z4V0AAAp7SURBVHja7Fp5UBRX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";
+
+  var style = {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    height: 42,
+    color: 'white',
+    fontSize: 9,
+    fontFamily: 'Arial',
+    textShadow: WICSS.WHITE_TEXT_SHADOW,
+    backgroundImage: 'url(' + logo + ')',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '40% 40%',
+    opacity: '0.9',
+    cursor: 'pointer',
+  };
+
+  var ModitFooter = function() {
+    this.initialize();
+  };
+
+  var p = ModitFooter.prototype;
+  p.initialize = function() {
+    this.link = MODIT.ui.createElement('a');
+    this.link.href = 'https://mod.it/mwvGNpEU/';
+    this.link.target = '_top';
+    this.div = MODIT.ui.addElement(this.link, 'div', style);
+    this.div.textContent = 'Powered by';
+  };
+
+  App.ModitFooter = ModitFooter;
+}(App));
+</script></body></html>
