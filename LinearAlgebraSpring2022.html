@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<style>
+body {
+	background-color: #eff5f5
+}
+</style>
+
+<head>
+<title>Linear Algebra Spring 2022</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="non-bs.css">
+  <link rel="icon" type="image/png" href="favicon.ico" sizes=16x16>
+  <meta name="theme-color" content="#222222">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#222222">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+</head>  
+  
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><big><a href="index.html">Home</a></big></td>
+<td><big><a href="research.html">Research and Interests</a></big></td>
+<td><big><a href="teaching.html">Teaching</a></big></td>
+<td><big><a href="3MinuteThesis.html">3 Minute Thesis</a></big></td>
+<td><big><a href="CV.pdf">CV</a></big></td>
+<!--<td><big><a href="monogenicfields.html">Monogenic Fields Data</a></big></td>-->
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+<center>
+
+
+
+<html>
+<head>
+  <title>Math 2210Q-011, Spring 2022</title>
+</head>
+
+<body style="background-color: #FFFFFF;" alink="#ff0000" link="#000000" vlink="#000000">
+
+
+<center><h1>
+Math 2210Q-011, Spring 2022<br>
+Applied Linear Algebra
+</h1>
+</center>
+
+
+<center>
+<h2>General Information</h2></center>
+
+<table align="center" border="2" cellpadding="4" cellspacing="2" width="70%">
+  <tbody>
+    <!--<tr>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Table of links:</tr>-->
+    <tr bgcolor="#ACB6F8">
+        <th><a href="#classes">Classes</a> </th>
+        <th><a href="#instructor">Instructor</a> </th>
+    <th><a href="#textbk">Text & Prerequisites</a> </th>
+        <th><a href="#goals">Goals</a></th>
+        <th><a href="#content">Course Content and Extra Resources</a></th>
+    </tr>
+
+    <tr bgcolor="#8594F7">
+        <th><a href="#dates">Important Dates</a></th>
+        <th><a href="#grades">Grades</a></th>
+    <th><a href="#hw">Homework</a> </th>
+    <th><a href="#exams">Quizzes and Exams</a> </th>
+        <th><a href="#synchronicity">Synchronicity</a></th>
+    </tr>
+
+    <tr bgcolor="#5F73F9">
+        <th><a href="#statement">Statement of Expectations</a> </th>
+        <th><a href="#integrity">Academic Integrity</a> </th>
+        <th><a href="#Support">Support From Me</a></th>
+        <th><a href="#athlete">Student Athletes</a></th>
+        <th><a href="#accessibility">Accessibility Issues and the CSD</a></th>
+    </tr>
+
+  </tbody>
+</table>
+
+This page is based on a template from David Gross. Thanks David!
+
+<div style="width: 80%">
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="classes"></a>Classes</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+
+
+<li> Class: Mon., Wed., and Fri. 1:25-2:15 in <a href="https://maps.uconn.edu/m/info/MONT" target="_blank"><font color="blue">MONT</font></a> 225. 
+<li> <b>The first two weeks of class will be on Zoom. 
+<a href="https://us06web.zoom.us/j/85888637875?pwd=QkNLbmVkd3BMdDYyRTd0eFF6UUhQZz09" target="_blank"><font color="blue">Here's the meeting link.</font></a> 
+The ID is 858 8863 7875 and the passcode is h8RyUZ.</b>
+
+
+<br />
+<li> A mask covering your nose and mouth is required in class. 
+See <a href="https://covid.uconn.edu/campus-guidelines/" target="_blank"><font color="blue">UConn's campus guidelines</font></a>.
+<br />
+<li> <b><a href="LinearAlgebraSpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a> </b>
+
+</p>
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="instructor"></a> Instructor</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+
+<li><b>Instructor:</b> <a href="http://math.colorado.edu/~hwsmith/" target="_blank"><font color="blue">Hanson Smith</font></a>
+<li><b>Office:</b> MONT 404 and 
+<a href="https://zoom.us/j/93486140980?pwd=azhQUjRNZC95TVY0MlgzNUljaWlYZz09" target="_blank"><font color="blue"><u>Zoom office hours meeting</u></font></a>
+(Meeting ID: 934 8614 0980
+Passcode: subspace). 
+</br>
+We will have some office hours in person and some on Zoom.
+<li><b>E-mail:</b> <a href="mailto:hanson.smith@uconn.edu"><font color="blue">Hanson dot Smith at uconn dot edu</font></a>
+<li><b>In-person office hours:</b> Mon. 3:20-4:20, Wed. 3:20-4:20, and by appointment. </br>
+<b>Office hours will be on Zoom for the first two weeks.</b><br>
+<li><b>Zoom Office hours:</b> Friday 9am to 10am and by appointment<br>
+<li><b>HuskyCT:</b> We will be using <a href="https://huskyct.uconn.edu" target="_blank"><font color="blue">HuskyCT</font></a> 
+as a delivery system for this class. I use email for most communication though.
+
+
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="textbk"></a>Text & Prerequisites</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+<table  border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr align="left">
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="textbook" src="textbook6.jpg" alt="Linear Alegbra And Its Applications" width="170">
+</td>
+<td>
+<id="verbiage">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <big> -->
+&nbsp;The textbook is <u><i>Linear Algebra and Its Applications</i></u>, 6th edition, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by D. Lay, S. Lay and J. McDonald, Pearson Publishing, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bundled with an access code to Pearson's MyLab.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+You can get the text with the access code or just the access code at 
+the UConn Bookstore <a href="https://uconn.bncollege.com/shop/uconn/page/find-textbooks"target="_blank"><font color="blue"><u>online</u></font></a>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and they can send it to you if you are not on campus.
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The Prerequisite for this course is Calculus II, either Math 1132Q or Math 1152Q.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: This course is a prerequisite for Math 3210, 3510 and 3710 and will soon be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a prerequisite for Math 3230.
+<!-- </big> -->
+</td>
+</tr>
+</table>
+
+
+
+<!--
+<p>
+The Prerequisite for this course is Calculus II, either Math 1132Q or Math 1152Q.
+
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: This course is a prerequisite for Math 3210, 3510 and 3710 and will soon be a prerequisite for Math 3230.
+-->
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="goals"></a> Goals</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+The primary goal for the semester is to learn, understand, and be able to
+work with the vocabulary, algorithmic manipulations, main ideas, and concepts of linear algebra, specifically as outlined in Course Content. 
+A very important secondary goal is to develop the ability to communicate mathematics and reason mathematically. 
+This includes reading, understanding, and responding to mathematical arguments. 
+You are probably familiar with having this mathematical dialogue with an instructor, but a goal of this course is 
+to open and develop this kind of dialogue with your peers.
+
+<!-- including systems of linear equations, matrices,
+vector spaces (concrete and abstract) and their bases, linear transformations and change of
+bases matrices, eigenvectors and eigenvalues, orthogonalization, various matrix factorizations, and the applications
+of these ideas. This does not only mean that you should be able to work through a bunch of questions
+similar to ones seen in the homework, but that you should have the ability to articulate the ideas
+presented in the course in a clear and coherent manner as well. You should be able to apply the theory
+in new and imaginative ways. This course will have concrete and abstract components. Being able to explain
+why something is true will constitute a significant part of the course.-->
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="content"></a>Course Content and Extra Resources</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+We will cover the following material from
+<i>Linear Algebra and Its Applications, 6th edition</i> by D. Lay, S. Lay and J. McDonald, Pearson Publishing.
+
+<br><br>
+
+<table  width="60%">
+  <tbody>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Chapter</b></td><td><b>Chapter Title</b></td><td><b><align="left">Sections</align></b></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        1</td><td><align="left">Linear Equations in Linear Algebra</align></td><td><align="left">1.1 - 1.9, except 1.6</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        2</td><td><align="left">Matrix Algebra</align></td><td>2.1 - 2.3</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        3</td><td><align="left">Determinants</align></td><td><align="left">3.1 - 3.2 and some 3.3</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        4</td><td><align="left">Vector Spaces</align></td><td><align="left">4.1 - 4.6</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        5</td><td><align="left">Eigenvalues and Eigenvectors</align></td>
+        <td><align="left">5.1 - 5.4</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        6</td><td><align="left">Orthogonality</align></td><td><align="left">6.1 - 6.4</align></td></tr>
+
+<!--
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        7</td><td><align="left">Symmetric Matrices</align></td><td><align="left">7.1 and 7.4</align></td></tr>
+        -->
+
+    </tbody>
+</table>
+
+<br />
+
+More details can be found in the <b><a href="LinearAlgebraSpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b>
+
+<br />
+<br />
+<br />
+
+There are numerous great resources online. Here are a few I found. Let me know if you find others that you think are 
+helpful.  <br />
+<br />
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3Blue1Brown's Essence of Linear Algebra</a> <br />
+<a href="http://www2.math.uconn.edu/~troby/math2210s21/">Tom Roby's Math 2210Q Course</a> <br />
+<a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT OpenCourse Lectures</a> <br />
+<a href="https://www.khanacademy.org/math/linear-algebra">Khan Academy</a> <br />
+<a href="https://yutsumura.com/linear-algebra/">Linear Algebra Problems and Solutions</a>
+<br />
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="dates"></a>Important Dates</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+<!-- table of dates <font size="+1">-->
+<p></p>
+<table align="center" border="2" cellpadding="4" cellspacing="2" width="80%">
+  <tbody>
+        <tr><th>Wednesday, January 19</th> <th>First Day of Class</th></tr>
+        <tr><th>Monday, February 7</th><th>Quiz 1</th></tr>
+        <tr><th>Monday, February 21</th><th>Quiz 2</th></tr>
+        <tr><th>Monday and Wednesday, February 28 and March 2 </font></th> <th>Cross Products and Determinants Project</th></tr>
+        <tr><th>Monday, March 7 </th> <th>Quiz 3</th></tr>
+        <tr><th>Monday and Wednesday, March 21 and 23 </font></th> <th>Primary Source Project</th></tr>
+        <tr><th>Monday, April 11</th><th>Quiz 4</th></tr>
+        <tr><th>Friday, April 29 </th> <th>Last Day of Class</th></tr>
+       <!-- <tr><th>Tue., May 4. Time: 3:30-4:40 pm </th> <th>  Final Exam (May the fourth be with you.) -->
+       <tr><th>TBA Week of May 2 </th> <th>  Final Exam</th></tr>
+  </tbody>
+</table>
+
+<br />
+
+More details can be found in the <b><a href="LinearAlgebraSpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b>
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="grades"></a> Grades</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+
+What are grades? What purpose do they serve? What do they mean? 
+<a href="https://www.jessestommel.com/how-to-ungrade/" target="_blank"><font color="blue">
+This blog post</font></a> outlines some problems with grades. </br>
+
+Below is how I suggest we calculate grades in this course. 
+Please let me know if you have any suggestions or find this scheme over/under-emphasizes anything.
+
+</p>
+
+<p>
+<li>Homework: &nbsp; 25%
+<li>Quizzes:&nbsp;30%
+<li>Final Exam:  &nbsp; 20%
+<li>Primary Source Project: &nbsp; 15%
+<li>Honors Project: &nbsp; 10%
+</p>
+
+<p><table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="hw"></a>Homework</th>
+
+   </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+The homework assignments for the semester in Pearson's MyLab which you will access through HuskyCT. Due dates for homework assignments are given in the 
+<b><a href="LinearAlgebraSpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b> 
+As explained there, homework assignments must be submitted by 11:59 pm the day they are due. 
+
+<!--<p><b>Piazza Discussion Board:</b> The discussion board will be on Piazza, accessed through HuskyCT. Piazza is a place you can go to ask/answer questions and talk with your peers 
+about what we are working on. I will also post further explanations and homework hints on Piazza. I would like people to go onto Piazza sometime after each class and ask a question 
+about something they found confusing or try to answer/comment on someone else's question. Though this won't be a formal part of your grade, I think routinely discussing things on Piazza 
+will make this class more meaninful and help you learn the material better and more quickly. You can sign up via HuskyCT (I think) or via the
+<b><a href="https://piazza.com/uconn/fall2020/1208uconnmath2210qsec0126963" target="_blank"><font color="blue">Piazza link</font></a></b>.
+</p>-->
+
+<p>It is natural and expected to struggle on homework. You are encouraged to work together and come to office hours for help with homework. 
+<br />
+<b>Homework is a place to learn how to do things!</b></p>
+
+<p>You can also use the <a href="https://qcenter.uconn.edu" target="blank"><font color="00 00 FF">Q-Center</font></a> as a place to get help. 
+It is an awesome resource; the 
+tutors there are paid to help you! You will want to check what times someone who is comfortable helping with linear algebra is available. </p>
+
+<p>Two other, more big-picture resources are the 
+<a href="https://achieve.uconn.edu/" target="blank"><font color="blue">Academic Achievement Center</font></a> and the 
+<a href="https://onlinestudent.uconn.edu/keeplearning/" target="blank"><font color="blue">Keep Learning Site</font></a>. </p> 
+
+<p>Finally, I have three hours a week that are specifically for helping y'all. Please come to my office hours with any questions! 
+If you think a question is dumb or you think
+you "don't understand anything," then that is even more reason to come to my office hours. 
+I am very used to struggling with math and I want to help everyone learn in this course.
+<!-- I can assure you that I have made math mistakes that are much more embarrassing than 
+any mistake you will make in this course. --></p>
+
+<p>Class attendance is not mandatory this semester, though it is highly encouraged. I know things are difficult for everyone right now and 
+I know flexibility is appreciated, so I will not grade participation directly.
+
+
+
+
+
+<p><table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="exams"></a>Quizzes and Exams</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+In this class we will have four quizzes and a final.
+We have yet to be assigned a final exam time, but the plan is to use the first hour of our assigned final exam time. 
+<br />
+<!-- The final will be Monday, Dec. 13 at 10:30 am in MONT 419, our usual classroom. The plan is for the exam to only last one hour of our two hour slot. -->
+
+
+<p>The quizzes will last 20 minutes and be at the beginning of class sporadically throughout the semester. 
+After finishing the quiz you will use camscanner to upload the quiz to HuskyCT.
+You will grade your own quiz after class based on a rubric that I will create. 
+(I reserve the right to overturn your grading decisions.)
+After grading your quiz you may write corrections/reflections in order to receive up to half credit on the problems you missed.
+You will have one chance to make corrections.  
+<br />
+<br />
+<b>Grading, Corrections, and Reflection Expectations: </b> Your graded quiz with corrections and reflection is due within one week of the time of the quiz. 
+For example, Quiz 1 is on Monday the 20th and your graded quiz with your reflection and corrections will be due at the start of class on Monday the 27th.
+Corrections that are not fully correct and explained will recieve no points back. 
+The reflection should assess how you think you are doing in the class and whether the ways in which you are studying are effective. 
+If you are not satisfied with how you're doing, your reflection should explain how you will change your approach to improve your performance. <br />
+<a href="SampleQuiz.pdf" target="blank"><font color="blue">
+Here is a sample of how your finished graded and corrected quiz with reflections might look.</font></a>
+
+
+<p><b>Make-Up Policy:</b> In general, no make-ups for quizzes or the final exam will be given. If you are going to miss the exam
+or a quiz and can show proof of some officially acceptable reason, e.g.: a verifiably documented medical excuse
+or a conflicting official university sanctioned activity that cannot be rescheduled, then we can make arrangements.
+
+<!-- <p>
+Please avoid making travel arrangements that would not allow you to take the final at the scheduled
+time. All rescheduled final exams must be approved by the
+<a href="https://dos.uconn.edu/" target="_blank"><font color="blue">Dean of Students Office</font></a> and they do not easily
+allow rescheduling. Please note that they do <bf>NOT</bf> consider
+vacations, previously purchased tickets or reservations, graduations, social events, misreading
+the assigned final exam schedule, and oversleeping as viable excuses for missing a final exam either.
+If you think that your situation warrants permission to reschedule, please contact the Dean of Students Office to meet
+with a staff member as soon as possible. They  have set November 16, 2018 as the last date they will consider rescheduling finals for all issue known before Nov. 16.
+-->
+
+
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="synchronicity"></a>Synchronicity</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+<!--<strike> To make it easier for you to engage in this course regardless of your situation, 
+I will be *attempting* to record selected parts of our classes and *attempting* to 
+post them on HuskyCT. </strike> <br /> -->
+Unfortunately, I have been unable to find a way to record class in a way that does not detract from the in-person experience. <br />
+Please let me know if you enjoy taking detailed notes and want to post them for everyone.
+<br />
+<b> You should make every effort to attend class when there are graded in-class activities, e.g., quizzes and the primary source project.</b>
+<p>
+
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="#statement"></a>Statement of Expectations</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+This is an incredibly tough time for everyone, myself included. I understand everyone is dealing with things differently and I will do my
+best to be flexible and accomodating. I ask you to be open with me and to discuss issues with me when they come up. I will listen and do 
+what I can to help you succeed in this course. Conversely, I am super excited to teach this course and I love this material. 
+However, this is my first semester teaching in person at UConn.
+I ask that you be understanding of the mistakes I will certainly make, and I ask that you give me honest feedback about how I can
+improve.
+
+<p>
+As individuals and as a class we will be respectful of everyone; language or behavior that discriminates against anyone will not be tolerated.
+We will avoid stereotypes about who is "good" at math. Math is difficult, but also beautiful, and as a class we will work together to overcome 
+difficulties and share the beauty. 
+This is especially true with group work. 
+You must treat your group members with respect and engage in positive and constructive
+conversations.
+</p>
+
+
+
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+
+    <tr>
+      <th align="left"><a name="integrity"></a>Academic Integrity</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+
+<p>I expect you to be familiar with and abide by
+<a href="https://community.uconn.edu/the-student-code-appendix-a/" target="_blank">
+<font color="blue">UConn's academic integrity policy</font></a> at all times. There should be no
+help given or received on exams or quizzes, not from other people, not from tutors, not from online sites.
+
+Academic misconduct includes, but is not limited to, providing or receiving assistance in a manner
+not authorized by the instructor in the creation of work to be submitted for academic evaluation
+(e.g. papers, projects, examinations and assessments - whether online or in class); presenting,
+as one's own, the ideas, words or calculations of another for academic evaluation; doing
+unauthorized academic work for which another person will receive credit or be evaluated;
+using unauthorized aids in preparing work for evaluation (e.g. unauthorized formula sheets,
+unauthorized calculators, unauthorized programs or formulas loaded into your calculator, etc.);
+and presenting the same or substantially the same papers or projects in two or more courses without
+the explicit permission of the instructors involved.
+
+A student who knowingly assists another student in committing an act of academic misconduct
+shall be equally accountable for the violation, and shall be subject to the sanctions and other
+remedies as described in <a href="https://community.uconn.edu/the-student-code-appendix-a/" target="_blank">
+<font color="blue">Appendix A</font></a> of the <a href="https://community.uconn.edu/the-student-code/" target="_blank">
+<font color="blue">Student Code</font></a>.
+
+Sanctions shall include, but are not limited to, a letter sent to the Office of Community
+Standards of the University; a grade of 0 on the assignment, quiz or exam; a grade of F for
+the course.
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="Support"></a>Support From Me</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>I pledge to do my utmost as your instructor to support you and your success in this class. 
+Regardless of your race, 
+color, religion, sex, sexual orientation, gender identity or 
+expression, age, disabilities, citizenship, or national origin, I am happy that you're taking this course
+and I am excited to help you learn math. I will do everything I can to make sure you feel welcome in
+our virtual classroom and address any aspects or elements of the course that may make you feel unwelcome. 
+This runs the gamut from being willing to make accomodations for religious observances to making sure
+our classroom is a supportive place. Please come to me with any concerns you have! I'm here to listen and 
+to help give you the tools and conditions to be successful in this course.</p>
+
+<!--<p>
+Some students may wish to take part in religious observances during this academic
+term. If you have a religious observance that conflicts with your participation in the course,
+please let me know before the end of the second week of the term to discuss appropriate accommodations.
+</p>-->
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="athlete"></a>Student Athletes</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+If you are a student athlete, let me know soon. Speak with your
+<a href="https://uconnhuskies.com/sports/2018/6/12/sports-sasp-spec-rel-staff-html.aspx" target="_blank">
+<font color="blue">CPIA counselor</font></a> and talk with them about any dates that conflict
+with your participation in this course. I should know of these conflicts within the first two
+weeks of the course. Alternate arrangements for away game conflicts with quizzes/the final might be possible.
+</p>
+
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="accessibility"></a> Accessibility Issues</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+If you have a learning or physical disability, the Center for Students with Disabilities (CSD), <a href="https://www.csd.uconn.edu/" target="_blank">
+<font color="blue">Center for Students with Disabilities</font></a> at <font color="blue">https://www.csd.uconn.edu</font> and at phone: <font color="blue">860-486-2020</font> and video phone: <font color="blue">860-553-3243</font> (room 204 of the Wilbur Cross Building) should have contacted me with notification of your needed accommodations. As electronic communication does not always work as desired, please let me know of any issues you have and I can contact the CSD on your behalf.
+<p>
+
+In addition, if you have accessibility issues, I encourage you to discuss possible accommodations with me and
+consult the CSD, as this office can help determine appropriate accommodations for you.
+</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</body>
+
+</html>
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
