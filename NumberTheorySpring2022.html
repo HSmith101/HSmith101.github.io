@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<style>
+body {
+	background-color: #eff5f5
+}
+</style>
+
+<head>
+<title>Number Theory</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="non-bs.css">
+  <link rel="icon" type="image/png" href="favicon.ico" sizes=16x16>
+  <meta name="theme-color" content="#222222">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#222222">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+</head>  
+  
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><big><a href="index.html">Home</a></big></td>
+<td><big><a href="research.html">Research and Interests</a></big></td>
+<td><big><a href="teaching.html">Teaching</a></big></td>
+<td><big><a href="3MinuteThesis.html">3 Minute Thesis</a></big></td>
+<td><big><a href="CV.pdf">CV</a></big></td>
+<!--<td><big><a href="monogenicfields.html">Monogenic Fields Data</a></big></td>-->
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+
+
+</div>   <! End of navigation div -->
+<center>
+
+
+
+<html>
+<head>
+  <title>Intro to Number Theory, Math 3240-001, Spring 2022</title>
+</head>
+
+<body style="background-color: #FFFFFF;" alink="#ff0000" link="#000000" vlink="#000000">
+
+
+<center><h1>
+Math 3240-001, Spring 2022<br>
+Intro to Number Theory
+</h1>
+</center>
+
+
+<center>
+<h2>General Information</h2></center>
+
+<table align="center" border="2" cellpadding="4" cellspacing="2" width="70%">
+  <tbody>
+    <!--<tr>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Table of links:</tr>-->
+    <tr bgcolor="#ACB6F8">
+        <th><a href="#classes">Classes</a> </th>
+        <th><a href="#instructor">Instructor</a> </th>
+    <th><a href="#textbk">Text & Prerequisites</a> </th>
+        <th><a href="#goals">Goals</a></th>
+        <th><a href="#content">Course Content and Extra Resources</a></th>
+    </tr>
+
+    <tr bgcolor="#8594F7">
+        <th><a href="#dates">Important Dates</a></th>
+        <th><a href="#grades">Grades</a></th>
+    <th><a href="#hw">Homework</a> </th>
+    <th><a href="#exams">Quizzes and Final</a> </th>
+        <th><a href="#synchronicity">Synchronicity</a></th>
+    </tr>
+
+    <tr bgcolor="#5F73F9">
+        <th><a href="#statement">Statement of Expectations</a> </th>
+        <th><a href="#integrity">Academic Integrity</a> </th>
+        <th><a href="#Support">Support From Me</a></th>
+        <th><a href="#athlete">Student Athletes</a></th>
+        <th><a href="#accessibility">Accessibility Issues and the CSD</a></th>
+    </tr>
+
+  </tbody>
+</table>
+
+<div style="width: 80%">
+
+
+This page is based on a template from David Gross and the content due in large part to Álvaro Lozono-Robledo. Thanks David and Álvaro!
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="classes"></a>Classes</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+
+<p>
+
+<ul>
+<li> Class: Mon., Wed., and Fri. 2:30-3:20 in <a href="https://maps.uconn.edu/m/info/MONT" target="_blank"><font color="blue">MONT</font></a> 112. 
+<li> <b>The first two weeks of class will be on Zoom. 
+<a href="https://us06web.zoom.us/j/84878382322?pwd=dzIxZDBRQTlST3JwdWtzZlUxMFFmZz09" target="_blank"><font color="blue">Here's the meeting link.</font></a> The ID is 848 7838 2322 and the passcode is 4h525f.</b>
+
+<br /> 
+<br />
+
+<li> Before each class there will be assigned reading. Your "ticket" to class will be one question/thing you found confusing/difficult/cool about 
+the reading.
+At the beginning of class you'll put these on a post-it note and stick it to the whiteboard. The questions will motivate our class and
+the problems we work on together. 
+<br /><b>Class meetings will have elements of lecture, but also elements of discussion and problem solving sessions.</b>
+
+<br />
+<br />
+
+<li> <b><a href="NumberTheorySpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a> </b>
+
+<br />
+<br />
+<li> A mask covering your nose and mouth is required in class. 
+See <a href="https://covid.uconn.edu/campus-guidelines/" target="_blank"><font color="blue">UConn's campus guidelines</font></a>.
+</ul>
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="instructor"></a> Instructor</th>
+
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<ul>
+<li><b>Instructor:</b> <a href="https://www.hansonsmath.info/" target="_blank"><font color="blue">Hanson Smith</font></a>
+<li><b>Office:</b> MONT 404 and <a href="https://zoom.us/j/93486140980?pwd=azhQUjRNZC95TVY0MlgzNUljaWlYZz09" target="_blank"><font color="blue"><u>Zoom office hours meeting</u></font></a>
+(Meeting ID: 934 8614 0980
+Passcode: subspace). <br /> We will have some office hours in person and some on Zoom.
+<li><b>E-mail:</b> <a href="mailto:hanson.smith@uconn.edu"><font color="blue">Hanson dot Smith at uconn dot edu</font></a>
+<li><b>In-person Office hours:</b> TBA and by appointment<br>
+<li><b>Zoom Office hours:</b> TBA and by appointment<br>
+<li><b>HuskyCT:</b> We will be using 
+<a href="https://huskyct.uconn.edu" target="_blank"><font color="blue">HuskyCT</font></a> 
+as a delivery system for some aspects of this class. Email will be the primary mode of communication though.
+</ul>
+
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="textbk"></a>Text & Prerequisites</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<!-- <li><b>Text:</b> Our primary reference will be
+<a href="https://bookstore.ams.org/amstext-35" ><font color="blue"><i>Number Theory and Geometry: An Introduction to Arithmetic Geometry</i></font></a> 
+by UConn professor Álvaro Lozano-Robledo. Álvaro has supplied me with watermarked pdfs of the chapters we will be covering.
+I will make these available as we begin each new chapter. 
+<li><b>Please keep these chapters off the internet/public domain. 
+They are for your use only! </b>
+Because of Álvaro's generosity it is not necessary to purchase this text. 
+However, I would recommend buying a physical copy of the text if you prefer physical copies of books since
+reading will be a large portion of this course. -->
+
+
+<p>
+<table  border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr align="left">
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="textbook" src="numbtheorytext.jpg" alt="Linear Alegbra And Its Applications" width="190">
+</td>
+<td>
+<id="verbiage">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <big> -->
+Our primary reference will be
+<a href="https://bookstore.ams.org/amstext-35" ><font color="blue"><i>Number Theory and Geometry: An Introduction to Arithmetic Geometry</i></font></a> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by UConn professor Álvaro Lozano-Robledo. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Álvaro has supplied me with watermarked pdfs of the chapters we will be covering..<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I will make these available on HuskyCT as we begin each new chapter. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Please keep these chapters off the internet/public domain. 
+They are for your use only! </b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Because of Álvaro's generosity it is not necessary to purchase this text. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; However, I would recommend buying a physical copy of the text 
+if you prefer physical copies.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reading will be a large portion of this course.
+<!-- </big> -->
+</td>
+</tr>
+</table>
+
+<li> <a href="https://math.uconn.edu/wp-content/uploads/sites/2511/2019/01/puremathchart.pdf" target="_blank">
+<font color="blue"><b>Prerequisites:</b></font></a> Math 2710, Transition to Advanced Mathematics.  
+
+
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="goals"></a> Goals</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+The overarching goal for the semester is to learn as much as we can about number theory.
+The primary mathematical motivation will be working to understand the statement and some 
+underpinnings of various proofs of quadratic reciprocity. However, the practical goal that will take precedence 
+in deepening our familiarity with and maturity in mathematics. This includes developing the ability to communicate mathematics and reason mathematically. 
+We will spend our time reading, understanding, responding to, and creating mathematical arguments. 
+You are probably familiar with having this sort of mathematical dialogue with an instructor, but a goal of this course is 
+to open and develop this kind of dialogue with your peers.
+
+
+<p>
+<table bgcolor="#ACB6F8" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="content"></a>Course Content and Extra Resources</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+Our primary reference will be
+<a href="https://bookstore.ams.org/amstext-35" ><font color="blue"><i>Number Theory and Geometry: An Introduction to Arithmetic Geometry</i></font></a>.
+<br></br>
+
+A very loose and almost sure to be augmented list of the chapters we will attempt to cover
+
+<table  width="60%">
+  <tbody>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Chapter</b></td><td><b>Chapter Title</b></td><td><b><align="left">Sections</align></b></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        1</td><td><align="left">Introduction</align></td><td><align="left">Assorted bits</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        2</td><td><align="left">The Integers </align></td><td>2.1 - 2.10</align></td></tr>
+        
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        3</td><td><align="left">The Prime Numbers </align></td><td><align="left">3.1 - 3.3</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        4</td><td><align="left">Congruences</align></td><td><align="left">4.1 - 4.5</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        5</td><td><align="left">Groups, Rings, and Fields </align></td><td><align="left">5.1 - 5.5</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        6</td><td><align="left">Finite Fields</align></td><td><align="left">6.1 - 6.4</align></td></tr>
+
+    	  <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        7</td><td><align="left">The Theorems of Wilson, Fermat, and Euler </align></td><td><align="left">7.1 - 7.5</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        8</td><td><align="left">Primitive Roots</align></td><td><align="left">8.1 - 8.4</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        9</td><td><align="left">An Introduction to Quadratic Equations </align></td>
+        <td><align="left">9.1 - 9.3</align></td></tr>
+
+        <tr><td align=""center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        10</td><td><align="left">Quadratic Congruences</align></td><td><align="left">10.1 - 10.4</align></td></tr>
+
+    </tbody>
+</table>
+
+<br />
+
+<li> More details can be found in the <b><a href="NumberTheorySpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b>
+
+<br />
+<br />
+<br />
+
+There are numerous great resources online. Here are a few I found. Let me know if you find others that you think are 
+helpful.  <br />
+<li> <a href="http://www.numbertheory.org/ntw/lecture_notes.html">A very extensive list of number theory lecture notes</a> <br />
+<li> <a href="https://ocw.mit.edu/courses/mathematics/18-781-theory-of-numbers-spring-2012/">MIT OpenCourse content</a> <br />
+<li><a href="https://www.youtube.com/watch?v=19SW3P_PRHQ">A random lecture that claims to cover the whole course and more in two and a half hours.</a> <br />
+<br />
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="dates"></a>Important Dates</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+<!-- table of dates <font size="+1">-->
+<p></p>
+<table align="center" border="2" cellpadding="4" cellspacing="2" width="80%">
+  <tbody>
+        <tr><th>Wednesday, January 19</th> <th>First Day of Class</th></tr>
+        <tr><th>Monday, February 14</th><th>In-Class Quiz 1</th></tr>
+        <tr><th>Monday, March 7</th><th>In-Class Quiz 2</th></tr>
+        <tr><th>Wednesday & Friday, March 30 and April 1</font></th> <th>Primary Source Project</th></tr>
+        <tr><th>Monday, April 11</th><th>In-Class Quiz 3</th></tr>
+        <tr><th>Friday, April 29 </th> <th>Last Day of Class</th></tr>
+        <tr><th>Monday, May 2 through Saturday, May 7 </th> <th>  Exam Week (We will probably have a take-home final.)  </th></tr>
+  </tbody>
+</table>
+
+<br />
+
+<li> More details can be found in the <b><a href="NumberTheorySpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b>
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="grades"></a> Grades</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+
+What are grades? What purpose do they serve? What do they mean? <a href="https://www.jessestommel.com/how-to-ungrade/" target="_blank"><font color="blue">
+This blog post</font></a> outlines some problems with grades. 
+
+</p>
+
+<p>
+The following is the grading scheme that I would like to implement for the course. 
+I feel it strikes a balance between a variety of different manners of doing and presenting mathematics.
+Please let me know if you would like to see any changes. 
+I would like everyone to understand how grades are calculated. <br />
+
+<li>Homework: &nbsp; 25%
+<li>Quizzes: &nbsp;35%
+<li>Primary Source Project: &nbsp; 20%
+<li>Final Exam:  &nbsp; 20%
+</p>
+
+<p><table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="hw"></a>Homework</th>
+
+   </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+There will be psuedo-weekly homework assignments this semester. They will be created by me. 
+They will feature exercises from the book and things I find interesting. 
+Due dates for homework assignments are given in the 
+<b><a href="NumberTheorySpring2022Schedule.pdf" target="_blank"><font color="blue">Course Schedule</font></a>.</b> 
+As explained there, homework assignments must be submitted in class on the day they are due. 
+Quizzes will feature problems that are remarkably similar to the homework or to problems we work in class, 
+so spending time completing homework to perfection is
+doubly advantageous. <br />
+<b>Homework without a staple and/or with "frills" will not be accepted.</b>
+
+<!--<br />
+<li> <a href="Homework0.pdf" ><font color="blue"><b>Homework 0</b></font></a>
+<br />
+<br />
+<li> <a href="Homework1.pdf" ><font color="blue"><b>Homework 1</b></font></a>
+<br />
+<br />
+<li> <a href="Homework2.pdf" ><font color="blue"><b>Homework 2</b></font></a>
+<br />
+<br />
+<li> <a href="Homework3.pdf" ><font color="blue"><b>Homework 3</b></font></a>
+<br />
+<br />
+<li> <a href="Homework4.pdf" ><font color="blue"><b>Homework 4</b></font></a>
+<br />
+<br />
+<li> <a href="Homework5.pdf" ><font color="blue"><b>Homework 5</b></font></a>
+<br />
+<br />
+<li> <a href="Homework6.pdf" ><font color="blue"><b>Homework 6</b></font></a>
+<br />
+<br />
+<li> <a href="Homework7.pdf" ><font color="blue"><b>Homework 7</b></font></a>
+<br />
+<br />
+<li> <a href="Homework8.pdf" ><font color="blue"><b>Homework 8</b></font></a>
+<br />-->
+
+<p>It is natural and expected to struggle on homework. You are encouraged to work together and come to office hours for help with homework. <b>Homework is 
+a place to learn how to do things!</b> You may use whatever resources you wish on the homework as long as you cite your sources and submit your own work.</p>
+
+<p>Two other, more big-picture resources are the 
+<a href="https://achieve.uconn.edu/" target="blank"><font color="blue">Academic Achievement Center</font></a> and the 
+<a href="https://onlinestudent.uconn.edu/keeplearning/" target="blank"><font color="blue">Keep Learning Site</font></a>. </p> 
+
+<p>Finally, I have three+ hours a week that are specifically for helping y'all. 
+Please come to my office hours with any questions! If you think a question is dumb or you think
+you "don't understand anything," then that is even more reason to come to my office hours. 
+I am very used to struggling with math and I want to help everyone learn in this course.
+I can assure you that I have made math mistakes that are much more embarrassing than 
+any mistake you will make in this course. </p>
+
+<p>Class attendance is not mandatory this semester, though it is highly encouraged. I know things are difficult for everyone right now and 
+I know flexibility is appreciated, so I will not grade participation directly. 
+However, we will have in-class assessments.
+
+
+
+
+
+<p><table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="exams"></a>Quizzes and Final</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<p>
+We will have three quizzes and a (probably take-home) final. 
+
+
+<p> In-class quizzes are closed book and notes. Quizzes will likely last 25 minutes.
+
+<!--<p> After hearing everyones' ideas on grading, <strike>I've decided to change the quizz format to better reflect the things you want in grading.
+We will still have three quizzes, but they will be a bit longer (20-25 min.). 
+You'll upload a camscanner picture of your quiz to HuskyCT once you finish, but you'll take your quiz home with you to grade yourself.
+I'll give you a rough rubric/idea of how I would grade it, but you will grade and correct your quiz yourself. 
+You will then turn-in your graded quiz with corrections and a reflection on how you're doing in the class one week after the original date of the quiz. 
+We will talk about the expectations for the corrections and the reflection in more detail once we get closer to the date of the first quiz. </strike>
+
+<p>The take-home final is open book and notes, but closed everything else.</b> 
+Using any resource outside of your book and your notes constitutes 
+academic dishonesty and will be dealt with accordingly. -->
+
+<p><b>Make-Up Policy:</b> <strike>In general, no make-ups for quizzes will be given. 
+If you are going to miss a quiz and can show proof of some officially acceptable reason, e.g.: a verifiably documented medical excuse
+or a conflicting official university sanctioned activity that cannot be rescheduled, then we can make arrangements. </strike> <br />
+If you are sick or something comes up, then please let me know as far before the assignment or assessment is due as you can. 
+We will do our best to get through this semester safely and healthily. 
+On as case-by-case basis, I can try to make arrangements in a way that is as fair and equitable as possible.
+
+<!-- <p>
+Please avoid making travel arrangements that would not allow you to take the final at the scheduled
+time. All rescheduled final exams must be approved by the
+<a href="https://dos.uconn.edu/" target="_blank"><font color="blue">Dean of Students Office</font></a> and they do not easily
+allow rescheduling. Please note that they do <bf>NOT</bf> consider
+vacations, previously purchased tickets or reservations, graduations, social events, misreading
+the assigned final exam schedule, and oversleeping as viable excuses for missing a final exam either.
+If you think that your situation warrants permission to reschedule, please contact the Dean of Students Office to meet
+with a staff member as soon as possible. They  have set November 16, 2018 as the last date they will consider rescheduling finals for all issue known before Nov. 16.
+-->
+
+
+
+<p>
+<table bgcolor="#8594F7" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="synchronicity"></a>Synchronicity</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+This is an in-person class and has been designed to be taught in person. Not attending in person will affect your experience in this course.
+However, to make it easier for you to engage in this course regardless of your situation, I will be asking for note takers and hopefully posting their notes.
+Please let me know if you enjoy taking detailed notes and want to post them for everyone.
+There will be days where we will do graded work in class. You must let me know well before these days if you are absolutely unable to attend. 
+<p>
+
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="#statement"></a>Statement of Expectations</th>
+    </tr>
+ </tbody>
+</table>
+</p>
+
+<p>
+This is an incredibly tough time for everyone, myself included. I understand everyone is dealing with things differently and I will do my
+best to be flexible and accomodating. I ask you to be open with me and to discuss issues with me when they come up. I will listen and do 
+what I can to help you succeed in this course. Conversely, I am super excited to teach this course and I love this material, but distance learning
+is very new to me. I ask that you be understanding of the mistakes I will certainly make, and I ask that you give me honest feedback about how I can
+improve.
+
+<p>
+As individuals and as a class we will be respectful of everyone; language or behavior that discriminates against anyone will not be tolerated.
+We will avoid stereotypes about who is "good" at math. Math is difficult, but also beautiful, and as a class we will work together to overcome 
+difficulties and share the beauty. This is especially true with group work. You must treat your group members with respect and engage in positive 
+and constructive conversations.
+</p>
+
+
+
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+
+    <tr>
+      <th align="left"><a name="integrity"></a>Academic Integrity</th>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+
+<p>I expect you to be familiar with and abide by
+<a href="https://community.uconn.edu/the-student-code-appendix-a/" target="_blank">
+<font color="blue">UConn's academic integrity policy</font></a> at all times. There should be no
+help given or received on exams or quizzes, not from other people, not from tutors, not from online sites.
+
+Academic misconduct includes, but is not limited to, providing or receiving assistance in a manner
+not authorized by the instructor in the creation of work to be submitted for academic evaluation
+(e.g. papers, projects, examinations and assessments - whether online or in class); presenting,
+as one's own, the ideas, words or calculations of another for academic evaluation; doing
+unauthorized academic work for which another person will receive credit or be evaluated;
+using unauthorized aids in preparing work for evaluation (e.g. unauthorized formula sheets,
+unauthorized calculators, unauthorized programs or formulas loaded into your calculator, etc.);
+and presenting the same or substantially the same papers or projects in two or more courses without
+the explicit permission of the instructors involved.
+
+A student who knowingly assists another student in committing an act of academic misconduct
+shall be equally accountable for the violation, and shall be subject to the sanctions and other
+remedies as described in <a href="https://community.uconn.edu/the-student-code-appendix-a/" target="_blank">
+<font color="blue">Appendix A</font></a> of the <a href="https://community.uconn.edu/the-student-code/" target="_blank">
+<font color="blue">Student Code</font></a>.
+
+Sanctions shall include, but are not limited to, a letter sent to the Office of Community
+Standards of the University; a grade of 0 on the assignment, quiz or exam; a grade of F for
+the course.
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="Support"></a>Support From Me</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>I pledge to do my utmost as your instructor to support you and your success in this class. 
+Regardless of your race, 
+color, religion, sex, sexual orientation, gender identity or 
+expression, age, disabilities, citizenship, or national origin, I am happy that you're taking this course
+and I am excited to help you learn math. I will do everything I can to make sure you feel welcome in
+our classroom and address any aspects or elements of the course that may make you feel unwelcome. 
+This runs the gamut from being willing to make accomodations for religious observances to making sure
+our classroom is a supportive place. Please come to me with any concerns you have! I'm here to listen and 
+to help give you the tools and conditions to be successful in this course.</p>
+
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="athlete"></a>Student Athletes</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+If you are a student athlete, let me know soon. Speak with your
+<a href="https://uconnhuskies.com/sports/2018/6/12/sports-sasp-spec-rel-staff-html.aspx" target="_blank">
+<font color="blue">CPIA counselor</font></a> and talk with them about any dates that conflict
+with your participation in this course. I should know of these conflicts within the first two
+weeks of the course. Alternate arrangements for away game conflicts with assignments might be possible.
+</p>
+
+
+
+<p>
+<table bgcolor="#5F73F9" border="1" cellpadding="4" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <th align="left"><a name="accessibility"></a> Accessibility Issues</th>
+    </tr>
+  </tbody>
+
+</table>
+</p>
+
+<p>
+If you have a learning or physical disability, the Center for Students with Disabilities (CSD), <a href="https://www.csd.uconn.edu/" target="_blank">
+<font color="blue">Center for Students with Disabilities</font></a> at <font color="blue">https://www.csd.uconn.edu</font> and at phone: <font color="blue">860-486-2020</font> and video phone: <font color="blue">860-553-3243</font> (room 204 of the Wilbur Cross Building) should have contacted me with notification of your needed accommodations. As electronic communication does not always work as desired, please let me know of any issues you have and I can contact the CSD on your behalf.
+<p>
+
+In addition, if you have accessibility issues, I encourage you to discuss possible accommodations with me and
+consult the CSD, as this office can help determine appropriate accommodations for you.
+</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</body>
+
+</html>
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
