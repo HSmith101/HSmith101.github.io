@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive practice with composition, inverses, transpositions, and parity in symmetric groups.">
+  <title>Symmetric Group Practice Lab</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #192238; --muted: #697188; --paper: #f5f3ec; --surface: #fffdf8;
+      --line: #d9d5c9; --navy: #263868; --teal: #087f78; --teal-soft: #dff2ee;
+      --coral: #d9674b; --coral-soft: #f9e8e2; --gold: #b98726; --gold-soft: #f8efd7;
+      --shadow: 0 16px 38px rgba(27,38,65,.09); --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-width: 320px; color: var(--ink);
+      background: radial-gradient(circle at 10% 8%, rgba(8,127,120,.11), transparent 28rem), radial-gradient(circle at 90% 14%, rgba(217,103,75,.09), transparent 25rem), var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5;
+    }
+    button, input, select { font: inherit; }
+    button, input, select { min-height: 42px; }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid rgba(8,127,120,.32); outline-offset: 3px; }
+    .shell { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 54px; }
+    header { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 22px; }
+    .eyebrow { color: var(--teal); font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+    h1 { margin: 5px 0 2px; font-size: clamp(2rem, 4.6vw, 3.65rem); letter-spacing: -.045em; line-height: 1; }
+    h2 { margin: 0; font-size: 1.52rem; }
+    h3 { margin: 0 0 8px; font-size: 1.16rem; }
+    .subtitle { margin: 8px 0 0; color: var(--muted); max-width: 680px; }
+    .group-badge { padding: 9px 14px; border-radius: 999px; background: var(--navy); color: #fff; font: 1.08rem Georgia, serif; white-space: nowrap; box-shadow: var(--shadow); }
+    .toolbar { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 17px 20px; background: rgba(255,253,248,.88); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    label { display: block; font-weight: 780; font-size: .86rem; }
+    label small { display: block; color: var(--muted); font-weight: 500; margin-top: 2px; }
+    select, input[type="text"] { width: 100%; margin-top: 7px; padding: 9px 11px; color: var(--ink); background: var(--surface); border: 1px solid #c8c3b7; border-radius: 10px; }
+    #nSelect { width: 130px; }
+    .convention { color: var(--muted); font-size: .82rem; max-width: 560px; text-align: right; }
+    .convention strong { color: var(--ink); }
+    .tabs { display: flex; gap: 6px; margin: 24px 0 16px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+    .tab { border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); padding: 10px 14px; font-weight: 800; white-space: nowrap; cursor: pointer; }
+    .tab[aria-selected="true"] { color: var(--navy); border-bottom-color: var(--teal); }
+    [role="tabpanel"][hidden] { display: none; }
+    .practice-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); gap: 20px; align-items: start; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .problem-card { padding: clamp(20px, 4vw, 32px); }
+    .side-card { padding: 19px 20px; }
+    .problem-label { color: var(--teal); font-size: .76rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .problem-prompt { margin: 8px 0 4px; color: var(--muted); }
+    .permutation { margin: 12px 0 22px; min-height: 1.4em; font: clamp(1.65rem, 4vw, 2.7rem) Georgia, serif; color: var(--navy); overflow-wrap: anywhere; }
+    .formula-line { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; }
+    .formula-line .permutation { margin: 5px 0 18px; }
+    .answer-row { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 10px; }
+    .primary, .secondary, .choice { border-radius: 999px; padding: 8px 15px; font-weight: 800; cursor: pointer; }
+    .primary { border: 0; background: var(--navy); color: #fff; }
+    .primary:hover { background: #172650; }
+    .secondary, .choice { border: 1px solid var(--line); background: transparent; color: var(--navy); }
+    .secondary:hover, .choice:hover { background: #efede6; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .feedback { min-height: 64px; margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: #f0eee7; color: var(--muted); }
+    .feedback.correct { background: var(--teal-soft); color: #075d57; }
+    .feedback.incorrect { background: var(--coral-soft); color: #8c3827; }
+    .feedback strong { color: inherit; }
+    .hint { margin-top: 12px; padding: 11px 13px; border-left: 3px solid var(--gold); background: var(--gold-soft); color: #6e5118; }
+    .hint[hidden] { display: none; }
+    .mapping { display: grid; grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 7px; margin-top: 12px; }
+    .map-chip { text-align: center; padding: 7px 4px; border-radius: 10px; background: #f1eee7; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .map-chip span { display: block; color: var(--muted); font-size: .7rem; }
+    .scoreline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat { padding: 10px; border-radius: 12px; background: #f1eee7; text-align: center; }
+    .stat strong { display: block; font-size: 1.35rem; color: var(--navy); }
+    .stat span { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; }
+    .rule-list { margin: 10px 0 0; padding-left: 20px; color: var(--muted); font-size: .86rem; }
+    .rule-list li + li { margin-top: 8px; }
+    code { color: var(--navy); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .parity-choices { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .choice[aria-pressed="true"] { color: #fff; background: var(--navy); border-color: var(--navy); }
+    .membership { margin-top: 9px; color: var(--muted); font-size: .83rem; }
+    .decomp-example { margin: 9px 0 0; color: var(--navy); font: 1.05rem Georgia, serif; overflow-wrap: anywhere; }
+    footer { display: flex; justify-content: space-between; gap: 18px; margin-top: 24px; color: var(--muted); font-size: .78rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-width: 760px) { header { align-items: flex-start; flex-direction: column; } .practice-grid { grid-template-columns: 1fr; } .toolbar { align-items: flex-start; } }
+    @media (max-width: 520px) { .shell { width: calc(100% - 20px); padding-top: 20px; } .toolbar { flex-direction: column; } .convention { text-align: left; } .answer-row { grid-template-columns: 1fr; } .answer-row .primary { width: 100%; } footer { flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    @media (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; --ink: #edf1f7; --muted: #abb5c8; --paper: #111722; --surface: #18202d; --line: #344052; --navy: #91a9eb; --teal: #5bc9c0; --teal-soft: #183e3b; --coral: #f08a72; --coral-soft: #462c29; --gold: #e2b857; --gold-soft: #38311e; --shadow: 0 16px 38px rgba(0,0,0,.22); }
+      .toolbar { background: rgba(24,32,45,.88); } select, input[type="text"] { border-color: #4c586a; } .group-badge, .primary, .choice[aria-pressed="true"] { background: #4d66a3; color: #fff; } .secondary:hover, .choice:hover { background: #242e3d; } .feedback, .map-chip, .stat { background: #222b39; } .feedback.correct { color: #a8ece5; } .feedback.incorrect { color: #ffc0b2; } .hint { color: #efd58e; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div><div class="eyebrow">Abstract Algebra · Practice Lab</div><h1>Symmetric Groups</h1><p class="subtitle">Build fluency with cycle notation, composition, inverses, transpositions, and the alternating group.</p></div>
+      <div class="group-badge" id="groupBadge">S₅ · 120 elements</div>
+    </header>
+
+    <section class="toolbar" aria-label="Practice settings">
+      <label for="nSelect">Choose the group
+        <small>Problems use the symbols 1 through n</small>
+        <select id="nSelect"><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
+      </label>
+      <div class="convention"><strong>Composition convention:</strong> products act right-to-left. In σ ∘ τ, apply τ first, then σ. Fixed points may be omitted.</div>
+    </section>
+
+    <nav class="tabs" role="tablist" aria-label="Practice modes">
+      <button class="tab" id="tab-compose" type="button" role="tab" aria-selected="true" aria-controls="compose-panel">Compose</button>
+      <button class="tab" id="tab-inverse" type="button" role="tab" aria-selected="false" aria-controls="inverse-panel">Invert</button>
+      <button class="tab" id="tab-parity" type="button" role="tab" aria-selected="false" aria-controls="parity-panel">Transpositions &amp; parity</button>
+    </nav>
+
+    <section id="compose-panel" role="tabpanel" aria-labelledby="tab-compose">
+      <div class="practice-grid">
+        <article class="card problem-card">
+          <div class="problem-label">Composition challenge</div>
+          <p class="problem-prompt">Compute σ ∘ τ. Remember to start with the permutation on the right.</p>
+          <div class="formula-line"><div class="permutation" id="composeSigma"></div><div class="permutation">∘</div><div class="permutation" id="composeTau"></div></div>
+          <div class="answer-row">
+            <label for="composeAnswer">Your answer in cycle notation<small>Example: (1 4 2)(3 5), or () for the identity</small><input type="text" id="composeAnswer" autocomplete="off" spellcheck="false" placeholder="(1 2 3)"></label>
+            <button class="primary" type="button" id="checkCompose">Check answer</button>
+          </div>
+          <div class="actions"><button class="secondary" type="button" id="hintCompose">Show hint</button><button class="secondary" type="button" id="newCompose">New problem</button></div>
+          <div class="hint" id="composeHint" hidden></div>
+          <div class="feedback" id="composeFeedback" aria-live="polite">Enter any equivalent cycle notation. Disjoint cycles may appear in either order.</div>
+        </article>
+        <aside class="card side-card"><h3>Composition strategy</h3><ol class="rule-list"><li>Pick an input, starting with 1.</li><li>Follow it through τ, then through σ.</li><li>Continue until the cycle closes.</li><li>Repeat with the smallest unused input.</li></ol><div class="mapping" id="composeMapping" aria-label="Resulting mapping"></div></aside>
+      </div>
+    </section>
+
+    <section id="inverse-panel" role="tabpanel" aria-labelledby="tab-inverse" hidden>
+      <div class="practice-grid">
+        <article class="card problem-card">
+          <div class="problem-label">Inverse challenge</div>
+          <p class="problem-prompt">Find the inverse of the permutation below.</p>
+          <div class="permutation" id="inverseProblem"></div>
+          <div class="answer-row">
+            <label for="inverseAnswer">Your answer in cycle notation<small>Reverse the direction of every cycle</small><input type="text" id="inverseAnswer" autocomplete="off" spellcheck="false" placeholder="(1 3 2)"></label>
+            <button class="primary" type="button" id="checkInverse">Check answer</button>
+          </div>
+          <div class="actions"><button class="secondary" type="button" id="hintInverse">Show hint</button><button class="secondary" type="button" id="newInverse">New problem</button></div>
+          <div class="hint" id="inverseHint" hidden></div>
+          <div class="feedback" id="inverseFeedback" aria-live="polite">A cycle can be rotated without changing the permutation.</div>
+        </article>
+        <aside class="card side-card"><h3>Why reversal works</h3><p class="problem-prompt">If a cycle sends a → b → c → a, its inverse must undo those arrows: a → c → b → a.</p><div class="decomp-example">(a b c)<sup>−1</sup> = (a c b)</div><div class="mapping" id="inverseMapping" aria-label="Inverse mapping"></div></aside>
+      </div>
+    </section>
+
+    <section id="parity-panel" role="tabpanel" aria-labelledby="tab-parity" hidden>
+      <div class="practice-grid">
+        <article class="card problem-card">
+          <div class="problem-label">Transpositions &amp; parity challenge</div>
+          <p class="problem-prompt">Write this permutation as a product of transpositions, then determine its parity.</p>
+          <div class="permutation" id="parityProblem"></div>
+          <label for="transpositionAnswer">A two-cycle decomposition<small>Every factor must be a transposition; products act right-to-left</small><input type="text" id="transpositionAnswer" autocomplete="off" spellcheck="false" placeholder="(1 3)(1 2)"></label>
+          <div class="parity-choices" role="group" aria-label="Choose parity"><button class="choice" id="evenChoice" type="button" aria-pressed="false">Even · belongs to A<sub>n</sub></button><button class="choice" id="oddChoice" type="button" aria-pressed="false">Odd · not in A<sub>n</sub></button></div>
+          <div class="actions"><button class="primary" type="button" id="checkParity">Check both</button><button class="secondary" type="button" id="hintParity">Show hint</button><button class="secondary" type="button" id="newParity">New problem</button></div>
+          <div class="hint" id="parityHint" hidden></div>
+          <div class="feedback" id="parityFeedback" aria-live="polite">Different valid transposition decompositions are accepted. Their lengths always have the same parity.</div>
+        </article>
+        <aside class="card side-card"><h3>Cycle-to-transposition rule</h3><p class="problem-prompt">For a k-cycle, hold the first symbol fixed and work backward:</p><div class="decomp-example">(a₁ a₂ … a<sub>k</sub>) = (a₁ a<sub>k</sub>) ··· (a₁ a₃)(a₁ a₂)</div><ul class="rule-list"><li>A k-cycle uses k − 1 transpositions.</li><li>An even number of transpositions means the permutation is in A<sub>n</sub>.</li><li>The decomposition is not unique, but parity is.</li></ul></aside>
+      </div>
+    </section>
+
+    <footer><span>Inputs accept spaces or commas: (1 3 2), (1,3,2), and (132) are all valid when symbols are single digits.</span><span id="scoreSummary">0 correct · 0 attempted</span></footer>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+      const $ = id => document.getElementById(id);
+      const state = { n: 5, compose: null, inverse: null, parity: null, parityChoice: null, correct: 0, attempted: 0 };
+      const subscript = value => String(value).replace(/[0-9]/g, d => '₀₁₂₃₄₅₆₇₈₉'[Number(d)]);
+      const factorial = n => Array.from({length:n}, (_,i) => i + 1).reduce((a,b) => a*b, 1);
+      const identity = n => Array.from({length:n+1}, (_,i) => i);
+      const equalPerm = (a,b) => a.length === b.length && a.every((v,i) => v === b[i]);
+      const compose = (p,q) => p.map((_,i) => i === 0 ? 0 : p[q[i]]);
+      const invert = p => { const result = identity(p.length - 1); for (let i=1;i<p.length;i++) result[p[i]] = i; return result; };
+
+      function cycleMap(cycle,n) {
+        const map = identity(n);
+        cycle.forEach((value,i) => map[value] = cycle[(i+1)%cycle.length]);
+        return map;
+      }
+
+      function parseNotation(text,n,{transpositionsOnly=false}={}) {
+        const raw = text.trim();
+        if (/^(\(\)|e|id|identity)$/i.test(raw)) return { perm: identity(n), cycles: [] };
+        const groups = [...raw.matchAll(/\(([^()]*)\)/g)];
+        if (!groups.length || raw.replace(/\([^()]*\)/g,'').trim()) throw new Error('Use parentheses around each cycle.');
+        let result = identity(n); const cycles = [];
+        for (const group of groups) {
+          const inside = group[1].trim();
+          if (!inside) continue;
+          let tokens;
+          if (/[\s,]/.test(inside)) tokens = inside.split(/[\s,]+/).filter(Boolean);
+          else tokens = inside.split('');
+          if (!tokens.every(t => /^\d+$/.test(t))) throw new Error('Cycle entries must be integers.');
+          const cycle = tokens.map(Number);
+          if (cycle.some(x => x < 1 || x > n)) throw new Error(`Use only symbols 1 through ${n}.`);
+          if (new Set(cycle).size !== cycle.length) throw new Error('A symbol cannot repeat within one cycle.');
+          if (cycle.length < 2) throw new Error('Omit one-cycles; fixed points are understood.');
+          if (transpositionsOnly && cycle.length !== 2) throw new Error('Every factor must be a two-cycle (transposition).');
+          cycles.push(cycle); result = compose(result, cycleMap(cycle,n));
+        }
+        return { perm: result, cycles };
+      }
+
+      function toCycles(p,{includeFixed=false}={}) {
+        const seen = new Set(), cycles = [];
+        for (let start=1; start<p.length; start++) {
+          if (seen.has(start)) continue;
+          const cycle=[]; let x=start;
+          while (!seen.has(x)) { seen.add(x); cycle.push(x); x=p[x]; }
+          if (includeFixed || cycle.length > 1) cycles.push(cycle);
+        }
+        return cycles;
+      }
+      const formatCycle = cycle => `(${cycle.join(' ')})`;
+      const formatPerm = p => { const cycles = toCycles(p); return cycles.length ? cycles.map(formatCycle).join('') : '()'; };
+      const transpositionDecomposition = p => toCycles(p).flatMap(c => Array.from({length:c.length-1},(_,j) => [c[0], c[c.length-1-j]])).map(formatCycle).join('') || '()';
+      const transpositionCount = p => toCycles(p).reduce((sum,c) => sum + c.length - 1, 0);
+      const isEven = p => transpositionCount(p) % 2 === 0;
+
+      function randomPerm(n) {
+        const values = Array.from({length:n},(_,i)=>i+1);
+        do { for (let i=n-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [values[i],values[j]]=[values[j],values[i]]; } }
+        while (values.every((v,i)=>v===i+1));
+        return [0,...values];
+      }
+
+      function renderMapping(hostId,p,hidden=false) {
+        const host=$(hostId); host.replaceChildren();
+        for(let i=1;i<p.length;i++) { const chip=document.createElement('div'); chip.className='map-chip'; chip.innerHTML=`<span>${i}</span>${hidden?'?':p[i]}`; host.appendChild(chip); }
+      }
+
+      function resetFeedback(id,text) { const box=$(id); box.className='feedback'; box.textContent=text; }
+      function setFeedback(id,correct,html) { const box=$(id); box.className=`feedback ${correct?'correct':'incorrect'}`; box.innerHTML=html; }
+      function record(correct) { state.attempted++; if(correct) state.correct++; $('scoreSummary').textContent=`${state.correct} correct · ${state.attempted} attempted`; }
+
+      function newCompose() {
+        const sigma=randomPerm(state.n), tau=randomPerm(state.n), answer=compose(sigma,tau);
+        state.compose={sigma,tau,answer}; $('composeSigma').textContent=`σ = ${formatPerm(sigma)}`; $('composeTau').textContent=`τ = ${formatPerm(tau)}`;
+        $('composeAnswer').value=''; $('composeHint').hidden=true; resetFeedback('composeFeedback','Enter any equivalent cycle notation. Disjoint cycles may appear in either order.'); renderMapping('composeMapping',answer,true);
+      }
+      function checkCompose() {
+        try { const parsed=parseNotation($('composeAnswer').value,state.n); const ok=equalPerm(parsed.perm,state.compose.answer); record(ok);
+          if(ok) { setFeedback('composeFeedback',true,`<strong>Correct.</strong> σ ∘ τ = ${formatPerm(state.compose.answer)}.`); renderMapping('composeMapping',state.compose.answer); }
+          else { const mismatch=parsed.perm.findIndex((value,i)=>i>0&&value!==state.compose.answer[i]); setFeedback('composeFeedback',false,`<strong>Not quite.</strong> Your answer sends ${mismatch} to ${parsed.perm[mismatch]}, but σ ∘ τ sends ${mismatch} to ${state.compose.answer[mismatch]}. Check the right-to-left order.`); }
+        } catch(error) { setFeedback('composeFeedback',false,`<strong>Notation issue:</strong> ${error.message}`); }
+      }
+      function hintCompose() {
+        const {sigma,tau}=state.compose; const start=1, middle=tau[start], end=sigma[middle];
+        $('composeHint').innerHTML=`Track 1 first: τ sends ${start} → ${middle}, then σ sends ${middle} → ${end}. So the product sends ${start} → ${end}.`;
+        $('composeHint').hidden=false;
+      }
+
+      function newInverse() {
+        const p=randomPerm(state.n), answer=invert(p); state.inverse={p,answer}; $('inverseProblem').textContent=`π = ${formatPerm(p)}`; $('inverseAnswer').value=''; $('inverseHint').hidden=true;
+        resetFeedback('inverseFeedback','A cycle can be rotated without changing the permutation.'); renderMapping('inverseMapping',answer,true);
+      }
+      function checkInverse() {
+        try { const parsed=parseNotation($('inverseAnswer').value,state.n); const ok=equalPerm(parsed.perm,state.inverse.answer); record(ok);
+          if(ok) { setFeedback('inverseFeedback',true,`<strong>Correct.</strong> π⁻¹ = ${formatPerm(state.inverse.answer)}, and ππ⁻¹ = ().`); renderMapping('inverseMapping',state.inverse.answer); }
+          else setFeedback('inverseFeedback',false,`<strong>Try again.</strong> Since π sends 1 to ${state.inverse.p[1]}, π⁻¹ must send ${state.inverse.p[1]} back to 1.`);
+        } catch(error) { setFeedback('inverseFeedback',false,`<strong>Notation issue:</strong> ${error.message}`); }
+      }
+      function hintInverse() { const cycles=toCycles(state.inverse.p); const c=cycles[0]; $('inverseHint').textContent=`Reverse each cycle. For example, ${formatCycle(c)} becomes ${formatCycle([c[0],...c.slice(1).reverse()])}.`; $('inverseHint').hidden=false; }
+
+      function newParity() {
+        const p=randomPerm(state.n); state.parity={p,even:isEven(p)}; state.parityChoice=null; $('parityProblem').textContent=`π = ${formatPerm(p)}`; $('transpositionAnswer').value='';
+        $('evenChoice').setAttribute('aria-pressed','false'); $('oddChoice').setAttribute('aria-pressed','false'); $('parityHint').hidden=true;
+        resetFeedback('parityFeedback','Different valid transposition decompositions are accepted. Their lengths always have the same parity.');
+      }
+      function chooseParity(value) { state.parityChoice=value; $('evenChoice').setAttribute('aria-pressed',String(value==='even')); $('oddChoice').setAttribute('aria-pressed',String(value==='odd')); }
+      function checkParity() {
+        try {
+          const parsed=parseNotation($('transpositionAnswer').value,state.n,{transpositionsOnly:true});
+          const decompositionOk=equalPerm(parsed.perm,state.parity.p); const parityOk=state.parityChoice===(state.parity.even?'even':'odd'); const ok=decompositionOk&&parityOk; record(ok);
+          if(ok) setFeedback('parityFeedback',true,`<strong>Both correct.</strong> This decomposition uses ${parsed.cycles.length} transpositions, so π is ${state.parity.even?'even and belongs to A':'odd and does not belong to A'}<sub>${state.n}</sub>.`);
+          else if(!decompositionOk) setFeedback('parityFeedback',false,`<strong>The product does not equal π.</strong> One valid decomposition is ${transpositionDecomposition(state.parity.p)}. Remember that the rightmost factor acts first.`);
+          else setFeedback('parityFeedback',false,`<strong>Your decomposition works, but revisit parity.</strong> It uses ${parsed.cycles.length} transpositions.`);
+        } catch(error) { setFeedback('parityFeedback',false,`<strong>Notation issue:</strong> ${error.message}`); }
+      }
+      function hintParity() { const cycles=toCycles(state.parity.p); const c=cycles.find(x=>x.length>2) || cycles[0]; $('parityHint').innerHTML=`Start with ${formatCycle(c)}: write it as ${transpositionDecomposition(cycleMap(c,state.n))}. Then decompose the remaining cycles the same way.`; $('parityHint').hidden=false; }
+
+      function setN(value) { state.n=Number(value); $('groupBadge').textContent=`S${subscript(state.n)} · ${factorial(state.n).toLocaleString()} elements`; newCompose(); newInverse(); newParity(); }
+      function enterCheck(inputId,fn) { $(inputId).addEventListener('keydown',event=>{ if(event.key==='Enter'){event.preventDefault();fn();} }); }
+
+      $('nSelect').addEventListener('change',e=>setN(e.target.value));
+      $('checkCompose').addEventListener('click',checkCompose); $('hintCompose').addEventListener('click',hintCompose); $('newCompose').addEventListener('click',newCompose); enterCheck('composeAnswer',checkCompose);
+      $('checkInverse').addEventListener('click',checkInverse); $('hintInverse').addEventListener('click',hintInverse); $('newInverse').addEventListener('click',newInverse); enterCheck('inverseAnswer',checkInverse);
+      $('evenChoice').addEventListener('click',()=>chooseParity('even')); $('oddChoice').addEventListener('click',()=>chooseParity('odd')); $('checkParity').addEventListener('click',checkParity); $('hintParity').addEventListener('click',hintParity); $('newParity').addEventListener('click',newParity); enterCheck('transpositionAnswer',checkParity);
+      document.querySelectorAll('[role="tab"]').forEach(tab=>tab.addEventListener('click',()=>{ document.querySelectorAll('[role="tab"]').forEach(t=>t.setAttribute('aria-selected',String(t===tab))); document.querySelectorAll('[role="tabpanel"]').forEach(p=>p.hidden=p.id!==tab.getAttribute('aria-controls')); }));
+      setN(5);
+    })();
+  </script>
+</body>
+</html>
