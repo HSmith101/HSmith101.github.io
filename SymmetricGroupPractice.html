@@ -114,10 +114,10 @@
       <div class="practice-grid">
         <article class="card problem-card">
           <div class="problem-label">Composition challenge</div>
-          <p class="problem-prompt">Compute σ ∘ τ. Remember to start with the permutation on the right.</p>
-          <div class="formula-line"><div class="permutation" id="composeSigma"></div><div class="permutation">∘</div><div class="permutation" id="composeTau"></div></div>
+          <p class="problem-prompt"><b>Compute σ ∘ τ.</b> Remember to start with the permutation on the right.</p>
+          <div class="formula-line"><div class="permutation" id="composeSigma"></div><div class="permutation">,</div><div class="permutation" id="composeTau"></div></div>
           <div class="answer-row">
-            <label for="composeAnswer">Your answer in cycle notation<small>Example: (1 4 2)(3 5), or () for the identity</small><input type="text" id="composeAnswer" autocomplete="off" spellcheck="false" placeholder="(1 2 3)"></label>
+            <label for="composeAnswer">Your answer in cycle notation<small>Example: (1 4 2)(3 5), or () for the identity. Omit one-cycles; fixed points are understood.</small><input type="text" id="composeAnswer" autocomplete="off" spellcheck="false" placeholder="(1 2 3)"></label>
             <button class="primary" type="button" id="checkCompose">Check answer</button>
           </div>
           <div class="actions"><button class="secondary" type="button" id="hintCompose">Show hint</button><button class="secondary" type="button" id="newCompose">New problem</button></div>
