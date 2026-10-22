@@ -13,8 +13,8 @@
 <header class="top"><div class="brand"><span class="mark">✦</span> Probability Playground</div><span class="topnote">Practice • Learn • Try again</span></header>
 <section class="hero"><div class="eyebrow">A little practice goes a long way</div><p>Roll dice, flip coins, and draw cards. Find probabilities, check your thinking, and see exactly why an answer works.</p></section>
 <nav class="pills" aria-label="Choose a topic"><button class="pill active" data-topic="mix">✦ Mixed practice</button><button class="pill" data-topic="dice">⚄ Dice</button><button class="pill" data-topic="coins">◉ Coins</button><button class="pill" data-topic="cards">♠ Cards</button></nav>
-<main class="layout"><section class="card question-card" aria-live="polite"><div class="question-top"><span class="label" id="topicLabel">MIXED PRACTICE</span><span class="difficulty" id="questionNumber">Question 1</span></div><h2 id="questionText"></h2><p class="hintline" id="questionSub"></p><label class="answerlabel" for="numerator">What's the probability?</label><div class="answerbox"><input id="numerator" type="number" min="0" step="1" placeholder="top" aria-label="Numerator"><span class="slash">/</span><input id="denominator" type="number" min="1" step="1" placeholder="bottom" aria-label="Denominator"><span class="or">or</span><input id="percent" class="percent" type="number" min="0" max="100" step="any" placeholder="%" aria-label="Percentage answer"><span class="or">%</span></div><p class="switch">Enter a fraction (like 1/6) or a percentage (like 50).</p><div class="action-row"><button id="check" class="btn primary">Check answer →</button><button id="hint" class="btn">Show hint</button><button id="next" class="btn" style="display:none">Next question →</button></div><div class="feedback" id="feedback" role="status"></div></section>
-<aside class="sidebar"><section class="card stat-card"><h3 class="side-title">Your progress</h3><div class="stats"><div class="stat"><strong id="correct">0</strong><span>Correct answers</span></div><div class="stat"><strong id="attempted">0</strong><span>Questions tried</span></div></div><div class="bar"><div id="progressbar"></div></div><p class="minicaption" id="accuracy">Answer a question to start your streak.</p><button class="reset" id="reset">Reset progress</button></section><section class="card guide-card"><h3 class="side-title">Remember this rule</h3><p>When all basic outcomes are equally likely:</p><div class="formula">Probability = <span style="color:var(--teal)">favorable outcomes</span><br>────────────────────<br>total possible outcomes</div><p>Count the outcomes that match the event, then divide by all possible outcomes.</p><div class="tip"><span>💡</span><span><b>Watch out!</b> Two dice have 36 equally likely ordered results. Two coin flips have 4.</span></div></section></aside></main><p class="footer">Designed for introductory probability • Standard six-sided dice, fair coins, and a standard 52-card deck without jokers.</p>
+<main class="layout"><section class="card question-card" aria-live="polite"><div class="question-top"><span class="label" id="topicLabel">MIXED PRACTICE</span><span class="difficulty" id="questionNumber">Question 1</span></div><h2 id="questionText"></h2><p class="hintline" id="questionSub"></p><div class="visual" id="visual" aria-label="Visual of the probability experiment"></div><label class="answerlabel" for="numerator">What's the probability?</label><div class="answerbox"><input id="numerator" type="number" min="0" step="1" placeholder="top" aria-label="Numerator"><span class="slash">/</span><input id="denominator" type="number" min="1" step="1" placeholder="bottom" aria-label="Denominator"><span class="or">or</span><input id="percent" class="percent" type="number" min="0" max="100" step="any" placeholder="%" aria-label="Percentage answer"><span class="or">%</span></div><p class="switch">Enter a fraction (like 1/6) or a percentage (like 50).</p><div class="action-row"><button id="check" class="btn primary">Check answer →</button><button id="hint" class="btn">Show hint</button><button id="next" class="btn" style="display:none">Next question →</button></div><div class="feedback" id="feedback" role="status"></div></section>
+<aside class="sidebar"><section class="card stat-card"><h3 class="side-title">Your progress</h3><div class="stats"><div class="stat"><strong id="correct">0</strong><span>Correct first try</span></div><div class="stat"><strong id="attempted">0</strong><span>Questions tried</span></div></div><div class="bar"><div id="progressbar"></div></div><p class="minicaption" id="accuracy">Answer a question to start your streak.</p><button class="reset" id="reset">Reset progress</button></section><section class="card guide-card"><h3 class="side-title">Remember this rule</h3><p>When all basic outcomes are equally likely:</p><div class="formula">Probability = <span style="color:var(--teal)">favorable outcomes</span><br>────────────────────<br>total possible outcomes</div><p>Count the outcomes that match the event, then divide by all possible outcomes.</p><div class="tip"><span>💡</span><span><b>Watch out!</b> Two dice have 36 equally likely ordered results. Two coin flips have 4.</span></div></section></aside></main><p class="footer">Designed for introductory probability • Standard six-sided dice, fair coins, and a standard 52-card deck without jokers.</p>
 </div><script>
 const $=id=>document.getElementById(id);const gcd=(a,b)=>b?gcd(b,a%b):a;
 const diceFaces=[[],[4],[0,8],[0,4,8],[0,2,6,8],[0,2,4,6,8],[0,2,3,5,6,8]];
@@ -39,12 +39,116 @@ function coinsQ(){let t=Math.floor(Math.random()*6);const all2=['HH','HT','TH','
  let all3=Array.from({length:8},(_,i)=>i.toString(2).padStart(3,'0').replaceAll('0','T').replaceAll('1','H'));if(t===4)return F('coins','A fair coin is flipped three times. What is the probability of exactly two heads?','There are 2 × 2 × 2 possible sequences.',coin('H')+coin('H')+coin('T'),8,3,'The matching sequences are HHT, HTH, and THH.',all3.map(x=>({label:x,hit:[...x].filter(y=>y==='H').length===2})));
  return F('coins','A fair coin is flipped three times. What is the probability of at least one head?','Try counting the opposite event first.',coin('H')+coin('T')+coin('H'),8,7,'Only TTT has no heads, so 8 − 1 = 7 sequences have at least one head.',all3.map(x=>({label:x,hit:x!=='TTT'})));}
 function cardsQ(){let t=Math.floor(Math.random()*7),v=card('A','♠')+card('7','♥')+card('K','♣')+card('Q','♦');if(t===0)return F('cards','One card is drawn. What is the probability of drawing a heart?','Standard 52-card deck, no jokers.',v,52,13,'There are 13 hearts in a 52-card deck.');if(t===1)return F('cards','One card is drawn. What is the probability of drawing an ace?','Standard 52-card deck, no jokers.',v,52,4,'There are four aces, one in each suit.');if(t===2)return F('cards','One card is drawn. What is the probability of drawing a red card?','Hearts and diamonds are red.',v,52,26,'26 cards are red: 13 hearts and 13 diamonds.');if(t===3)return F('cards','One card is drawn. What is the probability of drawing a face card (J, Q, or K)?','Aces are not face cards.',v,52,12,'Each suit has J, Q, and K: 3 × 4 = 12.');if(t===4)return F('cards','One card is drawn. What is the probability of drawing a black queen?','Spades and clubs are black.',v,52,2,'There are 2 black queens: queen of spades and queen of clubs.');if(t===5)return F('cards','One card is drawn. What is the probability of drawing a king or a heart?','Do not double-count the king of hearts.',v,52,16,'4 kings + 13 hearts − 1 king of hearts = 16 favorable cards.');return F('cards','One card is drawn. What is the probability of NOT drawing a spade?','There are 13 spades in the deck.',v,52,39,'52 − 13 = 39 cards are not spades.');}
-let topic='mix',current=null,answered=false,usedHint=false,number=0,correct=0,attempted=0,lastKey='';
-function nextQ(){let q;for(let i=0;i<12;i++){q=({dice:diceQ,coins:coinsQ,cards:cardsQ})[topic==='mix'?shuffled(['dice','coins','cards']):topic]();if(q.q!==lastKey)break}lastKey=q.q;current=q;answered=false;usedHint=false;number++;$('questionNumber').textContent=`Question ${number}`;$('topicLabel').textContent=({dice:'⚄ DICE',coins:'◉ COINS',cards:'♠ CARDS'})[q.category];$('questionText').textContent=q.q;$('questionSub').textContent=q.sub;$('visual').innerHTML=q.visual;$('numerator').value='';$('denominator').value='';$('percent').value='';$('check').style.display='';$('next').style.display='none';$('hint').disabled=false;$('hint').textContent='Show hint';$('feedback').className='feedback';$('feedback').innerHTML='';$('numerator').focus();}
+let topic='mix',current=null,solved=false,hasAttempted=false,number=0,correct=0,attempted=0,lastKey='';
+function nextQ(){
+ let q;
+ for(let i=0;i<12;i++){
+  q=({dice:diceQ,coins:coinsQ,cards:cardsQ})[topic==='mix'?shuffled(['dice','coins','cards']):topic]();
+  if(q.q!==lastKey)break;
+ }
+ lastKey=q.q;
+ current=q;
+ solved=false;
+ hasAttempted=false;
+ number++;
+ $('questionNumber').textContent=`Question ${number}`;
+ $('topicLabel').textContent=({dice:'⚄ DICE',coins:'◉ COINS',cards:'♠ CARDS'})[q.category];
+ $('questionText').textContent=q.q;
+ $('questionSub').textContent=q.sub;
+ $('visual').innerHTML=q.visual;
+ ['numerator','denominator','percent'].forEach(id=>{
+  $(id).value='';
+  $(id).disabled=false;
+ });
+ // Reset the actual button state, not only its visibility.
+ $('check').style.display='';
+ $('check').disabled=false;
+ $('check').textContent='Check answer →';
+ $('next').style.display='none';
+ $('hint').disabled=false;
+ $('hint').textContent='Show hint';
+ $('feedback').className='feedback';
+ $('feedback').innerHTML='';
+ $('numerator').focus();
+}
 function frac(){let g=gcd(current.good,current.all);return `${current.good/g}/${current.all/g}`}
-function explanation(){let outcomes=current.outcomes?`<div class="outcomes">${current.outcomes.map(o=>`<span class="outcome ${o.hit?'hit':''}">${o.label}</span>`).join('')}</div><span class="small-note">Highlighted outcomes satisfy the event.</span>`:'';return `<div class="explanation"><strong>Why? ${current.good} favorable ÷ ${current.all} total = ${frac()}</strong><p>${current.explain}</p>${outcomes}</div>`}
-function showFeedback(good,title,body){$('feedback').className='feedback show '+(good?'good':'bad');$('feedback').innerHTML=`<h3>${title}</h3><p>${body}</p>`}
-function check(){if(answered)return;let n=$('numerator').value.trim(),d=$('denominator').value.trim(),p=$('percent').value.trim(),answer;if(n!==''&&d!==''){let a=Number(n),b=Number(d);if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<=0){showFeedback(false,'Check your fraction','Use nonnegative whole numbers, with a denominator greater than zero.');return}answer=a/b}else if(p!==''){answer=Number(p)/100;if(!Number.isFinite(answer)||answer<0||answer>1){showFeedback(false,'Check your percentage','Enter a percentage between 0 and 100.');return}}else{showFeedback(false,'Enter an answer first','Fill in both parts of the fraction, or enter a percentage.');return}let win=Math.abs(answer-current.good/current.all)<0.00051;answered=true;attempted++;if(win)correct++;showFeedback(win,win?'Nice work! ✓':'Good try — here’s how it works.',win?`Correct! The probability is <b>${frac()}</b> (${(100*current.good/current.all).toFixed(1).replace(/\.0$/,'')}%).`:`The probability is <b>${frac()}</b> (${(100*current.good/current.all).toFixed(1).replace(/\.0$/,'')}%).`);$('feedback').innerHTML+=explanation();$('check').style.display='none';$('next').style.display='';$('hint').disabled=true;updateStats();}
-function updateStats(){$('correct').textContent=correct;$('attempted').textContent=attempted;let x=attempted?Math.round(correct/attempted*100):0;$('progressbar').style.width=x+'%';$('accuracy').textContent=attempted?`${x}% accuracy so far — keep practicing!`:'Answer a question to start your streak.'}
-$('check').addEventListener('click',check);$('next').addEventListener('click',nextQ);$('hint').addEventListener('click',()=>{if(answered)return;usedHint=true;showFeedback(true,'A hint to get started',`Count the equally likely outcomes first. For this question, there are <b>${current.all}</b> possible outcomes. Which ones match the event?`);$('hint').textContent='Hint shown'});['numerator','denominator','percent'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();answered?nextQ():check()}}));document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{topic=b.dataset.topic;document.querySelectorAll('[data-topic]').forEach(x=>x.classList.toggle('active',x===b));nextQ()}));$('reset').addEventListener('click',()=>{correct=attempted=0;updateStats()});updateStats();nextQ();
+function explanation(){
+ let outcomes=current.outcomes?`<div class="outcomes">${current.outcomes.map(o=>`<span class="outcome ${o.hit?'hit':''}">${o.label}</span>`).join('')}</div><span class="small-note">Highlighted outcomes satisfy the event.</span>`:'';
+ return `<div class="explanation"><strong>Why? ${current.good} favorable ÷ ${current.all} total = ${frac()}</strong><p>${current.explain}</p>${outcomes}</div>`;
+}
+function showFeedback(good,title,body){
+ $('feedback').className='feedback show '+(good?'good':'bad');
+ $('feedback').innerHTML=`<h3>${title}</h3><p>${body}</p>`;
+}
+function check(){
+ if(solved)return;
+ let n=$('numerator').value.trim(),d=$('denominator').value.trim(),p=$('percent').value.trim(),answer;
+ if(n!==''&&d!==''){
+  let a=Number(n),b=Number(d);
+  if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<=0){
+   showFeedback(false,'Check your fraction','Use nonnegative whole numbers, with a denominator greater than zero.');
+   return;
+  }
+  answer=a/b;
+ }else if(p!==''){
+  answer=Number(p)/100;
+  if(!Number.isFinite(answer)||answer<0||answer>1){
+   showFeedback(false,'Check your percentage','Enter a percentage between 0 and 100.');
+   return;
+  }
+ }else{
+  showFeedback(false,'Enter an answer first','Fill in both parts of the fraction, or enter a percentage.');
+  return;
+ }
+ let win=Math.abs(answer-current.good/current.all)<0.00051;
+ // Score each question only on the first valid submission, even when retried.
+ if(!hasAttempted){
+  hasAttempted=true;
+  attempted++;
+  if(win)correct++;
+  updateStats();
+ }
+ const result=`The probability is <b>${frac()}</b> (${(100*current.good/current.all).toFixed(1).replace(/\.0$/,'')}%).`;
+ if(win){
+  solved=true;
+  showFeedback(true,'Nice work! ✓',`Correct! ${result}`);
+  $('check').disabled=true;
+  $('check').textContent='Answer checked ✓';
+ }else{
+  showFeedback(false,'Not quite — try again',`${result} You can change your answer and check it again, or move on to the next question.`);
+  $('check').disabled=false;
+  $('check').textContent='Check again →';
+ }
+ $('feedback').innerHTML+=explanation();
+ $('next').style.display='';
+ $('hint').disabled=true;
+}
+function updateStats(){
+ $('correct').textContent=correct;
+ $('attempted').textContent=attempted;
+ let x=attempted?Math.round(correct/attempted*100):0;
+ $('progressbar').style.width=x+'%';
+ $('accuracy').textContent=attempted?`${x}% first-try accuracy so far — keep practicing!`:'Answer a question to start your streak.';
+}
+$('check').addEventListener('click',check);
+$('next').addEventListener('click',nextQ);
+$('hint').addEventListener('click',()=>{
+ if(solved||hasAttempted)return;
+ showFeedback(true,'A hint to get started',`Count the equally likely outcomes first. For this question, there are <b>${current.all}</b> possible outcomes. Which ones match the event?`);
+ $('hint').textContent='Hint shown';
+});
+['numerator','denominator','percent'].forEach(id=>$(id).addEventListener('keydown',e=>{
+ if(e.key==='Enter'){
+  e.preventDefault();
+  solved?nextQ():check();
+ }
+}));
+document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{
+ topic=b.dataset.topic;
+ document.querySelectorAll('[data-topic]').forEach(x=>x.classList.toggle('active',x===b));
+ nextQ();
+}));
+$('reset').addEventListener('click',()=>{correct=attempted=0;updateStats()});
+updateStats();
+nextQ();
 </script></body></html>
